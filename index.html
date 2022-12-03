@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
 
     <link rel="icon" href="/assets/img/icon-1.png">
 
@@ -23,7 +25,7 @@
             </div>
 
             <nav class="navbar">
-                <a href="#"><i class="fa-solid fa-record-vinyl"></i>album</a>
+                <a href="#">album</a>
                 <a href="#">V-Pop</a>
                 <a href="#">C-Pop</a>
                 <a href="#">K-Pop</a>
@@ -33,17 +35,135 @@
 
         <section class="header">
             <div class="header_search">
-                <i class="fa-solid fa-magnifying-glass header_search--icon"></i>
+                <i class="fas fa-search header_search--icon"></i>
                 <input type="text" inputmode="search" placeholder="Search..." class="header_search--input">
             </div>
 
             <div class="header_tool">
-                <i class="fa fa-bars header_tool--icon"></i>
-                <i class="fa fa-bell header_tool--icon"></i>
-                <i class="tool-icon fa fa-cog header_tool--icon"></i>
+                <div class="header_tool--icon">
+                    <i class="fa fa-bell"></i>
+                </div>
+
+                <div class="header_tool--icon">
+                    <i class="tool-icon fa fa-cog"></i>
+                </div>
+
+                <div class="header_tool--icon moon">
+                    <i class="tool-icon fas fa-moon"></i>
+                </div>
+                
                 <a href="#" class="header_tool--free">free</a>
+
+                <div class="header_tool--icon bars">
+                    <i class="fa fa-bars"></i>
+                </div>
+            </div>
+        </section>
+
+        <section class="heading-box">
+            <h2 class="heading">billboard chart</h2>
+        </section>
+
+        <section class="billboard_list">
+            <div class="billboard_list--item">
+                <div class="billboard_media">
+                    <img src="/assets/files/img/way-back-home.jpg" alt="billboard image" class="billboard_media--img">
+
+                    <img src="/assets/files/img/way-back-home.jpg" alt="billboard image" class="billboard_media--img__shadow">
+
+                    <h3 class="billboard_media--title title">way back home</h3>
+                    <a href="#" class="billboard_media--author author">shaun</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="swiper-container">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="/assets/files/img/way-back-home.jpg" alt="billboard image" class="media-image">
+
+                        <img src="/assets/files/img/way-back-home.jpg" alt="billboard image" class="media-image_shadow">
+
+                        <h3 class="billboard_media--title title">way back home</h3>
+                        <a href="#" class="billboard_media--author author">shaun</a>
+                    </div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div>
+                    <div class="swiper-slide">Slide 4</div>
+                    <div class="swiper-slide">Slide 5</div>
+                </div>
+            </div>
+        </div>
+
+        <section class="content">
+            <div class="content_item">
+                <div class="heading-box">
+                    <h2 class="heading">album</h2>
+                    <span class="sub-heading">list song</span>
+                </div>
+
+                <div class="song_list">
+                    <div class="song" data-index="0">
+                        <span class="song_index">01</span>
+                        <img src="/assets/files/img/way-back-home.jpg" alt="billboard image" class="song_img">
+                        <i class="fas fa-play song_play"></i>
+                        <h4 class="song_title">way back home</h4>
+                        <h5 class="song_album">shaun</h5>
+                        <time class="song_time">3:12</time>
+                        <label for="love" class="song_love">
+                            <input type="checkbox" name="love" id="love">
+                            <i class="fas fa-heart song_love--heart"></i>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-item">
+                <div class="heading-box">
+                    <h2 class="heading">now playing</h2>
+                    <span class="sub-heading">Like "relax" and "chill" all at once</span>
+                </div>
+
+                <div class="player">
+                    <div class="player_box">
+                        <div class="player_box--media">
+                            <img src="/assets/files/img/way-back-home.jpg" alt="billboard image" class="player_img is-playing">
+                        </div>
+
+                        <h3 class="player_box--title title">way back home</h3>
+
+                        <span class="player_box--author author">shaun</span>
+
+                        <div class="player_box--progress">
+                            <input type="range" id="progress-bar" class="bar" min="0" max="242.233469" value="0">
+                            <audio src="/assets/files/WBH.mp3" id="song"></audio>
+                        </div>
+
+                        <div class="player_box--number">
+                            <span class="player_duration">0:00</span>
+                            <span class="player_remaining">0:00</span>
+                        </div>
+
+                        <div class="player_box--tool">
+                            <i class="fas fa-backward player-prev"></i>
+                            <i class="fas fa-play player-play"></i>
+                            <i class="fas fa-forward player-next"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="/main.js"></script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+        effect: "cards",
+        grabCursor: true,
+        });
+    </script>
 </body>
 </html>
