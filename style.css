@@ -37,7 +37,7 @@ html {
     font-size: 55%;
   }
 }
-@media (max-width: 450px) {
+@media (max-width: 550px) {
   html {
     font-size: 50%;
   }
@@ -160,7 +160,7 @@ ul {
     left: -120%;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 550px) {
   .wrapper .sidebar {
     width: 100%;
   }
@@ -201,6 +201,7 @@ ul {
 .wrapper .sidebar .navbar a:hover {
   letter-spacing: 0.4rem;
   color: #eeecec;
+  text-decoration: underline;
 }
 .wrapper .sidebar.active {
   left: 0;
@@ -324,7 +325,7 @@ ul {
     grid-template-columns: unset;
   }
 }
-@media (max-width: 450px) {
+@media (max-width: 550px) {
   .wrapper .billboard_list {
     display: none;
   }
@@ -363,7 +364,7 @@ ul {
   position: relative;
   display: none;
 }
-@media (max-width: 450px) {
+@media (max-width: 550px) {
   .wrapper .swiper-container {
     display: block;
   }
