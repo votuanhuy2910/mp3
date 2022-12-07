@@ -141,6 +141,7 @@ ul {
         left: 0;
         bottom: 0;
         padding: 8rem 3rem;
+        text-align: center;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -183,6 +184,8 @@ ul {
         }
 
         .navbar {
+            width: 100%;
+            
             a {
                 display: block;
                 color: var(--color);
