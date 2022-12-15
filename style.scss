@@ -7,6 +7,10 @@
     --white: #fff;
     --heart: #cdc6c6;
     --black: #050938;
+
+    --shadow-1: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, 
+    rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+
     --shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
                 -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
 
@@ -63,6 +67,8 @@ body.active {
     --color: #050938;
     --white: #000;
     --black: #fff;
+    --shadow-1: rgba(250, 250, 250, 0.015) 0px 20px 5px 0px,
+    rgba(255, 255, 255, 0.7) 0px 1px 1px 0px
 }
 
 section {
@@ -109,6 +115,16 @@ ul {
     font-size: 1.8rem;
     color: var(--bg-header);
     font-weight: 600;
+}
+
+.quote {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    color: var(--black);
+    margin-top: 3rem;
+    font-size: 1.8rem;
+    letter-spacing: 2;
 }
 
 .title {
@@ -260,10 +276,10 @@ ul {
             font-size: 1.8rem;
             display: flex;
             align-items: center;
-            border: 1px solid var(--color);
             border-radius: .5rem;
             padding: .5rem 1rem;
-            background: var(--color);
+            background: rgba(124, 124, 125, 0.15);
+            box-shadow: var(--shadow);
 
             @media (max-width: 991px) {
                 margin-left: 1rem;
@@ -439,7 +455,9 @@ ul {
             }
 
             .swiper-slide:nth-child(1n),
-            .swiper-slide:nth-child(2n) {
+            .swiper-slide:nth-child(2n),
+            .swiper-slide:nth-child(3n),
+            .swiper-slide:nth-child(4n) {
                 background-color: var(--bg-primary);
             }
         }
@@ -457,7 +475,7 @@ ul {
 
         &_item {
             .song_list {
-                max-height: 42rem;
+                max-height: 44rem;
                 overflow-y: scroll;
                 scroll-behavior: smooth;
                 scrollbar-width: none;
@@ -475,7 +493,7 @@ ul {
                     padding: 1rem 2rem;
                     background-color: var(--bg-primary);
                     border-radius: 1rem;
-                    box-shadow: var(--shadow-inset);
+                    box-shadow: var(--shadow-1);
                     display: flex;
                     align-items: center;
                     margin-bottom: 1rem;
@@ -578,10 +596,9 @@ ul {
                 background-color: var(--bg-primary);
                 padding: 2rem;
                 border-radius: 1.2rem;
-                box-shadow: var(--shadow-inset);
+                box-shadow: var(--shadow-1);
 
                 &_box {
-                    box-shadow: var(--shadow);
                     padding: 2.5rem;
                     display: flex;
                     flex-direction: column;
@@ -591,7 +608,7 @@ ul {
                     border-radius: 2rem;
                     max-width: 30rem;
                     margin: 0 auto 3rem;
-                    box-shadow: var(--shadow-inset);
+                    box-shadow: var(--shadow-1);
 
                     &--media {
                         position: relative;
