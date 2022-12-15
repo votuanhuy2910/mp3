@@ -45,7 +45,6 @@ let songs = [
 	"./assets/files/WBH.mp3", 
 	"./assets/files/Faded.mp3",
 	"./assets/files/Mascara.mp3",
-	"./assets/files/That Girl - Olly Murs.mp3",
 	"./assets/files/Giua Dai Lo Dong Tay.mp3",
 	"./assets/files/In The End.mp3",
 	"./assets/files/xich linh.mp3",
@@ -53,13 +52,13 @@ let songs = [
 	"./assets/files/Noi Nay Co Anh.mp3",
 	"./assets/files/Thuy trieu.mp3",
 	"./assets/files/Ke Theo Duoi Anh Sang.mp3",
+	"./assets/files/That Girl - Olly Murs.mp3",
 ];
 
 let thumbnails = [
 	"./assets/files/img/way-back-home.jpg",
 	"./assets/files/img/fadedjpg.jpg",
 	"./assets/files/img/mascara.jpg",
-	"./assets/files/img/that girl.jpg",
 	"./assets/files/img/giua dai lo dong tay.jpg",
 	"./assets/files/img/in the end.jpg",
 	"./assets/files/img/xich linh.jpg",
@@ -67,20 +66,17 @@ let thumbnails = [
 	"./assets/files/img/noi nay co anh.jpg",
 	"./assets/files/img/thuy trieu.jpg",
 	"./assets/files/img/ke theo duoi sanh sang.jpg",
+	"./assets/files/img/that girl.jpg",
 
 ];
 
 let songTitles = [
-	"Way Back Home", "Faded", "Mascara", "That Girl", 
-	"Giữa Đại Lộ Đông Tây", "In The End", "Xích Linh", 
-	"See You Again", "Nơi Này Có Anh", "Thủy Triều",
-	"Kẻ Theo Đuổi Ánh Sáng"
+	"Way Back Home", "Faded", "Mascara", "Giữa Đại Lộ Đông Tây", 
+	"In The End", "Xích Linh", "See You Again", "Nơi Này Có Anh", "Thủy Triều", "Kẻ Theo Đuổi Ánh Sáng", "That Girl",
 ];
 
 let songArtists = [
-	"Shaun", "Alan Walker", "Chillies", "Olly Murs", "Uyên Linh",
-	"Linkin Park", "Chấp Tố Hề", "Wiz Khalifa Ft Charlie Puth",
-	"Sơn Tùng M-TP", "Phó Mộng Đồng", "Huy Vạc"
+	"Shaun", "Alan Walker", "Chillies", "Uyên Linh", "Linkin Park", "Chấp Tố Hề", "Wiz Khalifa Ft Charlie Puth", "Sơn Tùng M-TP", "Phó Mộng Đồng", "Huy Vạc", "Olly Murs",
 ];
 
 function handleClickEachSong(e) {
