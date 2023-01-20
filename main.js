@@ -32,7 +32,7 @@ let prevButton = document.querySelector(".player-prev");
 let thumbnail = document.querySelector(".player_img");
 
 let song = document.querySelector("#song");
-let songList = document.querySelectorAll(".song");
+let songList = document.querySelectorAll(".song_list");
 
 let songTitle = document.querySelector(".player_box--title");
 let songArtist = document.querySelector(".player_box--author");
