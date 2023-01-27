@@ -8,7 +8,7 @@ btnLogin.addEventListener("click", (e) => {
 	if (inputEmail.value === "" || inputPassword.value === "") {
 		alert("Please do not leave it blank");
 	} else {
-		const user = JSON.parse(sessionStorage.getItem(inputEmail.value));
+		const user = JSON.parse(localStorage.getItem(inputEmail.value));
 
 		if (
 			user.username === inputEmail.value &&

@@ -16,7 +16,7 @@ btnRegister.addEventListener("click", (e) => {
 		};
 
 		let json = JSON.stringify(user);
-		sessionStorage.setItem(inputEmailRegister.value, json);
+		localStorage.setItem(inputEmailRegister.value, json);
 		alert("Successfully");
 		window.location.reload();
 	}
