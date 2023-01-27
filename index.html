@@ -81,36 +81,77 @@
                         </header>
 
                         <div class="loginForm">
-                            <input class="field_input" type="text" name="username" id="username" required placeholder=" ">
-                            <label for="username" class="field_label">username</label>
+                            <input class="field_input" maxlength="24" type="email" name="emailLogin"
+                                id="emailLogin" placeholder=" ">
+                            <label for="username" class="field_label">email</label>
                         </div>
 
                         <div class="loginForm">
-                            <input class="field_input" type="text" name="password" id="password" required placeholder=" ">
+                            <input class="field_input" maxlength="16" type="password"
+                                name="passwordLogin" id="passwordLogin" placeholder=" ">
                             <label for="password" class="field_label">password</label>
-                        </div>
-
-                        <div class="loginSocial">
-                            <button class="loginSocial_links facebook">
-                                <i class="fab fa-facebook"></i>
-                            </button>
-
-                            <button class="loginSocial_links google">
-                                <i class="fab fa-google"></i>
-                            </button>
+                            <span id="checkPass"></span>
                         </div>
 
                         <div class="loginBtn">
-                            <button class="loginBtn_done" disabled="disabled">
+                            <button class="loginBtn_done" id="btnLogin">
                                 <i class="fas fa-arrow-right"></i>
                             </button>
                         </div>
 
-                        <div class="registerForm">
-                            signup
+                        <div id="registerForm" class="registerForm">
+                            don't have account?
+                        </div>
+                    </form>
+                </div>
+
+                <div id="register" class="header_login">
+                    <form action="" class="header_login--form">
+                        <div class="registerClose">
+                            <i class="fas fa-close"></i>
                         </div>
 
-                        <!-- <button id="loginBtn" class="btn" type="submit">Login</button> -->
+                        <header class="loginHeader">
+                            register
+                        </header>
+
+                        <div class="loginForm">
+                            <input class="field_input" type="email" name="emailRegister"
+                                id="emailRegister" placeholder=" ">
+                            <label for="username" class="field_label">email</label>
+                        </div>
+
+                        <div class="loginForm">
+                            <input class="field_input" maxlength="16" type="password"
+                                name="passwordRegister" id="passwordRegister" placeholder=" "
+                                onkeyup="checkPassword(this.value)">
+                            <label for="password" class="field_label">password</label>
+                            <span id="checkPass"></span>
+                        </div>
+
+                        <div id="validation">
+                            <ul>
+                                <li id="lower">At least one lowercase character</li>
+                                <li id="upper">At least one uppercase character</li>
+                                <li id="number">At least one number</li>
+                                <li id="special">At least one special character</li>
+                                <li id="length">At least 8 character</li>
+                            </ul>
+                        </div>
+
+                        <!-- <div class="loginForm">
+                            <input class="field_input" type="password" name="confirmPassword" id="confirmPassword" placeholder=" ">
+                            <label for="confirmPassword" class="field_label">confirm password</label>
+                        </div> -->
+                        <div class="loginBtn">
+                            <button class="loginBtn_done" id="btnRegister">
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+
+                        <div class="backLoginForm" id="backLoginForm">
+                            available account
+                        </div>
                     </form>
                 </div>
             </section>
@@ -156,7 +197,7 @@
                     </div>
 
                     <div class="player">
-                        <div class="player_box">
+                        <!-- <div class="player_box">
                             <div class="player_box--media">
                                 <img src="/assets/files/img/way-back-home.jpg" alt="billboard image"
                                     class="player_img is-playing">
@@ -182,6 +223,61 @@
                                 <i class="fas fa-pause player-play"></i>
                                 <i class="fas fa-forward player-next"></i>
                             </div>
+                        </div> -->
+                        <div class="top-bar">
+                            <box-icon name='chevron-down'></box-icon>
+                            <span>Now Playing</span>
+                            <box-icon name='dots-horizontal-rounded'></box-icon>
+                        </div>
+
+                        <div class="img-area">
+                            <img src="/assets/files/img/1 trieu kha nang.jpg" alt="">
+                        </div>
+
+                        <div class="song-details">
+                            <p class="name">Tuấn huy</p>
+                            <p class="artist">Tuấn Huy</p>
+                        </div>
+
+                        <div class="progress-area">
+                            <div class="progress-bar">
+                                <audio id="main-audio" src=""></audio>
+                            </div>
+
+                            <div class="song-timer">
+                                <span class="current-time">0:00</span>
+                                <span class="max-duration">0:00</span>
+                            </div>
+                        </div>
+
+                        <div class="controls">
+                            <box-icon name='repeat' id="repeat-plist" title="Playlist looped"></box-icon>
+                            <box-icon name='skip-previous' id="prev"></box-icon>
+                            <div class="play-pause">
+                                <box-icon name='play-circle'></box-icon>
+                            </div>
+                            <box-icon name='skip-next' id="next"></box-icon>
+                            <box-icon type='solid' name='playlist' id="more-music"></box-icon>
+                        </div>
+
+                        <div class="music-list">
+                            <div class="header">
+                                <div class="row">
+                                    <box-icon type='solid' name='playlist' id="more-music"></box-icon>
+                                    <span>Music list</span>
+                                </div>
+                                <box-icon name='x' id="close"></box-icon>
+                            </div>
+                            <ul>
+                                <li>
+                                    <div class="row">
+                                        <span>ádasdasd</span>
+                                        <p>ádasd</p>
+                                    </div>
+                                    <span class="audio-duration">3:40</span>
+                                    <audio class="" src=""></audio>
+                                </li>
+                            </ul>
                         </div>
 
                         <div class="quote">
@@ -195,10 +291,13 @@
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+        <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 
-        <script src="/main.js"></script>
-        <script src="/json.js"></script>
-        <script src="/login.js"></script>
+        <!-- <script src="/js/main.js"></script> -->
+        <script src="/js/json.js"></script>
+        <script src="/js/handleSubmit.js"></script>
+        <script src="/js/login.js"></script>
+        <script src="/js/register.js"></script>
 
         <script>
         var swiper = new Swiper(".mySwiper", {
