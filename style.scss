@@ -18,6 +18,14 @@
 		-6px -6px 10px -1px rgba(255, 255, 255, 0.7),
 		inset 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
 		inset -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+
+	--pink: #ff74a4;
+	--violet: #9f6ea3;
+	--lightblack: #515c6f;
+	--white: #ffffff;
+	--darkwhite: #cecaca;
+	--pinkshadow: #ffcbdd;
+	--lightbshadow: rgba(0, 0, 0, 0.15);
 }
 
 * {
@@ -62,6 +70,7 @@ body {
 }
 
 body.active {
+	--darkwhite: #515c6f;
 	--bg-primary: #2f323f;
 	--bg-header: #eeecec;
 	--color: #050938;
@@ -419,7 +428,7 @@ ul {
 					color: #2b86c5;
 				}
 
-				.loginForm {
+				.formGroup {
 					width: 100%;
 					margin-bottom: 1rem;
 					position: relative;
@@ -431,7 +440,7 @@ ul {
 						display: block;
 						outline: none;
 						border-radius: 0.5rem;
-						padding: 2rem 1rem 1rem;
+						padding: 2rem 5rem 1rem 1rem;
 						border: 1px solid #e7e7e7;
 						transition: border 0.25s linear;
 						background-color: transparent;
@@ -443,7 +452,7 @@ ul {
 					}
 
 					input:focus {
-						border-color: black;
+						border-color: #1dbfaf;
 					}
 
 					input:focus + .field_label,
@@ -856,6 +865,8 @@ ul {
 				border-radius: 1.2rem;
 				box-shadow: var(--shadow-1);
 				position: relative;
+				color: var(--black);
+				max-height: 44rem;
 
 				// &_box {
 				// 	padding: 2.5rem;
@@ -984,7 +995,7 @@ ul {
 				// 	}
 				// }
 
-				box-icon {
+				i {
 					cursor: pointer;
 				}
 
@@ -998,54 +1009,39 @@ ul {
 					justify-content: space-between;
 				}
 
-				.top-bar {
-					box-icon {
-						font-size: 30px;
-					}
-
-					box-icon:first-child {
-						margin-left: -7px;
-					}
-
-					span {
-						font-size: 18px;
-						margin-left: -3px;
-					}
-				}
-
 				.img-area {
-					width: 100%;
-					height: 100%;
-					overflow: hidden;
-					margin-top: 25px;
-					border-radius: 15px;
+					width: 15rem;
+					height: 15rem;
+					border-radius: 50%;
+					margin: 0 auto;
 
 					img {
 						width: 100%;
 						height: 100%;
 						object-fit: cover;
+						border-radius: inherit;
 					}
 				}
 
 				.song-details {
 					text-align: center;
-					margin: 30px 0;
+					margin: 3rem 0;
 
 					.name {
-						font-size: 21px;
+						font-size: 2.2rem;
 					}
 
 					.artist {
-						font-size: 18px;
+						font-size: 1.8rem;
 						opacity: 0.9;
-						line-height: 35px;
+						line-height: 3.5rem;
 					}
 				}
 
 				.progress-area {
-					height: 6px;
 					width: 100%;
-					border-radius: 50px;
+					height: 0.6rem;
+					border-radius: 5rem;
 					background: #f0f0f0;
 					cursor: pointer;
 
@@ -1060,109 +1056,95 @@ ul {
 					.progress-bar::before {
 						content: "";
 						position: absolute;
-						height: 12px;
-						width: 12px;
+						height: 1.2rem;
+						width: 1.2rem;
 						border-radius: 50%;
 						top: 50%;
 						right: -5px;
 						z-index: 2;
-						opacity: 0;
 						pointer-events: none;
 						transform: translateY(-50%);
 						background: inherit;
 						transition: opacity 0.2s ease;
 					}
 
-					.progress-bar::before:hover {
-						opacity: 1;
-						pointer-events: auto;
-					}
-
 					.song-timer {
-						margin-top: 2px;
+						margin-top: 0.4rem;
 
 						span {
-							font-size: 13px;
+							font-size: 1.4rem;
 						}
 					}
 				}
 
 				.controls {
-					margin: 40px 0 5px 0;
+					width: 100%;
+					margin: 4rem 0 1rem 0;
 
-					box-icon {
-						font-size: 28px;
-						height: 43px;
-						width: 43px;
+					i {
+						font-size: 3.2rem;
 						user-select: none;
-						background: linear-gradient(pink 0%, violet 100%);
+						background: linear-gradient(var(--pink) 0%, var(--darkwhite) 100%);
 						background-clip: text;
 						-webkit-background-clip: text;
 						-webkit-text-fill-color: transparent;
 					}
 
-					box-icon:nth-child(2),
-					box-icon:nth-child(4) {
-						font-size: 43px;
-						height: 43px;
-						width: 43px;
+					i:nth-child(2),
+					i:nth-child(4) {
+						font-size: 4.4rem;
 					}
 
-					#prev {
-						margin-right: -13px;
-					}
-
-					#next {
-						margin-left: -13px;
-					}
-
-					.play-pause {
-						height: 54px;
-						width: 54px;
+					#play-pause {
 						display: flex;
-						cursor: pointer;
 						align-items: center;
 						justify-content: center;
 						border-radius: 50%;
-						background: linear-gradient(white 0%, black 100%);
-						box-shadow: 0px 0px 5px pink;
+						background: linear-gradient(var(--white) 0%, var(--darkwhite) 100%);
+						box-shadow: 0px 0px 5px var(--pink);
+						width: 6rem;
+						height: 6rem;
+						font-size: 3rem;
+						cursor: pointer;
 
-						box-icon {
-							height: 43px;
-							width: 43px;
-							line-height: 43px;
+						i {
 							text-align: center;
 							background: inherit;
 							background-clip: text;
 							-webkit-background-clip: text;
 							-webkit-text-fill-color: transparent;
 							position: absolute;
+							width: 2.8rem;
+							height: 5.5rem;
+							line-height: 4.8rem;
 						}
 					}
 
-					.play-pause::before {
+					#play-pause::before {
 						position: absolute;
 						content: "";
-						height: 43px;
-						width: 43px;
+						height: 5rem;
+						width: 5rem;
 						border-radius: inherit;
-						background: linear-gradient(white 0%, violet 100%);
+						background: linear-gradient(var(--pink) 0%, var(--violet) 100%);
 					}
 				}
 
 				.music-list {
 					position: absolute;
-					background: var(--white);
+					background: var(--bg-primary);
 					width: 100%;
 					left: 0;
-					bottom: -16%;
+					bottom: 0;
 					opacity: 0;
 					pointer-events: none;
 					z-index: 5;
-					padding: 15px 30px;
-					border-radius: 15px;
+					padding: 1.5rem 2rem;
+					border-bottom-left-radius: 1.2rem;
+					border-bottom-right-radius: 1.2rem;
 					box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.1);
 					transition: all 0.15s ease-out;
+					color: var(--black);
 
 					.header {
 						.row {
@@ -1170,7 +1152,7 @@ ul {
 							align-items: center;
 							font-size: 19px;
 
-							box-icon {
+							i {
 								cursor: default;
 							}
 
@@ -1185,21 +1167,21 @@ ul {
 					}
 
 					ul {
-						margin: 10px 0;
-						max-height: 260px;
+						margin: 1rem 0;
+						max-height: 22rem;
 						overflow: auto;
 
 						li {
 							list-style: none;
 							display: flex;
 							cursor: pointer;
-							padding-bottom: 10px;
-							margin-bottom: 5px;
+							padding-bottom: 1rem;
+							margin-bottom: .5rem;
 							border-bottom: 1px solid #e5e5e5;
 
 							.row {
 								span {
-									font-size: 17px;
+									font-size: 1.8rem;
 								}
 
 								p {

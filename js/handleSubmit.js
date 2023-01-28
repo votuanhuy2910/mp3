@@ -108,3 +108,29 @@ function checkPassword(data) {
 		minLength.classList.remove("valid");
 	}
 }
+
+const player = document.querySelector(".player");
+const musicImg = document.querySelector(".img-area img");
+const musicName = document.querySelector(".song-details .name");
+const musicArtist = document.querySelector(".song-details .artist");
+const playPauseBtn = document.querySelector(".play-pause");
+const prevBtn = document.querySelector("#prev");
+const nextBtn = document.querySelector("#next");
+const mainAudio = document.querySelector("#main-audio");
+const progressArea = document.querySelector(".progress-area");
+const progressBar = document.querySelector(".progress-bar");
+const musicList = document.querySelector(".music-list");
+const moreMusicBtn = document.querySelector("#more-music");
+const closeMoreMusic = document.querySelector("#close");
+
+moreMusicBtn.addEventListener("click", () => {
+	musicList.classList.toggle("show");
+});
+
+closeMoreMusic.addEventListener("click", () => {
+	moreMusicBtn.click();
+});
+
+playPauseBtn.onclick = () => {
+	playPauseBtn.classList.toggle("ti-player-pause");
+};

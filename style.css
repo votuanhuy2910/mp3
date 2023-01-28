@@ -14,6 +14,13 @@
   	-6px -6px 10px -1px rgba(255, 255, 255, 0.7),
   	inset 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
   	inset -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+  --pink: #ff74a4;
+  --violet: #9f6ea3;
+  --lightblack: #515c6f;
+  --white: #ffffff;
+  --darkwhite: #cecaca;
+  --pinkshadow: #ffcbdd;
+  --lightbshadow: rgba(0, 0, 0, 0.15);
 }
 
 * {
@@ -61,6 +68,7 @@ body {
 }
 
 body.active {
+  --darkwhite: #515c6f;
   --bg-primary: #2f323f;
   --bg-header: #eeecec;
   --color: #050938;
@@ -388,47 +396,47 @@ ul {
 .wrapper .header_login--form .registerForm:hover {
   color: #2b86c5;
 }
-.wrapper .header_login--form .loginForm {
+.wrapper .header_login--form .formGroup {
   width: 100%;
   margin-bottom: 1rem;
   position: relative;
   display: flex;
   flex-direction: column-reverse;
 }
-.wrapper .header_login--form .loginForm input {
+.wrapper .header_login--form .formGroup input {
   width: 100%;
   display: block;
   outline: none;
   border-radius: 0.5rem;
-  padding: 2rem 1rem 1rem;
+  padding: 2rem 5rem 1rem 1rem;
   border: 1px solid #e7e7e7;
   transition: border 0.25s linear;
   background-color: transparent;
   font-size: 1.8rem;
 }
-.wrapper .header_login--form .loginForm input:hover {
+.wrapper .header_login--form .formGroup input:hover {
   border-color: #1dbfaf;
 }
-.wrapper .header_login--form .loginForm input:focus {
-  border-color: black;
+.wrapper .header_login--form .formGroup input:focus {
+  border-color: #1dbfaf;
 }
-.wrapper .header_login--form .loginForm input:not(:-moz-placeholder-shown) + .field_label {
+.wrapper .header_login--form .formGroup input:not(:-moz-placeholder-shown) + .field_label {
   transform: translateY(-5px);
   top: 1rem;
   font-weight: bold;
 }
-.wrapper .header_login--form .loginForm input:not(:-ms-input-placeholder) + .field_label {
+.wrapper .header_login--form .formGroup input:not(:-ms-input-placeholder) + .field_label {
   transform: translateY(-5px);
   top: 1rem;
   font-weight: bold;
 }
-.wrapper .header_login--form .loginForm input:focus + .field_label,
-.wrapper .header_login--form .loginForm input:not(:placeholder-shown) + .field_label {
+.wrapper .header_login--form .formGroup input:focus + .field_label,
+.wrapper .header_login--form .formGroup input:not(:placeholder-shown) + .field_label {
   transform: translateY(-5px);
   top: 1rem;
   font-weight: bold;
 }
-.wrapper .header_login--form .loginForm .field_label {
+.wrapper .header_login--form .formGroup .field_label {
   color: black;
   text-transform: capitalize;
   position: absolute;
@@ -438,8 +446,8 @@ ul {
   pointer-events: none;
   transition: 0.25s linear;
 }
-.wrapper .header_login--form .loginForm .checkPass,
-.wrapper .header_login--form .loginForm #checkPass {
+.wrapper .header_login--form .formGroup .checkPass,
+.wrapper .header_login--form .formGroup #checkPass {
   position: absolute;
   transform: translateY(-50%);
   top: 50%;
@@ -454,13 +462,13 @@ ul {
   border-radius: 50%;
   cursor: pointer;
 }
-.wrapper .header_login--form .loginForm .checkPass::before,
-.wrapper .header_login--form .loginForm #checkPass::before {
+.wrapper .header_login--form .formGroup .checkPass::before,
+.wrapper .header_login--form .formGroup #checkPass::before {
   content: "\f06e";
   font-family: fontAwesome;
 }
-.wrapper .header_login--form .loginForm .checkPass.hide::before,
-.wrapper .header_login--form .loginForm #checkPass.hide::before {
+.wrapper .header_login--form .formGroup .checkPass.hide::before,
+.wrapper .header_login--form .formGroup #checkPass.hide::before {
   content: "\f070";
 }
 .wrapper .header_login--form .loginForm.invalid .field_input {
@@ -795,8 +803,10 @@ ul {
   border-radius: 1.2rem;
   box-shadow: var(--shadow-1);
   position: relative;
+  color: var(--black);
+  max-height: 44rem;
 }
-.wrapper .content_item .player box-icon {
+.wrapper .content_item .player i {
   cursor: pointer;
 }
 .wrapper .content_item .player .top-bar,
@@ -808,45 +818,35 @@ ul {
   align-items: center;
   justify-content: space-between;
 }
-.wrapper .content_item .player .top-bar box-icon {
-  font-size: 30px;
-}
-.wrapper .content_item .player .top-bar box-icon:first-child {
-  margin-left: -7px;
-}
-.wrapper .content_item .player .top-bar span {
-  font-size: 18px;
-  margin-left: -3px;
-}
 .wrapper .content_item .player .img-area {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  margin-top: 25px;
-  border-radius: 15px;
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  margin: 0 auto;
 }
 .wrapper .content_item .player .img-area img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: inherit;
 }
 .wrapper .content_item .player .song-details {
   text-align: center;
-  margin: 30px 0;
+  margin: 3rem 0;
 }
 .wrapper .content_item .player .song-details .name {
-  font-size: 21px;
+  font-size: 2.2rem;
 }
 .wrapper .content_item .player .song-details .artist {
-  font-size: 18px;
+  font-size: 1.8rem;
   opacity: 0.9;
-  line-height: 35px;
+  line-height: 3.5rem;
 }
 .wrapper .content_item .player .progress-area {
-  height: 6px;
   width: 100%;
-  border-radius: 50px;
+  height: 0.6rem;
+  border-radius: 5rem;
   background: #f0f0f0;
   cursor: pointer;
 }
@@ -860,106 +860,95 @@ ul {
 .wrapper .content_item .player .progress-area .progress-bar::before {
   content: "";
   position: absolute;
-  height: 12px;
-  width: 12px;
+  height: 1.2rem;
+  width: 1.2rem;
   border-radius: 50%;
   top: 50%;
   right: -5px;
   z-index: 2;
-  opacity: 0;
   pointer-events: none;
   transform: translateY(-50%);
   background: inherit;
   transition: opacity 0.2s ease;
 }
-.wrapper .content_item .player .progress-area .progress-bar::before:hover {
-  opacity: 1;
-  pointer-events: auto;
-}
 .wrapper .content_item .player .progress-area .song-timer {
-  margin-top: 2px;
+  margin-top: 0.4rem;
 }
 .wrapper .content_item .player .progress-area .song-timer span {
-  font-size: 13px;
+  font-size: 1.4rem;
 }
 .wrapper .content_item .player .controls {
-  margin: 40px 0 5px 0;
+  width: 100%;
+  margin: 4rem 0 1rem 0;
 }
-.wrapper .content_item .player .controls box-icon {
-  font-size: 28px;
-  height: 43px;
-  width: 43px;
+.wrapper .content_item .player .controls i {
+  font-size: 3.2rem;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  background: linear-gradient(pink 0%, violet 100%);
+  background: linear-gradient(var(--pink) 0%, var(--darkwhite) 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.wrapper .content_item .player .controls box-icon:nth-child(2),
-.wrapper .content_item .player .controls box-icon:nth-child(4) {
-  font-size: 43px;
-  height: 43px;
-  width: 43px;
+.wrapper .content_item .player .controls i:nth-child(2),
+.wrapper .content_item .player .controls i:nth-child(4) {
+  font-size: 4.4rem;
 }
-.wrapper .content_item .player .controls #prev {
-  margin-right: -13px;
-}
-.wrapper .content_item .player .controls #next {
-  margin-left: -13px;
-}
-.wrapper .content_item .player .controls .play-pause {
-  height: 54px;
-  width: 54px;
+.wrapper .content_item .player .controls #play-pause {
   display: flex;
-  cursor: pointer;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: linear-gradient(white 0%, black 100%);
-  box-shadow: 0px 0px 5px pink;
+  background: linear-gradient(var(--white) 0%, var(--darkwhite) 100%);
+  box-shadow: 0px 0px 5px var(--pink);
+  width: 6rem;
+  height: 6rem;
+  font-size: 3rem;
+  cursor: pointer;
 }
-.wrapper .content_item .player .controls .play-pause box-icon {
-  height: 43px;
-  width: 43px;
-  line-height: 43px;
+.wrapper .content_item .player .controls #play-pause i {
   text-align: center;
   background: inherit;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   position: absolute;
+  width: 2.8rem;
+  height: 5.5rem;
+  line-height: 4.8rem;
 }
-.wrapper .content_item .player .controls .play-pause::before {
+.wrapper .content_item .player .controls #play-pause::before {
   position: absolute;
   content: "";
-  height: 43px;
-  width: 43px;
+  height: 5rem;
+  width: 5rem;
   border-radius: inherit;
-  background: linear-gradient(white 0%, violet 100%);
+  background: linear-gradient(var(--pink) 0%, var(--violet) 100%);
 }
 .wrapper .content_item .player .music-list {
   position: absolute;
-  background: var(--white);
+  background: var(--bg-primary);
   width: 100%;
   left: 0;
-  bottom: -16%;
+  bottom: 0;
   opacity: 0;
   pointer-events: none;
   z-index: 5;
-  padding: 15px 30px;
-  border-radius: 15px;
+  padding: 1.5rem 2rem;
+  border-bottom-left-radius: 1.2rem;
+  border-bottom-right-radius: 1.2rem;
   box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.1);
   transition: all 0.15s ease-out;
+  color: var(--black);
 }
 .wrapper .content_item .player .music-list .header .row {
   display: flex;
   align-items: center;
   font-size: 19px;
 }
-.wrapper .content_item .player .music-list .header .row box-icon {
+.wrapper .content_item .player .music-list .header .row i {
   cursor: default;
 }
 .wrapper .content_item .player .music-list .header .row span {
@@ -969,20 +958,20 @@ ul {
   font-size: 22px;
 }
 .wrapper .content_item .player .music-list ul {
-  margin: 10px 0;
-  max-height: 260px;
+  margin: 1rem 0;
+  max-height: 22rem;
   overflow: auto;
 }
 .wrapper .content_item .player .music-list ul li {
   list-style: none;
   display: flex;
   cursor: pointer;
-  padding-bottom: 10px;
-  margin-bottom: 5px;
+  padding-bottom: 1rem;
+  margin-bottom: 0.5rem;
   border-bottom: 1px solid #e5e5e5;
 }
 .wrapper .content_item .player .music-list ul li .row span {
-  font-size: 17px;
+  font-size: 1.8rem;
 }
 .wrapper .content_item .player .music-list ul li .row p {
   opacity: 0.9;
