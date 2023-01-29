@@ -15,7 +15,7 @@ btnLogin.addEventListener("click", (e) => {
 			user.password === inputPassword.value
 		) {
 			alert("Login successful!");
-			window.location.href = "/Layout/home.html";
+			window.location.href = "/home.html";
 		} else {
 			alert("Login failed!");
 		}

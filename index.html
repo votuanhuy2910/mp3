@@ -5,10 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
         <link rel="icon" href="/assets/icon-1.png">
 
@@ -67,7 +66,7 @@
                     </div>
 
                     <div id="user" class="header_tool--icon user">
-                        <i class="fa fa-user"></i>
+                        <i class="material-icons">login</i>
                     </div>
                 </div>
 
@@ -211,7 +210,7 @@
                             <div class="player_box--progress">
                                 <input type="range" id="progress-bar" class="bar" min="0"
                                     max="242.233469" value="0">
-                                <audio src="/assets/files/WBH.mp3" id="song"></audio>
+                                <audio src="/assets/files/songs/WBH.mp3" id="song"></audio>
                             </div>
 
                             <div class="player_box--number">
@@ -226,12 +225,12 @@
                             </div>
                         </div> -->
                         <div class="img-area">
-                            <img src="/assets/files/img/1 trieu kha nang.jpg" alt="">
+                            <img src="" alt="">
                         </div>
 
                         <div class="song-details">
-                            <p class="name">Tuấn huy</p>
-                            <p class="artist">Tuấn Huy</p>
+                            <b class="name"></b>
+                            <p class="artist"></p>
                         </div>
 
                         <div class="progress-area">
@@ -246,38 +245,31 @@
                         </div>
 
                         <div class="controls">
-                            <i class="ti ti-repeat" id="repeat-plist" title="Playlist looped"></i>
-                            <i class="ti ti-player-skip-back" id="prev"></i>
+                            <i id="repeat-plist" class="material-icons" title="Playlist looped">repeat</i>
+                            <i id="prev" class="material-icons">skip_previous</i>
 
-                            <div id="play-pause">
-                                <i class="ti ti-player-play"></i>
+                            <div class="play-pause">
+                                <i class="material-icons play">play_arrow</i>
                             </div>
 
-                            <i class="ti ti-player-skip-forward" id="next"></i>
-                            <i class="ti ti-playlist" id="more-music"></i>
+                            <i id="next" class="material-icons">skip_next</i>
+                            <i id="more-music" class="material-icons">apps</i>
                         </div>
 
-                        <div class="music-list">
+                        <!-- <div class="music-list">
                             <div class="header">
                                 <div class="row">
-                                    <i class="ti ti-playlist"></i>
+                                    <i class="list material-icons">queue_music</i>
                                     <span>Music list</span>
                                 </div>
-                                <i class="ti ti-x" id="close"></i>
+
+                                <i id="close" class="material-icons">close</i>
                             </div>
 
                             <ul>
-                                <li>
-                                    <div class="row">
-                                        <span></span>
-                                        <p></p>
-                                    </div>
-                                    <span class="audio-duration"></span>
-                                    <audio class="" src=""></audio>
-                                </li>
-                            </ul>
-                        </div>
 
+                            </ul>
+                        </div> -->
                     </div>
 
                     <div class="quote">
@@ -291,11 +283,12 @@
 
         <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
-        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-        <script src="/js/main.js"></script>
+        <!-- <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> -->
         <script src="/js/json.js"></script>
-        <script src="/js/handleSubmit.js"></script>
+        <script src="/js/allMusic.js"></script>
+        <script src="/js/main.js"></script>
+        <script src="/js/handle.js"></script>
         <script src="/js/login.js"></script>
         <script src="/js/register.js"></script>
 

@@ -1,0 +1,80 @@
+let allMusic = [
+	{
+		name: "way back home",
+		artist: "shaun",
+		img: "way-back-home",
+		src: "WBH",
+	},
+	{
+		name: "faded",
+		artist: "alan walker",
+		img: "fadedjpg",
+		src: "Faded",
+	},
+	{
+		name: "mascara",
+		artist: "chillies",
+		img: "mascara",
+		src: "Mascara",
+	},
+    {
+        name: "nơi này có anh",
+        artist: "sơn tùng M-TP",
+        img: "noi nay co anh",
+        src: "Noi Nay Co Anh",
+    },
+	{
+		name: "giữa đại lộ đông tây",
+		artist: "uyên linh",
+		img: "giua dai lo dong tay",
+		src: "Giua Dai Lo Dong Tay",
+	},
+	{
+		name: "thủy triều",
+		artist: "phó mộng đồng",
+		img: "thuy trieu",
+		src: "Thuy trieu",
+	},
+	{
+		name: "quẻ bói",
+		artist: "thôi tử cách",
+		img: "que boi",
+		src: "que boi",
+	},
+	{
+		name: "xích linh",
+		artist: "chấp tố hề",
+		img: "xich linh",
+		src: "xich linh",
+	},
+    {
+		name: "kẻ theo đuổi ánh sáng",
+		artist: "huy vạc",
+		img: "ke theo duoi anh sang",
+		src: "Ke Theo Duoi Anh Sang",
+	},
+    {
+		name: "see you again",
+		artist: "wiz khalifa",
+		img: "see-you-again",
+		src: "See you again",
+	},
+    {
+		name: "that girl",
+		artist: "olly murs",
+		img: "that girl",
+		src: "That Girl - Olly Murs",
+	},
+    {
+		name: "thập niên nhân gian",
+		artist: "lão can ma",
+		img: "10 nam",
+		src: "10 Nhan Gian",
+	},
+    {
+		name: "alone",
+		artist: "alan walker",
+		img: "alone",
+		src: "Alone",
+	},
+];
