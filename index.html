@@ -1,203 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
-        <link rel="icon" href="/assets/icon-1.png">
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+		/>
+		<link rel="icon" href="/assets/icon-1.png" />
 
-        <link rel="stylesheet" href="/style.css">
+		<link rel="stylesheet" href="/style.css" />
 
-        <title>MP3</title>
-    </head>
-    <body>
-        <div class="wrapper">
-            <div class="sidebar">
-                <div class="profile">
-                    <img src="/assets/logo2.png" alt="avt" class="profile_avatar">
-                    <h3 class="profile_name">Vo Tuan Huy</h3>
-                    <span class="profile_position">Front - End Developer</span>
-                </div>
+		<title>MP3</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="sidebar">
+				<div class="profile">
+					<img src="/assets/logo2.png" alt="avt" class="profile_avatar" />
+					<h3 class="profile_name">Vo Tuan Huy</h3>
+					<span class="profile_position">Front - End Developer</span>
+				</div>
 
-                <nav class="navbar">
-                    <a href="">album</a>
-                    <a href="">V-Pop</a>
-                    <a href="">C-Pop</a>
-                    <a href="">K-Pop</a>
-                    <a href="">US-UK</a>
-                </nav>
+				<nav class="navbar">
+					<a href="">album</a>
+					<a href="">V-Pop</a>
+					<a href="">C-Pop</a>
+					<a href="">K-Pop</a>
+					<a href="">US-UK</a>
+				</nav>
 
-                <div class="contact">
-                    <a href="#" class="fab fa-facebook"></a>
-                    <a href="#" class="fab fa-youtube"></a>
-                    <a href="#" class="fab fa-github"></a>
-                </div>
-            </div>
+				<div class="contact">
+					<a href="#" class="fab fa-facebook"></a>
+					<a href="#" class="fab fa-youtube"></a>
+					<a href="#" class="fab fa-github"></a>
+				</div>
+			</div>
 
-            <section class="header">
-                <div class="header_search">
-                    <i class="fas fa-search header_search--icon"></i>
-                    <input type="text" inputmode="search" placeholder="Search..."
-                        class="header_search--input">
-                </div>
+			<section class="header">
+				<div class="header_search">
+					<i class="fas fa-search header_search--icon"></i>
+					<input
+						type="text"
+						inputmode="search"
+						placeholder="Search..."
+						class="header_search--input"
+					/>
+				</div>
 
-                <div class="header_tool">
-                    <div class="header_tool--icon">
-                        <i class="fa fa-bell"></i>
-                    </div>
+				<div class="header_tool">
+					<div class="header_tool--icon">
+						<i class="fa fa-bell"></i>
+					</div>
 
-                    <div class="header_tool--icon">
-                        <i class="tool-icon fa fa-cog"></i>
-                    </div>
+					<div class="header_tool--icon">
+						<i class="tool-icon fa fa-cog"></i>
+					</div>
 
-                    <div class="header_tool--icon moon">
-                        <i class="tool-icon fas fa-moon"></i>
-                    </div>
+					<div class="header_tool--icon moon">
+						<i class="tool-icon fas fa-moon"></i>
+					</div>
 
-                    <div class="header_tool--free">free</div>
+					<div class="header_tool--free">free</div>
 
-                    <div class="header_tool--icon bars">
-                        <i class="fa fa-bars"></i>
-                    </div>
+					<div class="header_tool--icon bars">
+						<i class="fa fa-bars"></i>
+					</div>
 
-                    <div id="user" class="header_tool--icon user">
-                        <i class="material-icons">login</i>
-                    </div>
-                </div>
+					<div id="user" class="header_tool--icon user">
+						<i class="material-icons">login</i>
+					</div>
+				</div>
 
-                <div id="login" class="header_login">
-                    <form action="" class="header_login--form">
-                        <div class="loginClose">
-                            <i class="fas fa-close"></i>
-                        </div>
+				<div id="login" class="header_login">
+					<form action="" class="header_login--form">
+						<div class="loginClose">
+							<i class="fas fa-close"></i>
+						</div>
 
-                        <header class="loginHeader">
-                            login
-                        </header>
+						<header class="loginHeader">login</header>
 
-                        <div class="formGroup">
-                            <input class="field_input" maxlength="24" type="email" name="emailLogin"
-                                id="emailLogin" placeholder=" ">
-                            <label for="username" class="field_label">email</label>
-                        </div>
+						<div class="formGroup">
+							<input
+								class="field_input"
+								maxlength="24"
+								type="email"
+								name="emailLogin"
+								id="emailLogin"
+								placeholder=" "
+							/>
+							<label for="username" class="field_label">email</label>
+						</div>
 
-                        <div class="formGroup">
-                            <input class="field_input" maxlength="16" type="password"
-                                name="passwordLogin" id="passwordLogin" placeholder=" ">
-                            <label for="password" class="field_label">password</label>
-                            <span id="checkPass"></span>
-                        </div>
+						<div class="formGroup">
+							<input
+								class="field_input"
+								maxlength="16"
+								type="password"
+								name="passwordLogin"
+								id="passwordLogin"
+								placeholder=" "
+							/>
+							<label for="password" class="field_label">password</label>
+							<span id="checkPass"></span>
+						</div>
 
-                        <div class="loginBtn">
-                            <button class="loginBtn_done" id="btnLogin">
-                                <i class="fas fa-arrow-right"></i>
-                            </button>
-                        </div>
+						<div class="loginBtn">
+							<button class="loginBtn_done" id="btnLogin">
+								<i class="fas fa-arrow-right"></i>
+							</button>
+						</div>
 
-                        <div id="registerForm" class="registerForm">
-                            don't have account?
-                        </div>
-                    </form>
-                </div>
+						<div id="registerForm" class="registerForm">
+							don't have account?
+						</div>
+					</form>
+				</div>
 
-                <div id="register" class="header_login">
-                    <form action="" class="header_login--form">
-                        <div class="registerClose">
-                            <i class="fas fa-close"></i>
-                        </div>
+				<div id="toast" class="header_toast">
+					<!-- <div class="toast success">
+						<i class="fa-solid fa-circle-check"></i>
+						<p>Login successfully</p>
+                        <span>Welcome to my MP3 website</span>
+                        <a href="/home.html">OK</a>
+						<div class="cout_down"></div>
+					</div> -->
+				</div>
 
-                        <header class="loginHeader">
-                            register
-                        </header>
+				<div id="register" class="header_login">
+					<form action="" class="header_login--form">
+						<div class="registerClose">
+							<i class="fas fa-close"></i>
+						</div>
 
-                        <div class="formGroup">
-                            <input class="field_input" maxlength="24" type="email" name="emailRegister"
-                                id="emailRegister" placeholder=" ">
-                            <label for="username" class="field_label">email</label>
-                        </div>
+						<header class="loginHeader">register</header>
 
-                        <div class="formGroup">
-                            <input class="field_input" maxlength="16" type="password"
-                                name="passwordRegister" id="passwordRegister" placeholder=" "
-                                onkeyup="checkPassword(this.value)">
-                            <label for="password" class="field_label">password</label>
-                            <span id="checkPass"></span>
-                        </div>
+						<div class="formGroup">
+							<input
+								class="field_input"
+								maxlength="24"
+								type="email"
+								name="emailRegister"
+								id="emailRegister"
+								placeholder=" "
+							/>
+							<label for="username" class="field_label">email</label>
+						</div>
 
-                        <div id="validation">
-                            <ul>
-                                <li id="lower">At least one lowercase character</li>
-                                <li id="upper">At least one uppercase character</li>
-                                <li id="number">At least one number</li>
-                                <li id="special">At least one special character</li>
-                                <li id="length">At least 8 character</li>
-                            </ul>
-                        </div>
+						<div class="formGroup">
+							<input
+								class="field_input"
+								maxlength="16"
+								type="password"
+								name="passwordRegister"
+								id="passwordRegister"
+								placeholder=" "
+								onkeyup="checkPassword(this.value)"
+							/>
+							<label for="password" class="field_label">password</label>
+							<span id="checkPass"></span>
+						</div>
 
-                        <!-- <div class="formGroup">
+						<div id="validation">
+							<ul>
+								<li id="lower">At least one lowercase character</li>
+								<li id="upper">At least one uppercase character</li>
+								<li id="number">At least one number</li>
+								<li id="special">At least one special character</li>
+								<li id="length">At least 8 character</li>
+							</ul>
+						</div>
+
+						<!-- <div class="formGroup">
                             <input class="field_input" type="password" name="confirmPassword" id="confirmPassword" placeholder=" ">
                             <label for="confirmPassword" class="field_label">confirm password</label>
                         </div> -->
-                        <div class="loginBtn">
-                            <button class="loginBtn_done" id="btnRegister">
-                                <i class="fas fa-arrow-right"></i>
-                            </button>
-                        </div>
+						<div class="loginBtn">
+							<button class="loginBtn_done" id="btnRegister">
+								<i class="fas fa-arrow-right"></i>
+							</button>
+						</div>
 
-                        <div class="backLoginForm" id="backLoginForm">
-                            available account
-                        </div>
-                    </form>
-                </div>
-            </section>
+						<div class="backLoginForm" id="backLoginForm">
+							available account
+						</div>
+					</form>
+				</div>
+			</section>
 
-            <section class="heading-box">
-                <h2 class="heading">billboard chart</h2>
-            </section>
+			<section class="heading-box">
+				<h2 class="heading">billboard chart</h2>
+			</section>
 
-            <section class="billboard_list">
+			<section class="billboard_list"></section>
 
-            </section>
+			<div class="swiper-container">
+				<div class="swiper mySwiper">
+					<div class="swiper-wrapper"></div>
+				</div>
+			</div>
 
-            <div class="swiper-container">
-                <div class="swiper mySwiper">
-                    <div class="swiper-wrapper">
+			<section class="content">
+				<div class="content_item">
+					<div class="heading-box">
+						<h2 class="heading">album</h2>
+						<span class="sub-heading">List song</span>
+					</div>
 
-                    </div>
-                </div>
-            </div>
+					<div class="song_list"></div>
 
-            <section class="content">
-                <div class="content_item">
-                    <div class="heading-box">
-                        <h2 class="heading">album</h2>
-                        <span class="sub-heading">List song</span>
-                    </div>
+					<div class="quote">
+						<span> future depends on your dreams </span>
+					</div>
+				</div>
 
-                    <div class="song_list">
+				<div class="content_item">
+					<div class="heading-box">
+						<h2 class="heading">now playing</h2>
+						<span class="sub-heading"
+							>Like "relax" and "chill" all at once</span
+						>
+					</div>
 
-                    </div>
-
-                    <div class="quote">
-                        <span>
-                            future depends on your dreams
-                        </span>
-                    </div>
-                </div>
-
-                <div class="content_item">
-                    <div class="heading-box">
-                        <h2 class="heading">now playing</h2>
-                        <span class="sub-heading">Like "relax" and "chill" all at once</span>
-                    </div>
-
-                    <div class="player">
-                        <!-- <div class="player_box">
+					<div class="player">
+						<!-- <div class="player_box">
                             <div class="player_box--media">
                                 <img src="/assets/files/img/way-back-home.jpg" alt="billboard image"
                                     class="player_img is-playing">
@@ -224,39 +260,44 @@
                                 <i class="fas fa-forward player-next"></i>
                             </div>
                         </div> -->
-                        <div class="img-area">
-                            <img src="" alt="">
-                        </div>
+						<div class="img-area">
+							<img src="" alt="" />
+						</div>
 
-                        <div class="song-details">
-                            <b class="name"></b>
-                            <p class="artist"></p>
-                        </div>
+						<div class="song-details">
+							<b class="name"></b>
+							<p class="artist"></p>
+						</div>
 
-                        <div class="progress-area">
-                            <div class="progress-bar">
-                                <audio id="main-audio" src=""></audio>
-                            </div>
+						<div class="progress-area">
+							<div class="progress-bar">
+								<audio id="main-audio" src=""></audio>
+							</div>
 
-                            <div class="song-timer">
-                                <span class="current-time">0:00</span>
-                                <span class="max-duration">0:00</span>
-                            </div>
-                        </div>
+							<div class="song-timer">
+								<span class="current-time">0:00</span>
+								<span class="max-duration">0:00</span>
+							</div>
+						</div>
 
-                        <div class="controls">
-                            <i id="repeat-plist" class="material-icons" title="Playlist looped">repeat</i>
-                            <i id="prev" class="material-icons">skip_previous</i>
+						<div class="controls">
+							<i
+								id="repeat-plist"
+								class="material-icons"
+								title="Playlist looped"
+								>repeat</i
+							>
+							<i id="prev" class="material-icons">skip_previous</i>
 
-                            <div class="play-pause">
-                                <i class="material-icons play">play_arrow</i>
-                            </div>
+							<div class="play-pause">
+								<i class="material-icons play">play_arrow</i>
+							</div>
 
-                            <i id="next" class="material-icons">skip_next</i>
-                            <i id="more-music" class="material-icons">apps</i>
-                        </div>
+							<i id="next" class="material-icons">skip_next</i>
+							<i id="more-music" class="material-icons">apps</i>
+						</div>
 
-                        <!-- <div class="music-list">
+						<!-- <div class="music-list">
                             <div class="header">
                                 <div class="row">
                                     <i class="list material-icons">queue_music</i>
@@ -270,33 +311,31 @@
 
                             </ul>
                         </div> -->
-                    </div>
+					</div>
 
-                    <div class="quote">
-                        <span>
-                            whatever you do
-                        </span>
-                    </div>
-                </div>
-            </section>
-        </div>
+					<div class="quote">
+						<span> whatever you do </span>
+					</div>
+				</div>
+			</section>
+		</div>
 
-        <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
-        <!-- <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+		<!-- <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> -->
-        <script src="/js/json.js"></script>
-        <script src="/js/allMusic.js"></script>
-        <script src="/js/main.js"></script>
-        <script src="/js/handle.js"></script>
-        <script src="/js/login.js"></script>
-        <script src="/js/register.js"></script>
+		<script src="/js/json.js"></script>
+		<script src="/js/allMusic.js"></script>
+		<script src="/js/main.js"></script>
+		<script src="/js/handle.js"></script>
+		<script src="/js/login.js"></script>
+		<script src="/js/register.js"></script>
 
-        <script>
-        var swiper = new Swiper(".mySwiper", {
-            effect: "cards",
-            grabCursor: true,
-        });
-    </script>
-    </body>
+		<script>
+			var swiper = new Swiper(".mySwiper", {
+				effect: "cards",
+				grabCursor: true,
+			});
+		</script>
+	</body>
 </html>
