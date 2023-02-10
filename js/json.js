@@ -221,7 +221,7 @@ const app = {
 		{
 			id: 14,
 			index: "15",
-			src: "/assets/files/img/ke theo duoi sanh sang.jpg",
+			src: "/assets/files/img/ke theo duoi anh sang.jpg",
 			name: "kẻ theo đuổi ánh sáng",
 			artist: "huy vạc",
 			time: "3:32",

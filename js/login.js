@@ -7,7 +7,54 @@ btnLogin.disabled = true;
 inputEmail.addEventListener("keyup", btnState);
 inputPassword.addEventListener("keyup", btnState);
 
-function handleShowAndHideToast(type) {
+function btnState() {
+	if (inputEmail.value === "" && inputPassword.value === "") {
+		btnLogin.disabled = true;
+	} else {
+		btnLogin.disabled = false;
+	}
+}
+
+const toastDetails = {
+	success: {
+		icon: "fa-circle-check",
+		message: "Successfully",
+	},
+	invalid_username: {
+		icon: "fa-user",
+		message: "Warning: Invalid username",
+	},
+	invalid_password: {
+		icon: "fa-key",
+		message: "Warning: Invalid password",
+	},
+	fill_form: {
+		icon: "fa-circle-exclamation",
+		message: "Warning: Please fill out the form",
+	},
+	fill_username: {
+		icon: "fa-circle-exclamation",
+		message: "Warning: Please email...",
+	},
+	fill_password: {
+		icon: "fa-circle-exclamation",
+		message: "Warning: Please password...",
+	},
+	error_username: {
+		icon: "fa-triangle-exclamation",
+		message: "Error: Please enter email again...",
+	},
+	error_password: {
+		icon: "fa-triangle-exclamation",
+		message: "Error: Please enter password again...",
+	},
+	error_username_password: {
+		icon: "fa-triangle-exclamation",
+		message: "Error: Please re-enter email & password",
+	},
+};
+
+function handleShowAndHideToastSuccess(type) {
 	const toast = document.createElement("div");
 	toast.classList.add("toast", type);
 
@@ -21,37 +68,100 @@ function handleShowAndHideToast(type) {
 		`;
 	}
 
-	if (type === "error") {
+	const login = document.getElementById("login");
+	login.style.display = "none";
+
+	const toastListSuccess = document.querySelector("#toast_success");
+	toastListSuccess.appendChild(toast);
+}
+
+function handleShowAndHideToastError(type) {
+	const { icon, message } = toastDetails[type];
+	const toast = document.createElement("div");
+	toast.classList.add("toast", type);
+
+	if (type === "invalid_username") {
 		toast.innerHTML = `
-			<i class="fa-solid fa-circle-error"></i>
-			<p>Login successfully</p>
-			<span>Welcome to my MP3 website</span>
-			<a href="/home.html">OK</a>
+			<i class="fa-solid ${icon}"></i>
+			<p>${message}</p>
+			<i class="fas fa-times"></i>
+			<div class="cout_down invalid"></div>
+		`;
+	}
+
+	if (type === "invalid_password") {
+		toast.innerHTML = `
+			<i class="fa-solid ${icon}"></i>
+			<p>${message}</p>
+			<i class="fas fa-times"></i>
+			<div class="cout_down invalid"></div>
+		`;
+	}
+
+	if (type === "fill_form") {
+		toast.innerHTML = `
+			<i class="fa-solid ${icon}"></i>
+			<p>${message}</p>
+			<i class="fas fa-times"></i>
+			<div class="cout_down info"></div>
+		`;
+	}
+
+	if (type === "fill_username") {
+		toast.innerHTML = `
+			<i class="fa-solid ${icon}"></i>
+			<p>${message}</p>
+			<i class="fas fa-times"></i>
+			<div class="cout_down info"></div>
+		`;
+	}
+
+	if (type === "fill_password") {
+		toast.innerHTML = `
+			<i class="fa-solid ${icon}"></i>
+			<p>${message}</p>
+			<i class="fas fa-times"></i>
+			<div class="cout_down info"></div>
+		`;
+	}
+
+	if (type === "error_username") {
+		toast.innerHTML = `
+			<i class="fa-solid ${icon}"></i>
+			<p>${message}</p>
+			<i class="fas fa-times"></i>
 			<div class="cout_down"></div>
 		`;
 	}
 
-	const login = document.getElementById("login");
-	login.style.display = "none";
-
-	const toastList = document.querySelector("#toast");
-	toastList.appendChild(toast);
-
-	// setTimeout(() => {
-	// 	toast.style.animation = `hideToast ease 3s forwards`;
-	// }, 3000);
-
-	// setTimeout(() => {
-	// 	toast.remove();
-	// }, 3000 + 3000);
-}
-
-function btnState() {
-	if (inputEmail.value === "" && inputPassword.value === "") {
-		btnLogin.disabled = true;
-	} else {
-		btnLogin.disabled = false;
+	if (type === "error_password") {
+		toast.innerHTML = `
+			<i class="fa-solid ${icon}"></i>
+			<p>${message}</p>
+			<i class="fas fa-times"></i>
+			<div class="cout_down"></div>
+		`;
 	}
+
+	if (type === "error_username_password") {
+		toast.innerHTML = `
+			<i class="fa-solid ${icon}"></i>
+			<p>${message}</p>
+			<i class="fas fa-times"></i>
+			<div class="cout_down"></div>
+		`;
+	}
+
+	const toastListError = document.querySelector("#toast_error");
+	toastListError.appendChild(toast);
+
+	setTimeout(() => {
+		toast.style.animation = `hideToastError ease 3s forwards`;
+	}, 3000);
+
+	setTimeout(() => {
+		toast.remove();
+	}, 3000 + 3000);
 }
 
 btnLogin.addEventListener("click", (e) => {
@@ -66,22 +176,35 @@ btnLogin.addEventListener("click", (e) => {
 	let checkPass = regexPassword.test(inputPassword.value);
 
 	if (inputEmail.value === "" && inputPassword.value === "") {
-		alert("Please fill in the form...");
+		handleShowAndHideToastError("fill_form");
+	} else if (inputEmail.value === "") {
+		handleShowAndHideToastError("fill_username");
+	} else if (inputPassword.value === "") {
+		handleShowAndHideToastError("fill_password");
 	} else if (!checkEmail) {
-		alert("Please fill in the form...");
+		handleShowAndHideToastError("invalid_username");
 	} else if (!checkPass) {
-		alert("Please fill in the form...");
+		handleShowAndHideToastError("invalid_password");
 	} else {
-		const user = {
-			username: inputEmail.value,
-			password: inputPassword.value,
-		};
+		const user = JSON.parse(localStorage.getItem("token"));
 
-		let json = JSON.stringify(user);
-		localStorage.setItem(inputEmail.value, json);
-		handleShowAndHideToast("success");
-		// setTimeout(() => {
-		// 	window.location.href = "/home.html";
-		// }, 3000);
+		if (
+			user.username === inputEmail.value &&
+			user.password === inputPassword.value
+		) {
+			handleShowAndHideToastSuccess("success");
+		} else if (
+			user.username !== inputEmail.value &&
+			user.password === inputPassword.value
+		) {
+			handleShowAndHideToastError("error_username");
+		} else if (
+			user.username === inputEmail.value &&
+			user.password !== inputPassword.value
+		) {
+			handleShowAndHideToastError("error_password");
+		} else {
+			handleShowAndHideToastError("error_username_password");
+		}
 	}
 });

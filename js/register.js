@@ -16,6 +16,77 @@ function btnState() {
 	}
 }
 
+function handleShowAndHideToast(type) {
+	const { icon, message } = toastDetails[type];
+	const toast = document.createElement("div");
+	toast.classList.add("toast", type);
+
+	if (type === "success") {
+		toast.innerHTML = `
+			<i class="fa-solid ${icon}"></i>
+			<p>${message}</p>
+			<i class="fas fa-times"></i>
+			<div class="cout_down success"></div>
+		`;
+	}
+
+	if (type === "invalid_username") {
+		toast.innerHTML = `
+			<i class="fa-solid ${icon}"></i>
+			<p>${message}</p>
+			<i class="fas fa-times"></i>
+			<div class="cout_down invalid"></div>
+		`;
+	}
+
+	if (type === "invalid_password") {
+		toast.innerHTML = `
+			<i class="fa-solid ${icon}"></i>
+			<p>${message}</p>
+			<i class="fas fa-times"></i>
+			<div class="cout_down invalid"></div>
+		`;
+	}
+
+	if (type === "fill_form") {
+		toast.innerHTML = `
+			<i class="fa-solid ${icon}"></i>
+			<p>${message}</p>
+			<i class="fas fa-times"></i>
+			<div class="cout_down info"></div>
+		`;
+	}
+
+	if (type === "fill_username") {
+		toast.innerHTML = `
+			<i class="fa-solid ${icon}"></i>
+			<p>${message}</p>
+			<i class="fas fa-times"></i>
+			<div class="cout_down info"></div>
+		`;
+	}
+
+	if (type === "fill_password") {
+		toast.innerHTML = `
+			<i class="fa-solid ${icon}"></i>
+			<p>${message}</p>
+			<i class="fas fa-times"></i>
+			<div class="cout_down info"></div>
+		`;
+	}
+
+	const toastListError = document.querySelector("#toast_error");
+	toastListError.appendChild(toast);
+
+	setTimeout(() => {
+		toast.style.animation = `hideToastError ease 3s forwards`;
+	}, 3000);
+
+	setTimeout(() => {
+		toast.remove();
+	}, 3000 + 3000);
+}
+
 btnRegister.addEventListener("click", (e) => {
 	e.preventDefault();
 
@@ -28,11 +99,15 @@ btnRegister.addEventListener("click", (e) => {
 	let checkPass = regexPassword.test(inputPassRegister.value);
 
 	if (inputEmailRegister.value === "" && inputPassRegister.value === "") {
-		alert("Please fill in the form...");
+		handleShowAndHideToast("fill_form");
+	} else if (inputEmailRegister.value === "") {
+		handleShowAndHideToast("fill_username");
+	} else if (inputPassRegister.value === "") {
+		handleShowAndHideToast("fill_password");
 	} else if (!checkEmail) {
-		alert("Invalid Email Address");
+		handleShowAndHideToast("invalid_username");
 	} else if (!checkPass) {
-		alert("Invalid Password");
+		handleShowAndHideToast("invalid_password");
 	} else {
 		const user = {
 			username: inputEmailRegister.value,
@@ -41,9 +116,11 @@ btnRegister.addEventListener("click", (e) => {
 		};
 
 		let json = JSON.stringify(user);
-		localStorage.setItem(inputEmailRegister.value, json);
-		alert("Successfully");
-		window.location.reload();
+		localStorage.setItem("token", json);
+		handleShowAndHideToast("success");
+		setTimeout(() => {
+			window.location.reload();
+		}, 3000);
 	}
 });
 
