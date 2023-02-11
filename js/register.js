@@ -25,7 +25,7 @@ function handleShowAndHideToast(type) {
 		toast.innerHTML = `
 			<i class="fa-solid ${icon}"></i>
 			<p>${message}</p>
-			<i class="fas fa-times"></i>
+			<i class="fas fa-times" onclick="removeToast(this.parentElement)"></i>
 			<div class="cout_down success"></div>
 		`;
 	}
@@ -34,7 +34,7 @@ function handleShowAndHideToast(type) {
 		toast.innerHTML = `
 			<i class="fa-solid ${icon}"></i>
 			<p>${message}</p>
-			<i class="fas fa-times"></i>
+			<i class="fas fa-times" onclick="removeToast(this.parentElement)"></i>
 			<div class="cout_down invalid"></div>
 		`;
 	}
@@ -43,7 +43,7 @@ function handleShowAndHideToast(type) {
 		toast.innerHTML = `
 			<i class="fa-solid ${icon}"></i>
 			<p>${message}</p>
-			<i class="fas fa-times"></i>
+			<i class="fas fa-times" onclick="removeToast(this.parentElement)"></i>
 			<div class="cout_down invalid"></div>
 		`;
 	}
@@ -52,7 +52,7 @@ function handleShowAndHideToast(type) {
 		toast.innerHTML = `
 			<i class="fa-solid ${icon}"></i>
 			<p>${message}</p>
-			<i class="fas fa-times"></i>
+			<i class="fas fa-times" onclick="removeToast(this.parentElement)"></i>
 			<div class="cout_down info"></div>
 		`;
 	}
@@ -61,7 +61,7 @@ function handleShowAndHideToast(type) {
 		toast.innerHTML = `
 			<i class="fa-solid ${icon}"></i>
 			<p>${message}</p>
-			<i class="fas fa-times"></i>
+			<i class="fas fa-times" onclick="removeToast(this.parentElement)"></i>
 			<div class="cout_down info"></div>
 		`;
 	}
@@ -70,7 +70,7 @@ function handleShowAndHideToast(type) {
 		toast.innerHTML = `
 			<i class="fa-solid ${icon}"></i>
 			<p>${message}</p>
-			<i class="fas fa-times"></i>
+			<i class="fas fa-times" onclick="removeToast(this.parentElement)"></i>
 			<div class="cout_down info"></div>
 		`;
 	}
@@ -78,13 +78,7 @@ function handleShowAndHideToast(type) {
 	const toastListError = document.querySelector("#toast_error");
 	toastListError.appendChild(toast);
 
-	setTimeout(() => {
-		toast.style.animation = `hideToastError ease 3s forwards`;
-	}, 3000);
-
-	setTimeout(() => {
-		toast.remove();
-	}, 3000 + 3000);
+	setTimeout(() => removeToast(toast), 3000);
 }
 
 btnRegister.addEventListener("click", (e) => {
@@ -116,7 +110,7 @@ btnRegister.addEventListener("click", (e) => {
 		};
 
 		let json = JSON.stringify(user);
-		localStorage.setItem("token", json);
+		localStorage.setItem("", json);
 		handleShowAndHideToast("success");
 		setTimeout(() => {
 			window.location.reload();

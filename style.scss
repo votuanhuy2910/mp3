@@ -766,6 +766,10 @@ ul {
 					cursor: pointer;
 				}
 
+				.fa-times:hover {
+					color: black;
+				}
+
 				.cout_down {
 					position: absolute;
 					bottom: 0;
@@ -814,6 +818,10 @@ ul {
 				100% {
 					transform: translateX(0%);
 				}
+			}
+
+			.toast.remove {
+				animation: hideToastError 3s ease forwards;
 			}
 
 			@keyframes hideToastError {

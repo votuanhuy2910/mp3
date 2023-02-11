@@ -54,6 +54,11 @@ const toastDetails = {
 	},
 };
 
+const removeToast = (toast) => {
+	toast.classList.add("remove");
+	setTimeout(() => toast.remove(), 3000 + 3000);
+};
+
 function handleShowAndHideToastSuccess(type) {
 	const toast = document.createElement("div");
 	toast.classList.add("toast", type);
@@ -84,7 +89,7 @@ function handleShowAndHideToastError(type) {
 		toast.innerHTML = `
 			<i class="fa-solid ${icon}"></i>
 			<p>${message}</p>
-			<i class="fas fa-times"></i>
+			<i class="fas fa-times" onclick="removeToast(this.parentElement)"></i>
 			<div class="cout_down invalid"></div>
 		`;
 	}
@@ -93,7 +98,7 @@ function handleShowAndHideToastError(type) {
 		toast.innerHTML = `
 			<i class="fa-solid ${icon}"></i>
 			<p>${message}</p>
-			<i class="fas fa-times"></i>
+			<i class="fas fa-times" onclick="removeToast(this.parentElement)"></i>
 			<div class="cout_down invalid"></div>
 		`;
 	}
@@ -102,7 +107,7 @@ function handleShowAndHideToastError(type) {
 		toast.innerHTML = `
 			<i class="fa-solid ${icon}"></i>
 			<p>${message}</p>
-			<i class="fas fa-times"></i>
+			<i class="fas fa-times" onclick="removeToast(this.parentElement)"></i>
 			<div class="cout_down info"></div>
 		`;
 	}
@@ -111,7 +116,7 @@ function handleShowAndHideToastError(type) {
 		toast.innerHTML = `
 			<i class="fa-solid ${icon}"></i>
 			<p>${message}</p>
-			<i class="fas fa-times"></i>
+			<i class="fas fa-times" onclick="removeToast(this.parentElement)"></i>
 			<div class="cout_down info"></div>
 		`;
 	}
@@ -120,7 +125,7 @@ function handleShowAndHideToastError(type) {
 		toast.innerHTML = `
 			<i class="fa-solid ${icon}"></i>
 			<p>${message}</p>
-			<i class="fas fa-times"></i>
+			<i class="fas fa-times" onclick="removeToast(this.parentElement)"></i>
 			<div class="cout_down info"></div>
 		`;
 	}
@@ -129,7 +134,7 @@ function handleShowAndHideToastError(type) {
 		toast.innerHTML = `
 			<i class="fa-solid ${icon}"></i>
 			<p>${message}</p>
-			<i class="fas fa-times"></i>
+			<i class="fas fa-times" onclick="removeToast(this.parentElement)"></i>
 			<div class="cout_down"></div>
 		`;
 	}
@@ -138,7 +143,7 @@ function handleShowAndHideToastError(type) {
 		toast.innerHTML = `
 			<i class="fa-solid ${icon}"></i>
 			<p>${message}</p>
-			<i class="fas fa-times"></i>
+			<i class="fas fa-times" onclick="removeToast(this.parentElement)"></i>
 			<div class="cout_down"></div>
 		`;
 	}
@@ -147,7 +152,7 @@ function handleShowAndHideToastError(type) {
 		toast.innerHTML = `
 			<i class="fa-solid ${icon}"></i>
 			<p>${message}</p>
-			<i class="fas fa-times"></i>
+			<i class="fas fa-times" onclick="removeToast(this.parentElement)"></i>
 			<div class="cout_down"></div>
 		`;
 	}
@@ -155,13 +160,15 @@ function handleShowAndHideToastError(type) {
 	const toastListError = document.querySelector("#toast_error");
 	toastListError.appendChild(toast);
 
-	setTimeout(() => {
-		toast.style.animation = `hideToastError ease 3s forwards`;
-	}, 3000);
+	setTimeout(() => removeToast(toast), 3000);
 
-	setTimeout(() => {
-		toast.remove();
-	}, 3000 + 3000);
+	// setTimeout(() => {
+	// 	toast.style.animation = `hideToastError ease 3s forwards`;
+	// }, 3000);
+
+	// setTimeout(() => {
+	// 	toast.remove();
+	// }, 3000 + 3000);
 }
 
 btnLogin.addEventListener("click", (e) => {
@@ -186,7 +193,7 @@ btnLogin.addEventListener("click", (e) => {
 	} else if (!checkPass) {
 		handleShowAndHideToastError("invalid_password");
 	} else {
-		const user = JSON.parse(localStorage.getItem("token"));
+		const user = JSON.parse(localStorage.getItem(""));
 
 		if (
 			user.username === inputEmail.value &&

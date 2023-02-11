@@ -682,6 +682,9 @@ ul {
   font-size: 1.8rem;
   cursor: pointer;
 }
+.wrapper .header #toast_error .toast .fa-times:hover {
+  color: black;
+}
 .wrapper .header #toast_error .toast .cout_down {
   position: absolute;
   bottom: 0;
@@ -720,6 +723,9 @@ ul {
   100% {
     transform: translateX(0%);
   }
+}
+.wrapper .header #toast_error .toast.remove {
+  animation: hideToastError 3s ease forwards;
 }
 @keyframes hideToastError {
   0% {
