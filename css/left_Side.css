@@ -1,0 +1,209 @@
+:root {
+    --LeftAndRight: #ffe3e4;
+    --main: #ffd7d8;
+    --bottom: #f9c6c5;
+    --hoverText: #b72479;
+    --text: #32323d;
+}
+
+.left_side {
+    display: flex;
+    flex-direction: column;
+    color: var(--text);
+}
+
+.left_side marquee {
+    font-size: 2.2rem;
+    /* margin: 1.5rem 2rem 1rem 2rem; */
+    margin: 1rem;
+    padding: 1rem;
+    font-weight: 500;
+    /* text-align: center; */
+    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+    transition: all .4s ease-in-out;
+    border-radius: 10px;
+    color: white;
+}
+
+.left_side marquee h2 {
+    background: #77d0ae;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffffff, #26d7ba);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #26d7ba);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.left_side .playlist {
+    margin: 2rem 0 1.5rem 0rem;
+    width: 100%;
+}
+
+.left_side .playlist li:hover {
+    background: #f2d7d8;
+}
+
+.left_side .playlist li.banner {
+    background: none;
+}
+
+.left_side .playlist .vip_banner {
+    border-radius: .5rem;
+    text-align: center;
+    color: #fff;
+    flex-direction: column;
+    margin: 1rem 2rem;
+    overflow: hidden;
+    background-image: linear-gradient(117deg, #5a4be7, #c86dd7 102%);
+}
+
+.left_side .playlist .vip_banner>div {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    white-space: pre-wrap;
+}
+
+.left_side .playlist .vip_banner .btn_banner {
+    text-decoration: none;
+    margin-top: 1.2rem;
+    background: #ffdb00;
+    padding: 0.5rem 3rem;
+    border-radius: 5rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: pre-wrap;
+}
+
+.left_side .playlist .vip_banner,
+.left_side .playlist h4 {
+    font-size: 1.4rem;
+    padding-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    padding: .8rem 2.5rem;
+    transition: .2s linear;
+}
+
+.left_side .playlist h4 {
+    cursor: pointer;
+}
+
+b {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.left_side .playlist h4:hover {
+    color: var(--hoverText);
+}
+
+.left_side .playlist .library {
+    font-size: 1.4rem;
+    padding-bottom: 1rem;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    padding: .8rem 2.5rem;
+    transition: .2s linear;
+}
+
+.left_side .playlist .library i {
+    display: none;
+}
+
+.left_side .playlist .library:hover i {
+    display: block;
+    cursor: pointer;
+}
+
+.left_side .playlist h4 span {
+    position: relative;
+    margin-right: 3.5rem;
+}
+
+.left_side .playlist h4 span::before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    padding: 2px;
+    border-radius: 50%;
+    border: 2px solid #4c5262;
+    top: -4px;
+    transition: .2s linear;
+}
+
+.left_side .playlist h4:hover span::before {
+    color: var(--hoverText);
+    border: 2px solid var(--hoverText);
+}
+
+.left_side .playlist_scroll h4 .ti,
+.left_side .playlist h4 .ti {
+    display: none;
+}
+
+.left_side .playlist h4 p {
+    margin-left: 1rem;
+    font-size: 1rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.5rem;
+    background: #ff0a0a;
+    color: #fff;
+}
+
+.left_side .playlist .active {
+    color: var(--hoverText);
+    background: #f2d7d8;
+    border-left: 3px solid var(--hoverText);
+}
+
+.left_side .playlist .active span {
+    display: none;
+}
+
+.left_side .playlist .active .ti {
+    display: flex;
+    margin-right: 1.2rem;
+}
+
+.left_side .sidebar_divide {
+    position: relative;
+    height: 1px;
+}
+
+.left_side .sidebar_divide::after {
+    content: "";
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 0;
+    left: 2.5rem;
+    right: 2.5rem;
+}
+
+.left_side .playlist.sub {
+    max-height: 45rem;
+    overflow-y: auto;
+    margin: 0.5rem 0;
+    position: relative;
+}
+
+.left_side .playlist.sub ul {
+    margin: 1.5rem 0 1rem 0;
+}
+
+.left_side .playlist.sub::-webkit-scrollbar {
+    width: 4px;
+    border-radius: .5rem;
+}
+
+.left_side .playlist.sub::-webkit-scrollbar-thumb {
+    background: #e5cccd;
+}

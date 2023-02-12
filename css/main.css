@@ -1,0 +1,74 @@
+
+
+
+
+/* Start left__side */
+
+
+
+.left_side .song_list {
+    max-height: 45rem;
+    overflow-y: auto;
+    padding: 1rem 0 1rem 1rem;
+}
+
+.left_side .song_list::-webkit-scrollbar {
+    width: 0;
+}
+
+.left_side .song_list .song {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 1.2rem;
+    gap: 2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-top-right-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+}
+
+.left_side .song_list .song:hover {
+    background: #171f36;
+}
+
+.left_side .song_list .song .play_hover {
+    display: none;
+    font-size: 3rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.left_side .song_list .song:hover .play_hover {
+    display: block;
+}
+
+.left_side .song_list .song .song_img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: .5rem;
+    object-fit: cover;
+}
+
+.left_side .song_list .song .song_name {
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.left_side .song_list .song .song_artist {
+    color: #353c4a;
+    text-transform: capitalize;
+}
+
+.left_side .song_list .song .song_num {
+    color: #353c4a;
+    width: 2rem;
+}
+
+.equalizer_gif {
+    width: 2rem;
+    display: none;
+}
+/* End left__side */

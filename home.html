@@ -5,7 +5,12 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<link rel="stylesheet" href="main.css" />
+		<link rel="stylesheet" href="/css/reset.css" />
+		<link rel="stylesheet" href="/css/left_Side.css" />
+		<link rel="stylesheet" href="/css/bot_Side.css" />
+		<link rel="stylesheet" href="/css/mid_Side.css" />
+		<link rel="stylesheet" href="/css/right_Side.css" />
+		<link rel="stylesheet" href="/css/reponsive.css" />
 
 		<link
 			rel="stylesheet"
@@ -27,45 +32,113 @@
 	<body>
 		<div class="wrapper">
 			<section class="left_side">
-				<h1>playlist</h1>
+				<h1><marquee behavior="scroll"><h2>Zing MP3</h2></marquee></h1>
 				<!-- <i class="ti ti-music"> -->
-				<div class="playlist">
-					<h4 class="active">
-						<span></span>
-						<i class="ti ti-music"></i>
-						Playlist
-					</h4>
-					<h4>
-						<span></span>
-						<i class="ti ti-ear"></i>
-						Last Listening
-					</h4>
-					<h4>
-						<span></span>
-						<i class="ti ti-award"></i>
-						Recommended
-					</h4>
-				</div>
+				<nav class="playlist">
+					<ul>
+						<li>
+							<h4 class="active">
+								<span></span>
+								<i class="ti ti-music"></i>
+								<b>Việt Nam</b>
+							</h4>
+						</li>
+						<li>
+							<h4>
+								<span></span>
+								<i class="ti ti-music"></i>
+								<b>US-UK</b>
+							</h4>
+						</li>
+						<li>
+							<h4>
+								<span></span>
+								<i class="ti ti-music"></i>
+								<b>Trung Quốc</b>
+							</h4>
+						</li>
+						<li>
+							<h4>
+								<span></span>
+								<i class="ti ti-music"></i>
+								<b>Hàn Quốc</b>
+							</h4>
+						</li>
+						<li>
+							<h4>
+								<span></span>
+								<i class="ti ti-radio"></i>
+								<b>Radio</b>
+								<p>LIVE</p>
+							</h4>
+						</li>
+					</ul>
+				</nav>
 
-				<div class="songs_list">
-					<div class="song">
-						<img
-							src="/assets/files/component/equalizer.gif"
-							class="equalizer_gif"
-							alt=""
-						/>
+				<div class="sidebar_divide"></div>
 
-						<div class="song_num">01</div>
-
-						<div class="img" style="position: relative">
-							<img src="/assets/files/img/10 nam.jpg" alt="" class="song_img" />
-							<i class="bi bi-play-circle-fill play_hover"></i>
-						</div>
-						<div class="song_info">
-							<h2 class="song_name">10 nam</h2>
-							<h4 class="song_artist">lao can ma</h4>
-						</div>
-					</div>
+				<div class="playlist sub">
+					<ul>
+						<li>
+							<h4>
+								<span></span>
+								<i class="ti ti-music"></i>
+								<b>Nhạc mới</b>
+							</h4>
+						</li>
+						<li>
+							<h4>
+								<span></span>
+								<i class="ti ti-album"></i>
+								<b>Thể loại</b>
+							</h4>
+						</li>
+						<li>
+							<h4>
+								<span></span>
+								<i class="ti ti-award"></i>
+								<b>Top 100</b>
+							</h4>
+						</li>
+						<li>
+							<h4>
+								<span></span>
+								<i class="ti ti-align-box-bottom-center"></i>
+								<b>MV</b>
+							</h4>
+						</li>
+						<li class="banner">
+							<div class="vip_banner">
+								<div>Nghe nhạc không quảng cáo cùng kho nhạc VIP</div>
+								<a href="#" class="btn_banner">NÂNG CẤP VIP</a>
+							</div>
+						</li>
+						<h3 style="justify-content: space-between" class="library">
+							Thư viện
+							<i class="fas fa-times"></i>
+						</h3>
+						<li>
+							<h4>
+								<span></span>
+								<i class="ti ti-disc"></i>
+								<b>Bài hát</b>
+							</h4>
+						</li>
+						<li>
+							<h4>
+								<span></span>
+								<i class="ti ti-playlist"></i>
+								<b>Playlist</b>
+							</h4>
+						</li>
+						<li>
+							<h4>
+								<span></span>
+								<i class="ti ti-clock"></i>
+								<b>Gần đây</b>
+							</h4>
+						</li>
+					</ul>
 				</div>
 			</section>
 
@@ -180,7 +253,7 @@
 			</section>
 		</div>
 
-		<script src="/js/allMusic.js"></script>
+		<script src="/js/musicList.js"></script>
 		<script src="/js/home.js"></script>
 	</body>
 </html>
