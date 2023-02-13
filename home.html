@@ -32,8 +32,8 @@
 	<body>
 		<div class="wrapper">
 			<section class="left_side">
-				<h1><marquee behavior="scroll"><h2>Zing MP3</h2></marquee></h1>
-				<!-- <i class="ti ti-music"> -->
+				<button class="btn-zing">Zing MP3</button>
+				<button class="btn-z">Z</button>
 				<nav class="playlist">
 					<ul>
 						<li>
@@ -216,40 +216,49 @@
 			<section class="right_side"></section>
 
 			<section class="bot_side">
-				<!-- <div class="wave">
-                    <div class="wave1"></div>
-                    <div class="wave1"></div>
-                    <div class="wave1"></div>
-                </div>
-        
-                <img src="/assets/files/img/best-song-ever.jpg" alt="Alan" id="poster_master_play">
-        
-                <h5 id="title">Vande Mataram<br>
-                    <div class="subtitle">Bankim Chandra</div>
-                </h5>
+				<div class="first" style="display: flex; align-items: center;">
+					<div class="wave">
+						<div class="wave1"></div>
+						<div class="wave1"></div>
+						<div class="wave1"></div>
+					</div>
 
-                <div class="icon">
-                    <i class="ti ti-player-skip-back-filled" id="back"></i>
-                    <i class="ti ti-player-play-filled" id="masterPlay"></i>
-                    <i class="ti ti-player-skip-forward-filled" id="next"></i>
-                </div>
-        
-                <span id="currentStart">0:00</span>
+					<img
+						src="/assets/files/img/best-song-ever.jpg"
+						alt="Alan"
+						id="poster_master_play"
+					/>
 
-                <div class="bar">
-                    <input type="range" id="seek" min="0" value="0" max="100">
-                    <div class="bar2" id="bar2"></div>
-                    <div class="dot"></div>
-                </div>
-                
-                <span id="currentEnd">0:00</span>
+					<h5 id="title">
+						<marquee behavior="scroll">Vande Mataram</marquee>
+						<br />
+						<div class="subtitle">Bankim Chandra</div>
+					</h5>
+				</div>
 
-                <div class="vol">
-                    <i class="ti ti-volume-2" id="vol_icon"></i>
-                    <input type="range" id="vol" min="0" value="30" max="100">
-                    <div class="vol_bar"></div>
-                    <div class="dot" id="vol_dot"></div>
-                </div> -->
+				<div class="icon">
+					<i class="ti ti-player-skip-back-filled" id="back"></i>
+					<i class="ti ti-player-play-filled" id="masterPlay"></i>
+					<i class="ti ti-player-skip-forward-filled" id="next"></i>
+				</div>
+
+				<span id="currentStart">0:00</span>
+
+				<div class="bar">
+					<input type="range" id="seek" min="0" value="0" max="100" />
+					<div class="bar2" id="bar2"></div>
+					<div class="dot"></div>
+				</div>
+
+				<span id="currentEnd">0:00</span>
+
+
+				<div class="vol">
+					<i class="ti ti-volume-2" id="vol_icon"></i>
+					<input type="range" id="vol" min="0" value="30" max="100" />
+					<div class="vol_bar"></div>
+					<div class="dot" id="vol_dot"></div>
+				</div>
 			</section>
 		</div>
 

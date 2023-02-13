@@ -12,30 +12,23 @@
     color: var(--text);
 }
 
-.left_side marquee {
+.left_side button.btn-z,
+.left_side button.btn-zing {
     font-size: 2.2rem;
-    /* margin: 1.5rem 2rem 1rem 2rem; */
-    margin: 1rem;
+    margin: 1rem 2.5rem;
     padding: 1rem;
-    font-weight: 500;
-    /* text-align: center; */
+    font-weight: 700;
     background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
     transition: all .4s ease-in-out;
-    border-radius: 10px;
+    border-radius: 1rem;
+    outline: none;
+    border: none;
     color: white;
+    cursor: pointer;
 }
 
-.left_side marquee h2 {
-    background: #77d0ae;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #ffffff, #26d7ba);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #FFFFFF, #26d7ba);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+.left_side button.btn-z {
+    display: none;
 }
 
 .left_side .playlist {
@@ -131,9 +124,9 @@ b {
 .left_side .playlist h4 span::before {
     content: "";
     position: absolute;
-    width: 4px;
-    height: 4px;
-    padding: 2px;
+    width: 10px;
+    height: 10px;
+    padding: 4px;
     border-radius: 50%;
     border: 2px solid #4c5262;
     top: -4px;
@@ -171,6 +164,7 @@ b {
 
 .left_side .playlist .active .ti {
     display: flex;
+    font-size: 2rem;
     margin-right: 1.2rem;
 }
 
