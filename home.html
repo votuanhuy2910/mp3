@@ -40,28 +40,21 @@
 							<h4 class="active">
 								<span></span>
 								<i class="ti ti-music"></i>
-								<b>Việt Nam</b>
+								<b>Cá Nhân</b>
 							</h4>
 						</li>
 						<li>
 							<h4>
 								<span></span>
 								<i class="ti ti-music"></i>
-								<b>US-UK</b>
+								<b>Khám Phá</b>
 							</h4>
 						</li>
 						<li>
 							<h4>
 								<span></span>
-								<i class="ti ti-music"></i>
-								<b>Trung Quốc</b>
-							</h4>
-						</li>
-						<li>
-							<h4>
-								<span></span>
-								<i class="ti ti-music"></i>
-								<b>Hàn Quốc</b>
+								<i class="ti ti-award"></i>
+								<b>#zingchart</b>
 							</h4>
 						</li>
 						<li>
@@ -113,9 +106,9 @@
 								<a href="#" class="btn_banner">NÂNG CẤP VIP</a>
 							</div>
 						</li>
-						<h3 style="justify-content: space-between" class="library">
+						<h3 class="library">
 							Thư viện
-							<i class="fas fa-times"></i>
+							<i class="fas fa-pencil-alt"></i>
 						</h3>
 						<li>
 							<h4>
@@ -213,10 +206,31 @@
                 </div> -->
 			</section>
 
-			<section class="right_side"></section>
+			<section class="right_side">
+				<div class="tabs">
+					<div class="tab-item active">Việt Nam</div>
+					<div class="tab-item">US-UK</div>
+					<div class="tab-item">Hàn Quốc</div>
+					<div class="tab-item">Trung Quốc</div>
+				</div>
+
+				<div class="tab-content">
+					<div class="tab-pane tab-vn active">
+					</div>
+
+					<div class="tab-pane tab-us">
+					</div>
+
+					<div class="tab-pane tab-kr">
+					</div>
+
+					<div class="tab-pane tab-tq">
+					</div>
+				</div>
+			</section>
 
 			<section class="bot_side">
-				<div class="first" style="display: flex; align-items: center;">
+				<div class="first" style="display: flex; align-items: center">
 					<div class="wave">
 						<div class="wave1"></div>
 						<div class="wave1"></div>
@@ -252,7 +266,6 @@
 
 				<span id="currentEnd">0:00</span>
 
-
 				<div class="vol">
 					<i class="ti ti-volume-2" id="vol_icon"></i>
 					<input type="range" id="vol" min="0" value="30" max="100" />
@@ -262,7 +275,29 @@
 			</section>
 		</div>
 
-		<script src="/js/musicList.js"></script>
+		<script src="/js/renderHome.js"></script>
 		<script src="/js/home.js"></script>
+
+		<script>
+			const $ = document.querySelector.bind(document);
+			const $$ = document.querySelectorAll.bind(document);
+
+			const tabs = $$(".tab-item");
+			const panes = $$(".tab-pane");
+
+			const tabActive = $(".tab-item.active");
+
+			tabs.forEach((tab, index) => {
+				const pane = panes[index];
+
+				tab.onclick = function () {
+					$(".tab-item.active").classList.remove("active");
+					$(".tab-pane.active").classList.remove("active");
+
+					this.classList.add("active");
+					pane.classList.add("active");
+				};
+			});
+		</script>
 	</body>
 </html>

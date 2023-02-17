@@ -10,6 +10,7 @@
     display: flex;
     align-items: center;
     padding: 0 2.5rem;
+    /* justify-content: space-between; */
 }
 
 .bot_side .wave {
@@ -39,15 +40,15 @@
     /* animation-delay: .8s; */
 }
 
-.bot_side .wave .active .wave1 {
+.bot_side .wave .active2 .wave1 {
     animation: wave .5s linear infinite;
 }
 
-.bot_side .wave .active .wave1:nth-child(2) {
+.bot_side .wave .active2 .wave1:nth-child(2) {
     animation-delay: .4s;
 }
 
-.bot_side .wave .active .wave1:nth-child(3) {
+.bot_side .wave .active2 .wave1:nth-child(3) {
     animation-delay: .8s;
 }
 
@@ -100,10 +101,10 @@
 }
 
 .bot_side .icon .ti:nth-child(2) {
-    border: 1px solid rgb(105, 105, 170, .1);
+    border: 1px solid white;
     border-radius: 50%;
-    padding: 2px 0px 5px 6px;
-    margin: 0 5px;
+    padding: 6px 0px 6px 8px;
+    margin: 0 1.2rem 0 .4rem;
     transition: .3s linear;
 }
 
@@ -120,7 +121,7 @@
 
 .bot_side .bar {
     position: relative;
-    width: 39%;
+    width: 50%;
     height: 2px;
     background: rgb(105, 105, 170, .1);
     margin: 0 15px 0 10px;
@@ -165,12 +166,12 @@
     cursor: pointer;
     z-index: 999999999;
     opacity: 0;
-    transition: 3s linear;
+    transition: 0s linear;
 }
 
 .bot_side .vol {
     position: relative;
-    width: 100px;
+    width: 15rem;
     height: 2px;
     margin-left: 5rem;
     background: rgb(105, 105, 170, .1);
@@ -192,7 +193,7 @@
     cursor: pointer;
     z-index: 999999999;
     opacity: 0;
-    transition: 3s linear;
+    transition: 0s linear;
 }
 
 .bot_side .vol .vol_bar {
