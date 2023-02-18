@@ -39,14 +39,14 @@
 						<li>
 							<h4 class="active">
 								<span></span>
-								<i class="ti ti-music"></i>
+								<i class="ti ti-user-circle"></i>
 								<b>Cá Nhân</b>
 							</h4>
 						</li>
 						<li>
 							<h4>
 								<span></span>
-								<i class="ti ti-music"></i>
+								<i class="ti ti-brand-shazam"></i>
 								<b>Khám Phá</b>
 							</h4>
 						</li>
@@ -66,6 +66,29 @@
 							</h4>
 						</li>
 					</ul>
+
+					<!-- <ul>
+						<li>
+							<h4 class="active">
+								<i class="ti ti-user-circle"></i>
+							</h4>
+						</li>
+						<li>
+							<h4>
+								<i class="ti ti-brand-shazam"></i>
+							</h4>
+						</li>
+						<li>
+							<h4>
+								<i class="ti ti-award"></i>
+							</h4>
+						</li>
+						<li>
+							<h4>
+								<i class="ti ti-radio"></i>
+							</h4>
+						</li>
+					</ul> -->
 				</nav>
 
 				<div class="sidebar_divide"></div>
@@ -277,27 +300,5 @@
 
 		<script src="/js/renderHome.js"></script>
 		<script src="/js/home.js"></script>
-
-		<script>
-			const $ = document.querySelector.bind(document);
-			const $$ = document.querySelectorAll.bind(document);
-
-			const tabs = $$(".tab-item");
-			const panes = $$(".tab-pane");
-
-			const tabActive = $(".tab-item.active");
-
-			tabs.forEach((tab, index) => {
-				const pane = panes[index];
-
-				tab.onclick = function () {
-					$(".tab-item.active").classList.remove("active");
-					$(".tab-pane.active").classList.remove("active");
-
-					this.classList.add("active");
-					pane.classList.add("active");
-				};
-			});
-		</script>
 	</body>
 </html>

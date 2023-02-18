@@ -1,9 +1,22 @@
 /* reponsive desktops >= 1200px */
-
 @media screen and (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+}
 
+@media screen and (max-width: 991px) {
+    
 }
 
 @media screen and (max-width: 750px) {
-    
+    html {
+        font-size: 52.5%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
 }
