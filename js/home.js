@@ -5,10 +5,19 @@ const playLists = $$(".playlist h4");
 
 playLists.forEach((item) => {
 	item.onclick = function () {
-		document.querySelector(".playlist .active").classList.remove("active");
+		$(".playlist .active").classList.remove("active");
 		this.classList.add("active");
 	};
 });
+
+const lines = $$(".mid_side nav ul li h4");
+
+lines.forEach((item) => {
+	item.onclick = function () {
+		$(".mid_side nav ul li .active").classList.remove("active");
+		this.classList.add("active");
+	}
+})
 
 const tabs = $$(".tab-item");
 const panes = $$(".tab-pane");

@@ -48,6 +48,7 @@ ul {
     display: flex;
     flex-wrap: wrap;
     overflow: hidden;
+    transition: .3s linear;
 }
 
 .left_side {
@@ -57,6 +58,7 @@ ul {
     /* border: 1px solid #000; */
     background: var(--LeftAndRight);
     /* box-shadow: 5px 0px 2px #090f1f; */
+    transition: .3s linear;
 }
 
 .mid_side {
@@ -65,6 +67,7 @@ ul {
     height: 90%;
     /* border: 1px solid #000; */
     background: var(--main);
+    transition: .3s linear;
 }
 
 .right_side {
@@ -73,6 +76,7 @@ ul {
     height: 90%;
     /* border: 1px solid #000; */
     background: var(--LeftAndRight);
+    transition: .3s linear;
 }
 
 .bot_side {
@@ -80,4 +84,5 @@ ul {
     height: 10%;
     background: var(--bottom);
     box-shadow: 0px 3px 8px #090f1f;
+    transition: .3s linear;
 }

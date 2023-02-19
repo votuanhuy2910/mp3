@@ -1,22 +1,123 @@
 /* reponsive desktops >= 1200px */
+@media screen and (min-width: 2560px) {
+    html {
+        font-size: 100%;
+    }
+
+    .mid_side .content {
+        height: 33%;
+    }
+
+    .mid_side .content .buttons button {
+        font-size: 1.6rem;
+    }
+
+    .mid_side .content .swiper .ytb {
+        width: 40rem;
+        height: 20rem;
+    }
+
+    .mid_side .content .swiper .swiper-slide .heading {
+        height: 20rem;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 2559px) {
+    html {
+        font-size: 80%;
+    }
+
+    .mid_side .content .buttons button {
+        font-size: 1.6rem;
+    }
+
+    .mid_side .content .swiper .ytb {
+        width: 40rem;
+        height: 20rem;
+    }
+
+    .mid_side .content .swiper .swiper-slide .heading {
+        height: 20rem;
+    }
+}
+
+@media (min-width: 1440px) and (max-width: 1919px) {
+    html {
+        font-size: 60%;
+    }
+
+    .mid_side .content .buttons button {
+        font-size: 1.6rem;
+    }
+
+    .mid_side .content .swiper .ytb {
+        width: 40rem;
+        height: 20rem;
+    }
+
+    .mid_side .content .swiper .swiper-slide .heading {
+        height: 20rem;
+    }
+}
+
 @media screen and (max-width: 1200px) {
     html {
         font-size: 55%;
     }
 }
 
+@media screen and (max-width: 1050px) {
+    .mid_side .content {
+        height: 23%;
+    }
+
+    .mid_side .content .swiper .swiper-slide .heading {
+        align-items: center;
+    }
+
+    .mid_side .content .heading h1 {
+        text-align: center;
+    }
+}
+
 @media screen and (max-width: 991px) {
-    
+    .left_side {
+        display: none;
+    }
+
+    .mid_side {
+        width: 75%;
+    }
+
+    .mid_side .content {
+        height: 30%;
+    }
+
+    .right_side {
+        width: 25%;
+    }
 }
 
 @media screen and (max-width: 750px) {
     html {
         font-size: 52.5%;
     }
+
+    .mid_side {
+        width: 100%;
+    }
+
+    .right_side {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 450px) {
     html {
         font-size: 50%;
+    }
+
+    .mid_side .content .swiper .swiper-slide .heading {
+        display: none;
     }
 }
