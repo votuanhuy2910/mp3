@@ -195,6 +195,7 @@
 					</div>
 
 					<div class="user">
+						<div id="toggle-btn" class="ti ti-sun"></div>
 						<img src="/assets/logo2.png" alt="User" title="VTH Coder" />
 					</div>
 				</nav>
@@ -204,38 +205,39 @@
 						<div class="swiper-wrapper">
 							<div class="swiper-slide">
 								<div class="heading">
-									<h1>Giữa Đại Lộ Đông Tây</h1>
-									<p>Uyên Linh</p>
+									<h1>JustaTee</h1>
+									<p>248.182 người quan tâm</p>
+									<button>quan tâm</button>
 								</div>
 								<div class="ytb">
-									<iframe
-										src="https://www.youtube.com/embed/Ern8Z4I1mIA?autoplay=1"
-										allow="autoplay"
-									></iframe>
+									<img src="/assets/files/component/justatee.jpg" alt="justaTee">
 								</div>
 							</div>
 
 							<div class="swiper-slide">
 								<div class="heading">
-									<h1>10 năm</h1>
-									<p>lão can ma</p>
+									<h1>Mr. Siro</h1>
+									<p>804.978 người quan tâm</p>
+									<button>quan tâm</button>
 								</div>
 								<div class="ytb">
-									<iframe
-										src="https://www.youtube.com/embed/Ern8Z4I1mIA?autoplay=1"
-										allow="autoplay"
-									></iframe>
+									<img src="/assets/files/component/siro.jpg" alt="mr.siro">
+								</div>
+							</div>
+
+							<div class="swiper-slide">
+								<div class="heading">
+									<h1>Only C</h1>
+									<p>189.247 người quan tâm</p>
+									<button>quan tâm</button>
+								</div>
+								<div class="ytb">
+									<img src="/assets/files/component/onlyc.jpg" alt="onlyC">
 								</div>
 							</div>
 						</div>
 
 						<div class="swiper-pagination"></div>
-						<div class="autoplay-progress">
-							<svg viewBox="0 0 48 48">
-								<circle cx="24" cy="24" r="20"></circle>
-							</svg>
-							<span></span>
-						</div>
 					</div>
 
 					<div class="buttons">
@@ -286,9 +288,12 @@
 				</div>
 
 				<div class="icon">
+					<i class="ti ti-cloud-download" id="download"></i>
+					<i class="ti ti-repeat" id="repeat"></i>
 					<i class="ti ti-player-skip-back-filled" id="back"></i>
 					<i class="ti ti-player-play-filled" id="masterPlay"></i>
 					<i class="ti ti-player-skip-forward-filled" id="next"></i>
+					<i class="ti ti-arrows-shuffle" id="arrows-shuffle"></i>
 				</div>
 
 				<span id="currentStart">0:00</span>
@@ -307,6 +312,10 @@
 					<div class="vol_bar"></div>
 					<div class="dot" id="vol_dot"></div>
 				</div>
+
+				<div class="playList">
+					<i class="ti ti-playlist"></i>
+				</div>
 			</section>
 		</div>
 
@@ -324,18 +333,13 @@
 				centeredSlides: true,
 				loop: true,
 				autoplay: {
-					delay: 224500,
+					delay: 5000,
 					disableOnInteraction: false,
 				},
 				pagination: {
 					el: ".swiper-pagination",
 					dynamicBullets: true,
-				},
-				on: {
-					autoplayTimeLeft(s, time, progress) {
-						progressCircle.style.setProperty("--progress", 1 - progress);
-						progressContent.textContent = `${Math.ceil(time / 1000)}s`;
-					},
+					clickable: true,
 				},
 			});
 		</script>

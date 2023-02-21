@@ -1,9 +1,11 @@
 :root {
-    --LeftAndRight: #ffe3e4;
-    --main: #ffd7d8;
-    --bottom: #f9c6c5;
-    --hoverText: #b72479;
+    --LeftAndRight: #f2f2f2;
+    --main: #fff;
+    --bottom: #fff;
+    --hoverText: #8d22c3;
     --text: #32323d;
+    --black: #444;
+    --white: #fff;
 }
 
 .left_side {
@@ -23,7 +25,7 @@
     border-radius: 1rem;
     outline: none;
     border: none;
-    color: white;
+    color: var(--white);
     cursor: pointer;
 }
 
@@ -38,7 +40,7 @@
 }
 
 .left_side .playlist li:hover {
-    background: #f2d7d8;
+    background: rgba(141, 34, 195, .2);
 }
 
 .left_side .playlist li.banner {
@@ -48,7 +50,7 @@
 .left_side .playlist .vip_banner {
     border-radius: .5rem;
     text-align: center;
-    color: #fff;
+    color: var(--white);
     flex-direction: column;
     margin: 1rem 2rem;
     overflow: hidden;
@@ -158,12 +160,12 @@ b {
     padding: 0.2rem 0.5rem;
     border-radius: 0.5rem;
     background: #ff0a0a;
-    color: #fff;
+    color: var(--white);
 }
 
 .left_side .playlist .active {
     color: var(--hoverText);
-    background: #f2d7d8;
+    background: rgba(141, 34, 195, .2);
     border-left: 3px solid var(--hoverText);
 }
 

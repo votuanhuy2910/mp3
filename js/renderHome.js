@@ -136,7 +136,8 @@ const app = {
                             <span class="song_artist">${song.artist}</span>
                         </div>
                         <div class="heart">
-                            <i class="fas fa-heart"></i>
+							<input type="checkbox" id="${song.name}" />
+							<label class="icon-heart" for="${song.name}"></label>
                         </div>
                     </div>
                 </div>
@@ -175,7 +176,8 @@ const app = {
                             <span class="song_artist">${song.artist}</span>
                         </div>
                         <div class="heart">
-                            <i class="fas fa-heart"></i>
+							<input type="checkbox" id="${song.name}" />
+							<label class="icon-heart" for="${song.name}"></label>
                         </div>
                     </div>
                 </div>
@@ -214,7 +216,8 @@ const app = {
                             <span class="song_artist">${song.artist}</span>
                         </div>
                         <div class="heart">
-                            <i class="fas fa-heart"></i>
+							<input type="checkbox" id="${song.name}" />
+							<label class="icon-heart" for="${song.name}"></label>
                         </div>
                     </div>
                 </div>
@@ -253,7 +256,8 @@ const app = {
                             <span class="song_artist">${song.artist}</span>
                         </div>
                         <div class="heart">
-                            <i class="fas fa-heart"></i>
+							<input type="checkbox" id="${song.name}" />
+							<label class="icon-heart" for="${song.name}"></label>
                         </div>
                     </div>
                 </div>

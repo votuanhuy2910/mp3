@@ -1,9 +1,11 @@
 :root {
-    --LeftAndRight: #ffe3e4;
-    --main: #ffd7d8;
-    --bottom: #f9c6c5;
-    --hoverText: #b72479;
+    --LeftAndRight: #f2f2f2;
+    --main: #fff;
+    --bottom: #fff;
+    --hoverText: #8d22c3;
     --text: #32323d;
+    --black: #444;
+    --white: #fff;
 }
 
 .bot_side {
@@ -77,7 +79,7 @@
     width: 13rem;
     font-size: 1.4rem;
     margin-left: 1.5rem;
-    color: #fff;
+    color: var(--text);
     line-height: 1.5rem;
 }
 
@@ -91,7 +93,7 @@
     align-items: center;
     outline: none;
     font-size: 2rem;
-    color: #fff;
+    color: var(--text);
     margin: 0 2rem 0 4rem;
 }
 
@@ -100,16 +102,34 @@
     outline: none;
 }
 
-.bot_side .icon .ti:nth-child(2) {
-    border: 1px solid white;
+.bot_side .icon .ti:nth-child(3) {
+    margin-left: 1.2rem;
+}
+
+.bot_side .icon .ti:nth-child(5) {
+    margin-right: 0.4rem;
+}
+
+.bot_side .icon #masterPlay {
+    border: 1px solid var(--text);
     border-radius: 50%;
     padding: 6px 0px 6px 8px;
     margin: 0 1.2rem 0 .4rem;
-    transition: .3s linear;
+    background-size: 300% 100%;
+    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+    box-shadow: 0 1px 2px 0 rgba(65, 132, 234, 0.75);
+    transition: all .4s ease-in-out;
+}
+
+.bot_side .icon #masterPlay:hover {
+    background-position: 100% 0;
+    transition: all .4s ease-in-out;
+    border: 1px solid var(--white);
+    color: var(--white);
 }
 
 .bot_side span {
-    color: #fff;
+    color: var(--text);
     width: 3.2rem;
     font-size: 1.1rem;
     font-weight: 400;
@@ -179,7 +199,7 @@
 
 .bot_side .vol .ti {
     position: absolute;
-    color: #fff;
+    color: var(--text);
     font-size: 2.5rem;
     top: -12px;
     left: -35px;
@@ -225,4 +245,39 @@
     left: -5px;
     top: -5px;
     box-shadow: inset 0 0 3px #36e2ec;
+}
+
+.bot_side .playList {
+    display: flex;
+    position: relative;
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-left: 2rem;
+    border-radius: 1rem;
+    color: var(--black);
+    font-size: 2.5rem;
+    background-size: 300% 100%;
+    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+    box-shadow: 0 1px 2px 0 rgba(65, 132, 234, 0.75);
+    transition: all .4s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    cursor: pointer;
+    /* display: none; */
+}
+
+.bot_side .playList:hover {
+    background-position: 100% 0;
+    transition: all .4s ease-in-out;
+}
+
+.bot_side .playList i {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    top: 20%;
+    left: 3px;
 }

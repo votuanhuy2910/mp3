@@ -1,9 +1,11 @@
 :root {
-    --LeftAndRight: #ffe3e4;
-    --main: #ffd7d8;
-    --bottom: #f9c6c5;
-    --hoverText: #b72479;
+    --LeftAndRight: #f2f2f2;
+    --main: #ffffff;
+    --bottom: #ffffff;
+    --white: #ffffff;
+    --hoverText: #8d22c3;
     --text: #32323d;
+    --black: #444;
 }
 
 .mid_side {
@@ -46,7 +48,7 @@
     height: 3px;
     bottom: -5px;
     left: 0;
-    background-color: #ff5eb4;
+    background-color: var(--hoverText);
     border-radius: 2rem;
     display: none;
 }
@@ -57,23 +59,13 @@
 
 .mid_side nav .search {
     position: relative;
-    width: 40%;
+    width: 35%;
     padding: 1px 10px;
     border-radius: 2rem;
     color: gray;
     display: flex;
     align-items: center;
-}
-
-.mid_side nav .search::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 2rem;
     background: rgba(184, 184, 184, .3);
-    backdrop-filter: blur(5px);
-    z-index: -1;
 }
 
 .mid_side nav .search .ti {
@@ -86,26 +78,43 @@
     background: none;
     outline: none;
     border: none;
+    width: 100%;
     padding: 10px 10px;
     color: var(--text);
     font-size: 1.4rem;
 }
 
 .mid_side nav .user {
-    position: relative;
-    width: 3rem;
-    height: 3rem;
+    display: flex;
+    align-items: center;
     border-radius: 50%;
     margin-left: 1.5rem;
     cursor: pointer;
+    position: relative;
+}
+
+.mid_side nav #toggle-btn {
+    width: 3rem;
+    height: 3rem;
+    line-height: 2.7rem;
+    border-radius: 50%;
+    background-color: var(--text);
+    color: var(--white);
+    font-size: 2.9rem;
+    cursor: pointer;
+    text-align: center;
+    margin-right: 0.5rem;
+}
+
+#toggle-btn.ti-moon {
+    transform: rotate(360deg);
 }
 
 .mid_side nav .user img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 3rem;
+    height: 3rem;
     border-radius: inherit;
-    box-shadow: 2px 2px 4px #131312;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .mid_side .content {
@@ -141,11 +150,11 @@
 }
 
 .swiper-pagination-bullet {
-    background: #fff !important;
+    background: var(--white) !important;
 }
 
 .swiper-pagination-bullet-active {
-    background: #ff5eb4 !important;
+    background: var(--white) !important;
 }
 
 .mid_side .content .swiper .swiper-slide .heading {
@@ -153,49 +162,20 @@
     flex-direction: column;
     justify-content: center;
     width: 45%;
-    height: 160px;
+    height: 16rem;
     margin-right: 1rem;
-    border-right: 1px solid #ff5eb4;
-}
-
-.mid_side .content .swiper .autoplay-progress {
-    position: absolute;
-    right: 10px;
-    bottom: 5px;
-    z-index: 10;
-    width: 48px;
-    height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    color: #fff;
-}
-
-.mid_side .content .swiper .autoplay-progress svg {
-    --progress: 0;
-    position: absolute;
-    left: 0;
-    top: 0px;
-    z-index: 10;
-    width: 100%;
-    height: 100%;
-    stroke-width: 4px;
-    stroke: #fff;
-    fill: none;
-    stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
-    stroke-dasharray: 125.6;
-    transform: rotate(-90deg);
 }
 
 .mid_side .content .swiper .ytb {
-    height: 160px;
+    height: 16rem;
+    width: 50%;
     padding: 1rem 0;
 }
 
-.mid_side .content .swiper .ytb iframe {
+.mid_side .content .swiper .ytb img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
     border-radius: 2rem;
 }
 
@@ -212,6 +192,18 @@
     padding-right: 1rem;
 }
 
+.mid_side .content .heading button {
+    width: 50%;
+    border: 1px solid rgba(254,255,255,.2);
+    outline: none;
+    border-radius: 2rem;
+    padding: .7rem;
+    margin-top: 2rem;
+    background: rgba(254,255,255,.1);
+    color: var(--white);
+    cursor: pointer;
+}
+
 .mid_side .content .buttons {
     margin-top: 1rem;
 }
@@ -220,12 +212,12 @@
     width: 12rem;
     height: 3rem;
     border: none;
-    background-size: 300% 100%;
-    color: #fff;
+    color: var(--white);
     margin-right: 0.5rem;
     cursor: pointer;
     outline: none;
     border-radius: 2rem;
+    background-size: 300% 100%;
     background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
     box-shadow: 0 1px 2px 0 rgba(65, 132, 234, 0.75);
     transition: all .4s ease-in-out;
@@ -237,8 +229,8 @@
 }
 
 .mid_side .content .buttons button:nth-child(2) {
-    border: 2px solid #ff5eb4;
-    color: #ff5eb4;
+    border: 2px solid var(--hoverText);
+    color: var(--hoverText);
     background: transparent;
     animation: glowing 15s linear infinite;
 }
