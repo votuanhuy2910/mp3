@@ -13,6 +13,8 @@
     align-items: center;
     padding: 0 2.5rem;
     /* justify-content: space-between; */
+    position: relative;
+    z-index: 9999999;
 }
 
 .bot_side .wave {
@@ -68,6 +70,80 @@
     }
 }
 
+.wave2 {
+    width: 6rem;
+    height: 3rem;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -80px;
+    right: 42%;
+}
+
+.wave2>span {
+    display: block;
+    position: relative;
+    background: #000;
+    width: 4px;
+    height: 100%;
+    border-radius: 1rem;
+    margin: 0 0.2rem;
+    animation: inset;
+}
+
+.wave2>span:nth-child(1) {
+    height: 10px;
+    animation-delay: 0s;
+    background: #ff8c00;
+}
+
+.wave2>span:nth-child(2) {
+    height: 20px;
+    animation-delay: 0.3s;
+    background: #ffff00;
+}
+
+.wave2>span:nth-child(3) {
+    height: 15px;
+    animation-delay: 0.6s;
+    background: #26d53a;
+}
+
+.wave2>span:nth-child(4) {
+    height: 25px;
+    animation-delay: 0.9s;
+    background: #26e6a3;
+}
+
+.wave2>span:nth-child(5) {
+    height: 10px;
+    animation-delay: 0.6s;
+    background: #1da8e2;
+}
+
+.wave2>span:nth-child(6) {
+    height: 20px;
+    animation-delay: 0.3s;
+    background: #5916ba;
+}
+
+.wave2>span:nth-child(7) {
+    height: 13px;
+    animation-delay: 0s;
+    background: #d418d9;
+}
+
+@keyframes waves-2 {
+    50% {
+        height: 20%;
+    }
+
+    100% {
+        height: 100%;
+    }
+}
+
 .bot_side img {
     width: 6rem;
     height: 6rem;
@@ -88,13 +164,20 @@
     color: #4c5262;
 }
 
+.bot_side .download,
 .bot_side .icon {
     display: flex;
     align-items: center;
     outline: none;
     font-size: 2rem;
     color: var(--text);
-    margin: 0 2rem 0 4rem;
+    margin: 0 2rem;
+}
+
+.bot_side .download {
+    margin: 0 1.5rem;
+    font-size: 2.2rem;
+    cursor: pointer;
 }
 
 .bot_side .icon .ti {
@@ -102,11 +185,11 @@
     outline: none;
 }
 
-.bot_side .icon .ti:nth-child(3) {
+.bot_side .icon .ti:nth-child(2) {
     margin-left: 1.2rem;
 }
 
-.bot_side .icon .ti:nth-child(5) {
+.bot_side .icon .ti:nth-child(4) {
     margin-right: 0.4rem;
 }
 
@@ -265,7 +348,7 @@
     justify-content: center;
     color: var(--white);
     cursor: pointer;
-    /* display: none; */
+    display: none;
 }
 
 .bot_side .playList:hover {

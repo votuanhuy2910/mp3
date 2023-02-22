@@ -65,7 +65,7 @@ ul {
     width: 62%;
     height: 90%;
     background: var(--main);
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 22px 0px;
+    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 22px 0px; */
     transition: .3s linear;
 }
 
@@ -82,4 +82,5 @@ ul {
     height: 10%;
     background: var(--bottom);
     transition: .3s linear;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 22px 0px;
 }

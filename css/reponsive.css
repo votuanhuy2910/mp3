@@ -20,10 +20,15 @@
     .mid_side .content .swiper .swiper-slide .heading {
         height: 20rem;
     }
+
+    .right_side .song .song_info .heart label.icon-heart::before,
+    .right_side .song .song_info .heart label.icon-heart::after {
+        margin-left: 0;
+    }
 }
 
 /* responsive desktop */
-@media (min-width: 1920px) and (max-width: 2560px) {
+@media (min-width: 1920px) and (max-width: 2559px) {
     html {
         font-size: 85%;
     }
@@ -44,10 +49,15 @@
     .mid_side .content .swiper .swiper-slide .heading {
         height: 20rem;
     }
+
+    .right_side .song .song_info .heart label.icon-heart::before,
+    .right_side .song .song_info .heart label.icon-heart::after {
+        margin-left: -2rem;
+    }
 }
 
 /* responsive laptop macbook Pro */
-@media (min-width: 1440px) and (max-width: 1920px) {
+@media (min-width: 1440px) and (max-width: 1919px) {
     html {
         font-size: 60%;
     }
@@ -206,6 +216,34 @@
     }
 }
 
+@media screen and (max-width: 620px) {
+    .bot_side .wave {
+        display: none;
+    }
+    
+    .bot_side .wave2 {
+        display: flex;
+    }
+    
+    .bot_side .icon {
+        position: absolute;
+        top: -45px;
+        right: 30%;
+    }
+
+    .bot_side .icon::before {
+        content: "";
+        position: absolute;
+        width: 180px;
+        height: 180px;
+        background-color: #fff;
+        box-shadow: 0 -11px 15px -17px #444;
+        z-index: -1;
+        border-radius: 50% 50% 0 0;
+        left: -8%;
+    }
+}
+
 /* responsive moblie ip12/13pro, 13promax */
 @media screen and (max-width: 450px) {
     html {
@@ -214,6 +252,14 @@
 
     .mid_side .content {
         height: 26%;
+    }
+
+    .bot_side .wave2 {
+        right: 47%;
+    }
+
+    .bot_side .icon::before {
+        left: -14%;
     }
 }
 
@@ -236,5 +282,13 @@
     
     .mid_side .content {
         height: 23%;
+    }
+
+    .bot_side .wave2 {
+        right: 47%;
+    }
+
+    .bot_side .icon::before {
+        left: -18%;
     }
 }
