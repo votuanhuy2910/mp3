@@ -5,25 +5,30 @@
     }
 
     .mid_side .content {
-        height: 30%;
+        height: 44%;
     }
 
     .mid_side .content .buttons button {
         font-size: 1.6rem;
     }
 
-    .mid_side .content .swiper .ytb {
+    /* .mid_side .content .swiper .ytb {
         width: 40rem;
         height: 20rem;
     }
 
     .mid_side .content .swiper .swiper-slide .heading {
         height: 20rem;
-    }
+    } */
 
     .right_side .song .song_info .heart label.icon-heart::before,
     .right_side .song .song_info .heart label.icon-heart::after {
         margin-left: 0;
+    }
+
+    .bot_side .vol .ti {
+        top: -22px;
+        left: -46px;
     }
 }
 
@@ -38,21 +43,17 @@
     }
 
     .mid_side .content {
-        height: 33%;
-    }
-
-    .mid_side .content .swiper .ytb {
-        width: 40rem;
-        height: 20rem;
-    }
-
-    .mid_side .content .swiper .swiper-slide .heading {
-        height: 20rem;
+        height: 40%;
     }
 
     .right_side .song .song_info .heart label.icon-heart::before,
     .right_side .song .song_info .heart label.icon-heart::after {
         margin-left: -2rem;
+    }
+
+    .bot_side .vol .ti {
+        top: -18px;
+        left: -42px;
     }
 }
 
@@ -145,12 +146,6 @@
     }
 }
 
-@media screen and (max-width: 1050px) {
-    .bot_side .playList {
-        display: none;
-    }
-}
-
 /* responsive moblie ipad 12Pro */
 @media (min-width: 991px) and (max-width: 1050px) {
     .mid_side .content {
@@ -212,7 +207,7 @@
     }
 
     .bot_side .playList {
-        display: none;
+        display: flex;
     }
 }
 
@@ -251,7 +246,7 @@
     }
 
     .mid_side .content {
-        height: 26%;
+        height: 20%;
     }
 
     .bot_side .wave2 {
