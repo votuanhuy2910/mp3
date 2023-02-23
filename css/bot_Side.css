@@ -1,13 +1,3 @@
-:root {
-    --LeftAndRight: #f2f2f2;
-    --main: #fff;
-    --bottom: #fff;
-    --hoverText: #8d22c3;
-    --text: #32323d;
-    --black: #444;
-    --white: #fff;
-}
-
 .bot_side {
     display: flex;
     align-items: center;
@@ -164,7 +154,6 @@
     color: #4c5262;
 }
 
-.bot_side .download,
 .bot_side .icon {
     display: flex;
     align-items: center;
@@ -172,12 +161,6 @@
     font-size: 2rem;
     color: var(--text);
     margin: 0 2rem;
-}
-
-.bot_side .download {
-    margin: 0 1.5rem;
-    font-size: 2.2rem;
-    cursor: pointer;
 }
 
 .bot_side .icon .ti {

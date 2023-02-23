@@ -1,13 +1,3 @@
-:root {
-    --LeftAndRight: #f2f2f2;
-    --main: #fff;
-    --bottom: #fff;
-    --hoverText: #8d22c3;
-    --text: #32323d;
-    --black: #444;
-    --white: #fff;
-}
-
 .left_side {
     display: flex;
     flex-direction: column;
