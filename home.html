@@ -43,21 +43,21 @@
 				<nav class="playlist">
 					<ul>
 						<li>
-							<h4 class="tab_pane-left active">
+							<h4 class="tab_item-left active">
 								<span></span>
 								<i class="ti ti-user-circle"></i>
 								<b>Tổng quan</b>
 							</h4>
 						</li>
 						<li>
-							<h4 class="tab_pane-left">
+							<h4 class="tab_item-left">
 								<span></span>
 								<i class="ti ti-brand-shazam"></i>
 								<b>Cá nhân</b>
 							</h4>
 						</li>
 						<li>
-							<h4 class="tab_pane-left">
+							<h4 class="tab_item-left">
 								<span></span>
 								<i class="ti ti-radio"></i>
 								<b>Radio</b>
@@ -142,87 +142,133 @@
 			</section>
 
 			<section class="mid_side">
-				<nav>
-					<ul>
-						<li>
-							<h4 class="tab_pane-nav active">
+				<div class="tab_pane-mid active">
+					<nav>
+						<div class="heading">
+							<h4 class="tab_pane-nav">
 								<span></span>
 								Tổng quan
 							</h4>
-						</li>
+						</div>
+	
+						<div class="search">
+							<i class="ti ti-search"></i>
+							<input type="text" placeholder="Search Music..." />
+						</div>
+	
+						<div class="user">
+							<div id="toggle-btn" class="ti ti-sun"></div>
+							<img src="/assets/logo2.png" alt="User" title="VTH Coder" />
+						</div>
+					</nav>
+	
+					<div class="content">
+						<div class="swiper mySwiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="heading">
+										<h1>JustaTee</h1>
+										<p>248.182 người quan tâm</p>
+										<button>quan tâm</button>
+									</div>
+									<div class="ytb">
+										<img
+											src="/assets/files/component/justatee.jpg"
+											alt="justaTee"
+										/>
+									</div>
+								</div>
+	
+								<div class="swiper-slide">
+									<div class="heading">
+										<h1>Mr. Siro</h1>
+										<p>804.978 người quan tâm</p>
+										<button>quan tâm</button>
+									</div>
+									<div class="ytb">
+										<img src="/assets/files/component/siro.jpg" alt="mr.siro" />
+									</div>
+								</div>
+	
+								<div class="swiper-slide">
+									<div class="heading">
+										<h1>Only C</h1>
+										<p>189.247 người quan tâm</p>
+										<button>quan tâm</button>
+									</div>
+									<div class="ytb">
+										<img src="/assets/files/component/onlyc.jpg" alt="onlyC" />
+									</div>
+								</div>
+							</div>
+	
+							<div class="swiper-pagination"></div>
+						</div>
+	
+						<div class="buttons">
+							<button>PLAY</button>
+							<button>FOLLOW</button>
+						</div>
+					</div>
+				</div>
 
-						<li>
+				<div class="tab_pane-mid">
+					<nav>
+						<div class="heading">
 							<h4 class="tab_pane-nav">
 								<span></span>
 								Cá nhân
 							</h4>
-						</li>
+						</div>
+	
+						<div class="search">
+							<i class="ti ti-search"></i>
+							<input type="text" placeholder="Search Music..." />
+						</div>
+	
+						<div class="user">
+							<div id="toggle-btn" class="ti ti-sun"></div>
+							<img src="/assets/logo2.png" alt="User" title="VTH Coder" />
+						</div>
+					</nav>
+	
+					<div class="content">
+						chưa có gì hết
+	
+						<div class="buttons">
+							<button>PLAY</button>
+							<button>FOLLOW</button>
+						</div>
+					</div>
+				</div>
 
-						<li>
+				<div class="tab_pane-mid">
+					<nav>
+						<div class="heading">
 							<h4 class="tab_pane-nav">
 								<span></span>
 								Radio
 							</h4>
-						</li>
-					</ul>
-
-					<div class="search">
-						<i class="ti ti-search"></i>
-						<input type="text" placeholder="Search Music..." />
-					</div>
-
-					<div class="user">
-						<div id="toggle-btn" class="ti ti-sun"></div>
-						<img src="/assets/logo2.png" alt="User" title="VTH Coder" />
-					</div>
-				</nav>
-
-				<div class="content">
-					<div class="swiper mySwiper">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide">
-								<div class="heading">
-									<h1>JustaTee</h1>
-									<p>248.182 người quan tâm</p>
-									<button>quan tâm</button>
-								</div>
-								<div class="ytb">
-									<img
-										src="/assets/files/component/justatee.jpg"
-										alt="justaTee"
-									/>
-								</div>
-							</div>
-
-							<div class="swiper-slide">
-								<div class="heading">
-									<h1>Mr. Siro</h1>
-									<p>804.978 người quan tâm</p>
-									<button>quan tâm</button>
-								</div>
-								<div class="ytb">
-									<img src="/assets/files/component/siro.jpg" alt="mr.siro" />
-								</div>
-							</div>
-
-							<div class="swiper-slide">
-								<div class="heading">
-									<h1>Only C</h1>
-									<p>189.247 người quan tâm</p>
-									<button>quan tâm</button>
-								</div>
-								<div class="ytb">
-									<img src="/assets/files/component/onlyc.jpg" alt="onlyC" />
-								</div>
-							</div>
 						</div>
-
-						<div class="swiper-pagination"></div>
-					</div>
-
-					<div class="buttons">
-						<button>PLAY</button>
-						<button>FOLLOW</button>
+	
+						<div class="search">
+							<i class="ti ti-search"></i>
+							<input type="text" placeholder="Search Music..." />
+						</div>
+	
+						<div class="user">
+							<div id="toggle-btn" class="ti ti-sun"></div>
+							<img src="/assets/logo2.png" alt="User" title="VTH Coder" />
+						</div>
+					</nav>
+	
+					<div class="content">
+						cũng vậy
+	
+						<div class="buttons">
+							<button>PLAY</button>
+							<button>FOLLOW</button>
+						</div>
 					</div>
 				</div>
 			</section>

@@ -5,21 +5,21 @@
     }
 
     .mid_side .content {
-        height: 44%;
+        height: 30%;
     }
 
     .mid_side .content .buttons button {
         font-size: 1.6rem;
     }
 
-    /* .mid_side .content .swiper .ytb {
+    .mid_side .content .swiper .ytb {
         width: 40rem;
         height: 20rem;
     }
 
     .mid_side .content .swiper .swiper-slide .heading {
         height: 20rem;
-    } */
+    }
 
     .right_side .song .song_info .heart label.icon-heart::before,
     .right_side .song .song_info .heart label.icon-heart::after {
@@ -43,7 +43,16 @@
     }
 
     .mid_side .content {
-        height: 40%;
+        height: 35%;
+    }
+
+    .mid_side .content .swiper .ytb {
+        width: 40rem;
+        height: 20rem;
+    }
+
+    .mid_side .content .swiper .swiper-slide .heading {
+        height: 20rem;
     }
 
     .right_side .song .song_info .heart label.icon-heart::before,
@@ -149,7 +158,7 @@
 /* responsive moblie ipad 12Pro */
 @media (min-width: 991px) and (max-width: 1050px) {
     .mid_side .content {
-        height: 28%;
+        height: 16%;
     }
 
     .mid_side .content .swiper .swiper-slide .heading {
@@ -176,7 +185,7 @@
     }
 
     .mid_side .content {
-        height: 28%;
+        height: 20%;
     }
 
     .right_side {
@@ -199,7 +208,7 @@
     }
 
     .mid_side .content {
-        height: 26%;
+        height: 20%;
     }
 
     .right_side {
@@ -246,7 +255,11 @@
     }
 
     .mid_side .content {
-        height: 20%;
+        height: 25%;
+    }
+
+    .mid_side nav ul li {
+        font-size: 1.3rem;
     }
 
     .bot_side .wave2 {
@@ -264,8 +277,12 @@
         font-size: 48%;
     }
 
+    .mid_side nav ul li {
+        font-size: 1.3rem;
+    }
+
     .mid_side .content {
-        height: 24%;
+        height: 30%;
     }
 }
 
@@ -276,7 +293,7 @@
     }
     
     .mid_side .content {
-        height: 23%;
+        height: 25%;
     }
 
     .bot_side .wave2 {

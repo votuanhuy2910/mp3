@@ -39,14 +39,14 @@ playLists.forEach((item) => {
 	};
 });
 
-const lines = $$(".mid_side nav ul li h4");
+// const lines = $$(".mid_side .heading .tab_pane-nav");
 
-lines.forEach((item) => {
-	item.onclick = function () {
-		$(".mid_side nav ul li .active").classList.remove("active");
-		this.classList.add("active");
-	};
-});
+// lines.forEach((item) => {
+// 	item.onclick = function () {
+// 		$(".mid_side .heading .active").classList.remove("active");
+// 		this.classList.add("active");
+// 	};
+// });
 
 const tabs = $$(".tab-item");
 const panes = $$(".tab-pane");
@@ -64,3 +64,18 @@ tabs.forEach((tab, index) => {
 		pane.classList.add("active");
 	};
 });
+
+const tabsLeft = $$(".tab_item-left")
+const panesMid = $$(".tab_pane-mid")
+
+tabsLeft.forEach((tabLeft, index) => {
+	const paneMid = panesMid[index];
+
+	tabLeft.onclick = function () {
+		$(".tab_item-left.active").classList.remove("active");
+		$(".tab_pane-mid.active").classList.remove("active");
+
+		this.classList.add("active");
+		paneMid.classList.add("active");
+	}
+})
