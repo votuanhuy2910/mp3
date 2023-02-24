@@ -4,7 +4,11 @@
         font-size: 100%;
     }
 
-    .mid_side .content {
+    .left_side .playlist.sub {
+        max-height: 53rem;
+    }
+
+    .mid_side .content .swiper {
         height: 30%;
     }
 
@@ -42,7 +46,7 @@
         font-size: 1.6rem;
     }
 
-    .mid_side .content {
+    .mid_side .content .swiper {
         height: 35%;
     }
 
@@ -72,7 +76,11 @@
         font-size: 60%;
     }
 
-    .mid_side .content {
+    .left_side .playlist.sub {
+        max-height: 52rem;
+    }
+
+    .mid_side .content .swiper {
         height: 34%;
     }
 
@@ -100,8 +108,12 @@
     html {
         font-size: 50%;
     }
-    
-    .mid_side .content {
+
+    .left_side .playlist.sub {
+        max-height: 51rem;
+    }
+
+    .mid_side .content .swiper {
         height: 30%;
     }
 
@@ -125,7 +137,7 @@
 }
 
 @media (min-width: 1280px) and (max-width: 1366px) {
-    .mid_side .content {
+    .mid_side .content .swiper {
         height: 30%;
     }
 
@@ -145,7 +157,7 @@
         font-size: 60%;
     }
 
-    .mid_side .content {
+    .mid_side .content .swiper {
         height: 30%;
     }
 
@@ -157,8 +169,12 @@
 
 /* responsive moblie ipad 12Pro */
 @media (min-width: 991px) and (max-width: 1050px) {
-    .mid_side .content {
+    .mid_side .content .swiper {
         height: 16%;
+    }
+
+    .left_side .playlist.sub {
+        max-height: 56rem;
     }
 
     .mid_side .content .swiper .swiper-slide .heading {
@@ -175,7 +191,7 @@
     html {
         font-size: 60%;
     }
-    
+
     .left_side {
         display: none;
     }
@@ -184,7 +200,7 @@
         width: 75%;
     }
 
-    .mid_side .content {
+    .mid_side .content .swiper {
         height: 20%;
     }
 
@@ -207,7 +223,7 @@
         width: 100%;
     }
 
-    .mid_side .content {
+    .mid_side .content .swiper {
         height: 20%;
     }
 
@@ -218,17 +234,22 @@
     .bot_side .playList {
         display: flex;
     }
+
+    .bot_side .vol .ti {
+        top: -10px;
+        left: -30px;
+    }
 }
 
 @media screen and (max-width: 620px) {
     .bot_side .wave {
         display: none;
     }
-    
+
     .bot_side .wave2 {
         display: flex;
     }
-    
+
     .bot_side .icon {
         position: absolute;
         top: -45px;
@@ -254,11 +275,11 @@
         font-size: 50%;
     }
 
-    .mid_side .content {
+    .mid_side .content .swiper {
         height: 25%;
     }
 
-    .mid_side nav ul li {
+    .mid_side nav .heading .tab_pane-nav {
         font-size: 1.3rem;
     }
 
@@ -277,11 +298,11 @@
         font-size: 48%;
     }
 
-    .mid_side nav ul li {
+    .mid_side nav .heading .tab_pane-nav {
         font-size: 1.3rem;
     }
 
-    .mid_side .content {
+    .mid_side .content .swiper {
         height: 30%;
     }
 }
@@ -291,8 +312,8 @@
     html {
         font-size: 45%;
     }
-    
-    .mid_side .content {
+
+    .mid_side .content .swiper {
         height: 25%;
     }
 

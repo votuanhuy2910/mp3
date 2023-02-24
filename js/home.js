@@ -87,3 +87,112 @@ tabsLeft.forEach((tabLeft, index) => {
 		};
 	});
 });
+
+const slidersDiscover = $$(".overview__slider-item");
+
+var sliderIndex1 = 1;
+
+changeImage1Replate = function () {
+	slidersDiscover.forEach((item, index) => {
+		if (index == sliderIndex1) {
+			slidersDiscover[index].classList.replace(
+				"second",
+				"first"
+			);
+			slidersDiscover[index].classList.replace(
+				"third",
+				"first"
+			);
+			slidersDiscover[index].classList.replace(
+				"four",
+				"first"
+			);
+		} else if (index == sliderIndex1 + 1) {
+			slidersDiscover[index].classList.replace(
+				"first",
+				"second"
+			);
+			slidersDiscover[index].classList.replace(
+				"third",
+				"second"
+			);
+			slidersDiscover[index].classList.replace(
+				"four",
+				"second"
+			);
+		} else if (index == sliderIndex1 + 2) {
+			slidersDiscover[index].classList.replace(
+				"first",
+				"third"
+			);
+			slidersDiscover[index].classList.replace(
+				"second",
+				"third"
+			);
+			slidersDiscover[index].classList.replace(
+				"four",
+				"third"
+			);
+		} else {
+			slidersDiscover[index].classList.replace(
+				"first",
+				"four"
+			);
+			slidersDiscover[index].classList.replace(
+				"second",
+				"four"
+			);
+			slidersDiscover[index].classList.replace(
+				"third",
+				"four"
+			);
+		}
+		if (sliderIndex1 == 2) {
+			slidersDiscover[0].classList.replace(
+				"first",
+				"third"
+			);
+			slidersDiscover[0].classList.replace(
+				"second",
+				"third"
+			);
+			slidersDiscover[0].classList.replace(
+				"four",
+				"third"
+			);
+		} else if (sliderIndex1 == 3) {
+			slidersDiscover[0].classList.replace(
+				"first",
+				"second"
+			);
+			slidersDiscover[0].classList.replace(
+				"third",
+				"second"
+			);
+			slidersDiscover[0].classList.replace(
+				"four",
+				"second"
+			);
+			slidersDiscover[1].classList.replace(
+				"first",
+				"third"
+			);
+			slidersDiscover[1].classList.replace(
+				"second",
+				"third"
+			);
+			slidersDiscover[1].classList.replace(
+				"four",
+				"third"
+			);
+		}
+	});
+};
+changeImage1 = function () {
+	changeImage1Replate();
+	sliderIndex1++;
+	if (sliderIndex1 >= 4) {
+		sliderIndex1 = 0;
+	}
+};
+setInterval(changeImage1, 5000);

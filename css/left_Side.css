@@ -7,7 +7,7 @@
 .left_side button.btn-z,
 .left_side button.btn-zing {
     font-size: 2.2rem;
-    margin: 1rem 2.5rem;
+    margin: 2rem 2.5rem 1rem;
     padding: 1rem;
     font-weight: 700;
     background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);

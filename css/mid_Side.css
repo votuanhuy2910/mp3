@@ -119,10 +119,15 @@
 
 .mid_side .content {
     width: 90%;
-    height: 40%;
+    height: 100%;
     margin: auto;
     margin-top: 2rem;
     display: none;
+    overflow-y: auto;
+}
+
+.mid_side .content::-webkit-scrollbar {
+    width: 0;
 }
 
 .mid_side .content.active {
@@ -131,12 +136,11 @@
 
 .mid_side .content .swiper {
     width: 100%;
-    height: 100%;
+    height: 40%;
 }
 
 .mid_side .content .swiper .swiper-slide {
     display: flex;
-    background: var(--LeftAndRight);
     border: none;
     border-radius: 2rem;
     justify-content: space-evenly;
@@ -146,8 +150,6 @@
 }
 
 .swiper-slide-active {
-    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed) !important;
-    box-shadow: 0 1px 2px 0 rgba(65, 132, 234, 0.75) !important;
     background-size: 400% !important;
     color: #fff !important;
     transition: all .4s ease-in-out !important;
@@ -255,10 +257,68 @@
     }
 
     50% {
-        background-position: 400% 0;
+        background-position: 100% 0;
     }
 
     100% {
         background-position: 0 0;
     }
+}
+
+.overview {
+    margin-top: 2rem;
+}
+
+.overview .overview__slider {
+    display: flex;
+    position: relative;
+    margin: -1.5rem;
+}
+
+.overview .overview__slider-item {
+    background-size: cover;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform .9s;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+    padding: 15px;
+    width: 33.33%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.overview .overview__slider-item img {
+    width: 100%;
+    height: auto;
+    border-radius: .5rem;
+}
+
+.overview__slider-item.first {
+    z-index: 1;
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+.overview__slider-item.second {
+    z-index: 2;
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+.overview__slider-item.third {
+    transform: translateX(100%);
+    z-index: 5;
+    opacity: 1;
+}
+
+.overview__slider-item.four {
+    position: relative;
+    transform: translateX(200%);
+    z-index: 4;
+    opacity: 1;
 }
