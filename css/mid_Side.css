@@ -273,6 +273,7 @@
     display: flex;
     position: relative;
     margin: -1.5rem;
+    transition: .3s linear;
 }
 
 .overview .overview__slider-item {
@@ -321,4 +322,32 @@
     transform: translateX(200%);
     z-index: 4;
     opacity: 1;
+}
+
+.overview__slider-left,
+.overview__slider-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 6;
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 4px 18px;
+    display: none;
+}
+
+.overview__slider:hover .overview__slider-left,
+.overview__slider:hover .overview__slider-right {
+    display: block;
+}
+
+.overview__slider-left {
+    left: 2%;
+}
+
+.overview__slider-right {
+    right: 2%;
 }

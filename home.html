@@ -39,7 +39,8 @@
 		<div class="wrapper">
 			<section class="left_side">
 				<button class="btn-zing">Zing MP3</button>
-				<button class="btn-z">Z</button>
+				<div class="btn-z">Z</div>
+
 				<nav class="playlist">
 					<ul>
 						<li>
@@ -266,6 +267,13 @@
 								<div class="overview__slider-item four">
 									<img src="/assets/files/component/slider-4.jpg" alt="">
 								</div>
+								<div class="overview__slider-left">
+									<i class="fas fa-chevron-left"></i>
+								</div>
+
+								<div class="overview__slider-right">
+									<i class="fas fa-chevron-right"></i>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -315,8 +323,8 @@
 				</div>
 			</section>
 
-			<section class="bot_side">
-				<div class="first" style="display: flex; align-items: center">
+			<section class="bot_side">				
+				<div style="display: flex; align-items: center">
 					<div class="wave">
 						<div class="wave1"></div>
 						<div class="wave1"></div>
@@ -379,6 +387,8 @@
 
 		<script src="/js/renderHome.js"></script>
 		<script src="/js/home.js"></script>
+
+		<script language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 
 		<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 

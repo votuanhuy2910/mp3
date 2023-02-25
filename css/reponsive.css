@@ -4,10 +4,6 @@
         font-size: 100%;
     }
 
-    .left_side .playlist.sub {
-        max-height: 53rem;
-    }
-
     .mid_side .content .swiper {
         height: 30%;
     }
@@ -76,10 +72,6 @@
         font-size: 60%;
     }
 
-    .left_side .playlist.sub {
-        max-height: 52rem;
-    }
-
     .mid_side .content .swiper {
         height: 34%;
     }
@@ -107,10 +99,6 @@
 @media (min-width: 1366px) and (max-width: 1439px) {
     html {
         font-size: 50%;
-    }
-
-    .left_side .playlist.sub {
-        max-height: 51rem;
     }
 
     .mid_side .content .swiper {
@@ -173,10 +161,6 @@
         height: 16%;
     }
 
-    .left_side .playlist.sub {
-        max-height: 56rem;
-    }
-
     .mid_side .content .swiper .swiper-slide .heading {
         align-items: center;
     }
@@ -186,22 +170,21 @@
     }
 }
 
-/* responsive moblie ipad 10Pro, ipad 11Pro, */
-@media (min-width: 776px) and (max-width: 991px) {
-    html {
-        font-size: 60%;
+@media screen and (max-width: 991px) {
+    .left_side {
+        width: 25%;
+        position: absolute;
+        z-index: 999;
+        transition: 1s linear;
+        transform: translateX(-100%);
     }
 
-    .left_side {
-        display: none;
+    .left_side .btn-z {
+        display: block;
     }
 
     .mid_side {
         width: 75%;
-    }
-
-    .mid_side .content .swiper {
-        height: 20%;
     }
 
     .right_side {
@@ -209,14 +192,26 @@
     }
 }
 
-/* responsive moblie ipad mini, ipad 9Pro, */
-@media screen and (max-width: 776px) {
+/* responsive moblie ipad 10Pro, ipad 11Pro, */
+@media (min-width: 776px) and (max-width: 991px) {
     html {
-        font-size: 52.5%;
+        font-size: 60%;
     }
 
-    .left_side {
-        display: none;
+    .mid_side .content .swiper {
+        height: 20%;
+    }
+
+    .mid_side .overview__slider-left,
+    .mid_side .overview__slider-right {
+        display: block;
+    }
+}
+
+/* responsive moblie ipad mini, ipad 9Pro, */
+@media screen and (max-width: 775px) {
+    html {
+        font-size: 52.5%;
     }
 
     .mid_side {
@@ -242,6 +237,42 @@
 }
 
 @media screen and (max-width: 620px) {
+    .left_side {
+        width: 30%;
+    }
+
+    .mid_side .overview__slider {
+        overflow: hidden;
+    }
+
+    .mid_side .overview__slider-item {
+        width: 100%;
+    }
+
+    .mid_side .overview__slider-item.second {
+        z-index: 2;
+        opacity: 1;
+        transform: translateX(-100%);
+    }
+
+    .mid_side .overview__slider-item.third {
+        transform: translateX(0);
+        z-index: 5;
+        opacity: 1;
+    }
+
+    .mid_side .overview__slider-item.four {
+        position: relative;
+        transform: translateX(100%);
+        z-index: 4;
+        opacity: 1;
+    }
+
+    .mid_side .overview__slider-left,
+    .mid_side .overview__slider-right {
+        display: none !important;
+    }
+
     .bot_side .wave {
         display: none;
     }
@@ -275,6 +306,10 @@
         font-size: 50%;
     }
 
+    .left_side {
+        width: 35%;
+    }
+
     .mid_side .content .swiper {
         height: 25%;
     }
@@ -285,6 +320,10 @@
 
     .bot_side .wave2 {
         right: 47%;
+    }
+
+    .bot_side .icon {
+        right: 25%;
     }
 
     .bot_side .icon::before {
@@ -308,7 +347,7 @@
 }
 
 /* responsive moblie galaxy s9 */
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 375px) {
     html {
         font-size: 45%;
     }
