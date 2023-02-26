@@ -39,7 +39,6 @@
 		<div class="wrapper">
 			<section class="left_side">
 				<button class="btn-zing">Zing MP3</button>
-				<div class="btn-z">Z</div>
 
 				<nav class="playlist">
 					<ul>
@@ -139,6 +138,12 @@
 							</h4>
 						</li>
 					</ul>
+				</div>
+
+				<div class="btn-z_right">Z</div>
+
+				<div class="playList_right" id="playlist">
+					<i class="ti ti-playlist"></i>
 				</div>
 			</section>
 
@@ -362,6 +367,10 @@
 					<i class="ti ti-arrows-shuffle" id="arrows-shuffle"></i>
 				</div>
 
+				<div class="icon_sub">
+					<i class="ti ti-repeat" id="repeat_sub"></i>
+				</div>
+
 				<span id="currentStart">0:00</span>
 
 				<div class="bar">
@@ -372,6 +381,10 @@
 
 				<span id="currentEnd">0:00</span>
 
+				<div class="icon_sub">
+					<i class="ti ti-arrows-shuffle" id="arrows-shuffle_sub"></i>
+				</div>
+
 				<div class="vol">
 					<i class="ti ti-volume-2" id="vol_icon"></i>
 					<input type="range" id="vol" min="0" value="30" max="100" />
@@ -379,9 +392,7 @@
 					<div class="dot" id="vol_dot"></div>
 				</div>
 
-				<div class="playList">
-					<i class="ti ti-playlist"></i>
-				</div>
+				<div class="btn-z">Z</div>
 			</section>
 		</div>
 
@@ -400,10 +411,10 @@
 				spaceBetween: 30,
 				centeredSlides: true,
 				loop: true,
-				autoplay: {
-					delay: 5000,
-					disableOnInteraction: false,
-				},
+				// autoplay: {
+				// 	delay: 5000,
+				// 	disableOnInteraction: false,
+				// },
 				pagination: {
 					el: ".swiper-pagination",
 					dynamicBullets: true,

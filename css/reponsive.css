@@ -4,6 +4,10 @@
         font-size: 100%;
     }
 
+    .left_side .playlist.sub {
+        max-height: 53rem;
+    }
+
     .mid_side .content .swiper {
         height: 30%;
     }
@@ -33,17 +37,17 @@
 }
 
 /* responsive desktop */
-@media (min-width: 1920px) and (max-width: 2559px) {
+@media screen and (max-width: 1920px) {
     html {
-        font-size: 85%;
+        font-size: 80%;
+    }
+
+    .left_side .playlist.sub {
+        max-height: 50rem;
     }
 
     .mid_side .content .buttons button {
         font-size: 1.6rem;
-    }
-
-    .mid_side .content .swiper {
-        height: 35%;
     }
 
     .mid_side .content .swiper .ytb {
@@ -66,10 +70,30 @@
     }
 }
 
-/* responsive laptop macbook Pro */
-@media (min-width: 1440px) and (max-width: 1919px) {
+@media screen and (max-width: 1540px) {
     html {
         font-size: 60%;
+    }
+
+    .bot_side .vol .ti {
+        top: -11px;
+        left: -35px;
+    }
+
+    .right_side .song .song_info .heart label.icon-heart::before,
+    .right_side .song .song_info .heart label.icon-heart::after {
+        margin-left: 0;
+    }
+}
+
+/* responsive laptop macbook Pro */
+@media screen and (max-width: 1440px) {
+    html {
+        font-size: 60%;
+    }
+
+    .left_side .playlist.sub {
+        max-height: 52rem;
     }
 
     .mid_side .content .swiper {
@@ -96,13 +120,17 @@
 }
 
 /* responsive laptop size M */
-@media (min-width: 1366px) and (max-width: 1439px) {
+@media screen and (max-width: 1367px) {
     html {
         font-size: 50%;
     }
 
+    .left_side .playlist.sub {
+        max-height: 51rem;
+    }
+
     .mid_side .content .swiper {
-        height: 30%;
+        height: 34%;
     }
 
     .mid_side .content .buttons button {
@@ -124,41 +152,18 @@
     }
 }
 
-@media (min-width: 1280px) and (max-width: 1366px) {
-    .mid_side .content .swiper {
-        height: 30%;
-    }
-
-    .mid_side .content .buttons button {
-        font-size: 1.6rem;
-    }
-
-    .right_side .song .song_info .heart label.icon-heart::before,
-    .right_side .song .song_info .heart label.icon-heart::after {
-        margin-left: -2.2rem;
-    }
-}
-
-/* responsive laptop size S */
-@media screen and (max-width: 1280px) {
-    html {
-        font-size: 60%;
-    }
-
-    .mid_side .content .swiper {
-        height: 30%;
-    }
-
-    .right_side .song .song_info .heart label.icon-heart::before,
-    .right_side .song .song_info .heart label.icon-heart::after {
-        margin-left: -2.2rem;
-    }
-}
-
 /* responsive moblie ipad 12Pro */
-@media (min-width: 991px) and (max-width: 1050px) {
+@media screen and (max-width: 1050px) {
     .mid_side .content .swiper {
-        height: 16%;
+        height: 22%;
+    }
+
+    .left_side .playlist.sub {
+        max-height: 56rem;
+    }
+
+    .mid_side .content .swiper .swiper-slide {
+        padding: 0 3rem;
     }
 
     .mid_side .content .swiper .swiper-slide .heading {
@@ -170,7 +175,45 @@
     }
 }
 
+/* responsive rotate moblie ipad 12Pro */
+@media only screen and (max-width: 1296px) and (max-height: 1025px) {
+    .mid_side .content .swiper {
+        height: 25%;
+    }
+
+    .mid_side .content .swiper .ytb {
+        width: 70%;
+    }
+
+    .mid_side .content .swiper .swiper-slide {
+        padding: 0 4rem;
+    }
+}
+
+/* responsive laptop size S */
+@media only screen and (max-width: 1281px) and (max-height: 700px) {
+    html {
+        font-size: 60%;
+    }
+
+    .mid_side .content .swiper {
+        height: 40%;
+    }
+
+    .right_side .song .song_info .heart label.icon-heart::before,
+    .right_side .song .song_info .heart label.icon-heart::after {
+        margin-left: -2.2rem;
+    }
+}
+
+
+/* responsive moblie ipad 10Pro, ipad 11Pro */
+/* event click Z open left_side */
 @media screen and (max-width: 991px) {
+    html {
+        font-size: 60%;
+    }
+
     .left_side {
         width: 25%;
         position: absolute;
@@ -179,12 +222,31 @@
         transform: translateX(-100%);
     }
 
-    .left_side .btn-z {
+    .left_side.active {
+        transform: translateX(0%);
+    }
+
+    .btn-z {
         display: block;
+    }
+
+    .btn-z_right,
+    .playList_right {
+        display: none;
     }
 
     .mid_side {
         width: 75%;
+    }
+
+    /* moblie ipad 10Pro, ipad 11Pro, ipad mini, ipad 9Pro */
+    .mid_side .content .swiper {
+        height: 27%;
+    }
+
+    .mid_side .overview__slider-left,
+    .mid_side .overview__slider-right {
+        display: block;
     }
 
     .right_side {
@@ -192,24 +254,8 @@
     }
 }
 
-/* responsive moblie ipad 10Pro, ipad 11Pro, */
-@media (min-width: 776px) and (max-width: 991px) {
-    html {
-        font-size: 60%;
-    }
-
-    .mid_side .content .swiper {
-        height: 20%;
-    }
-
-    .mid_side .overview__slider-left,
-    .mid_side .overview__slider-right {
-        display: block;
-    }
-}
-
-/* responsive moblie ipad mini, ipad 9Pro, */
-@media screen and (max-width: 775px) {
+/* responsive moblie ipad mini, ipad 9Pro */
+@media screen and (max-width: 770px) {
     html {
         font-size: 52.5%;
     }
@@ -218,16 +264,34 @@
         width: 100%;
     }
 
-    .mid_side .content .swiper {
-        height: 20%;
-    }
-
     .right_side {
         display: none;
     }
 
-    .bot_side .playList {
+    .right_side {
+        width: 30%;
+        position: absolute;
+        right: 0;
+        transition: 1s linear;
+        display: none;
+        z-index: 999;
+    }
+
+    .right_side.active {
+        display: block;
+        animation: opened 0.5s ease;
+    }
+
+    .playList_right {
         display: flex;
+    }
+
+    .btn-z_right {
+        display: block;
+    }
+
+    .btn-z {
+        display: none;
     }
 
     .bot_side .vol .ti {
@@ -236,7 +300,15 @@
     }
 }
 
-@media screen and (max-width: 620px) {
+/* responsive rotate moblie ipad 10Pro, ipad 11Pro, ipad mini, ipad 9Pro */
+@media only screen and (max-width: 1125px) and (max-height: 835px) {
+    .mid_side .content .swiper {
+        height: 35%;
+    }
+}
+
+/* event changeImage */
+@media screen and (max-width: 600px) {
     .left_side {
         width: 30%;
     }
@@ -310,8 +382,32 @@
         width: 35%;
     }
 
+    .left_side.active .btn-z_right {
+        right: 1rem;
+    }
+
+    .left_side.active .playList_right {
+        right: 7rem;
+        bottom: 1.7rem;
+        width: 4.5rem;
+        height: 4.5rem;
+        font-size: 3rem;
+    }
+
+    .right_side {
+        width: 55%;
+    }
+
+    .left_side .playlist.sub {
+        max-height: 50rem;
+    }
+
     .mid_side .content .swiper {
-        height: 25%;
+        height: 32%;
+    }
+
+    .mid_side .content .swiper .ytb {
+        width: 50%;
     }
 
     .mid_side nav .heading .tab_pane-nav {
@@ -319,7 +415,7 @@
     }
 
     .bot_side .wave2 {
-        right: 47%;
+        right: 41%;
     }
 
     .bot_side .icon {
@@ -331,8 +427,71 @@
     }
 }
 
-/* responsive moblie ip6s, 6/7/8+, 13mini/12mini, XS, SE */
-@media (min-width: 375px) and (max-width: 389px) {
+/* responsive rotate moblie  ip12/13pro, 13promax */
+@media only screen and (max-width: 750px) and (max-height: 450px) {
+    .mid_side .tab_pane-mid {
+        margin-top: 1rem;
+    }
+
+    .mid_side .content .swiper {
+        height: 48%;
+    }
+
+    .mid_side .content .swiper .ytb {
+        width: 70%;
+        height: 15rem;
+    }
+
+    .mid_side .content .swiper .swiper-slide .heading {
+        height: 15rem;
+    }
+
+    .mid_side .content .swiper .swiper-slide .heading h1 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .mid_side .content .swiper .swiper-slide .heading p {
+        font-size: 1.4rem;
+    }
+
+    .mid_side .content .swiper .swiper-slide .heading button {
+        padding: 0.2rem;
+        width: 35%;
+        margin-top: 2rem;
+    }
+
+    .bot_side img {
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+
+    .bot_side #currentStart {
+        margin: unset;
+    }
+}
+
+/* responsive moblie ip12/13pro, 6/7/8+, 13mini/12mini, XS, SE */
+@media only screen and (max-width: 391px) and (max-height: 668px) {
+    .mid_side .content .swiper {
+        height: 35%;
+    }
+
+    .left_side .playlist.sub {
+        max-height: 45rem;
+    }
+
+    .left_side.active .btn-z_right {
+        right: 2.5rem;
+    }
+
+    .left_side.active .playList_right {
+        right: 8rem;
+    }
+}
+
+/* responsive moblie 6/7/8+, 13mini/12mini, XS, SE */
+@media screen and (max-width: 390px) {
     html {
         font-size: 48%;
     }
@@ -340,9 +499,145 @@
     .mid_side nav .heading .tab_pane-nav {
         font-size: 1.3rem;
     }
+}
+
+/* responsive rotate moblie  6/7/8+, 13mini/12mini, XS, SE */
+@media only screen and (max-width: 670px) and (max-height: 376px) {
+    .mid_side .tab_pane-mid {
+        margin-top: 1rem;
+    }
 
     .mid_side .content .swiper {
-        height: 30%;
+        height: 33%;
+    }
+
+    .mid_side .content .swiper .ytb {
+        width: 40%;
+        height: 85px;
+    }
+
+    .mid_side .content .swiper .swiper-slide .heading {
+        height: 85px;
+    }
+
+    .mid_side .content .swiper .swiper-slide .heading h1 {
+        font-size: 1.6rem;
+    }
+
+    .mid_side .content .swiper .swiper-slide .heading button {
+        padding: 0.2rem;
+        width: 35%;
+        margin-top: 1rem;
+    }
+
+    .bot_side img {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .bot_side #currentStart {
+        margin: unset;
+    }
+}
+
+/* responsive moblie ip6s */
+@media only screen and (max-width: 376px) and (max-height: 550px) {
+    .mid_side .content .swiper {
+        height: 40%;
+    }
+
+    .left_side .playlist.sub {
+        max-height: 35rem;
+    }
+}
+
+/* responsive rotate moblie ip6s */
+@media only screen and (max-width: 550px) and (max-height: 376px) {
+    .mid_side .tab_pane-mid {
+        margin-top: 1rem;
+    }
+
+    .mid_side .content .swiper {
+        height: 35%;
+    }
+
+    .mid_side .content .swiper .ytb {
+        width: 40%;
+        height: 85px;
+    }
+
+    .mid_side .content .swiper .swiper-slide .heading {
+        height: 85px;
+    }
+
+    .mid_side .content .swiper .swiper-slide .heading h1 {
+        font-size: 1.4rem;
+    }
+
+    .mid_side .content .swiper .swiper-slide .heading p {
+        font-size: 1rem;
+    }
+
+    .mid_side .content .swiper .swiper-slide .heading button {
+        padding: 0.2rem;
+        width: 35%;
+        margin-top: 1rem;
+    }
+
+    .bot_side {
+        padding: 0 1rem;
+    }
+
+    .bot_side h5 {
+        width: 14rem;
+    }
+
+
+    .bot_side img {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .bot_side .wave2 {
+        top: -72px;
+        right: 44%;
+    }
+
+    .bot_side .icon {
+        position: absolute;
+        top: -40px;
+        right: 40%;
+        margin: unset;
+    }
+
+    .bot_side .icon::before {
+        content: "";
+        position: absolute;
+        width: 130px;
+        height: 130px;
+        background-color: #fff;
+        box-shadow: 0 -11px 15px -17px #444;
+        z-index: -1;
+        border-radius: 50% 50% 0 0;
+        left: -20%;
+    }
+
+    .bot_side .icon #repeat,
+    .bot_side .icon #arrows-shuffle {
+        display: none;
+    }
+
+    .bot_side .icon_sub {
+        display: block;
+    }
+
+    .bot_side .icon_sub #repeat_sub,
+    .bot_side .icon_sub #arrows-shuffle_sub {
+        margin-left: 0.7rem;
+    }
+
+    .bot_side #currentStart {
+        margin: unset;
     }
 }
 
@@ -353,14 +648,57 @@
     }
 
     .mid_side .content .swiper {
-        height: 25%;
+        height: 33%;
     }
 
     .bot_side .wave2 {
-        right: 47%;
+        right: 42%;
     }
 
     .bot_side .icon::before {
         left: -18%;
+    }
+
+    .left_side .playlist.sub {
+        max-height: 48rem;
+    }
+}
+
+/* responsive rotate moblie galaxy s9 */
+@media only screen and (max-width: 618px) and (max-height: 375px) {
+    .mid_side .tab_pane-mid {
+        margin-top: 1rem;
+    }
+
+    .mid_side .content .swiper {
+        height: 33%;
+    }
+
+    .mid_side .content .swiper .ytb {
+        width: 40%;
+        height: 85px;
+    }
+
+    .mid_side .content .swiper .swiper-slide .heading {
+        height: 85px;
+    }
+
+    .mid_side .content .swiper .swiper-slide .heading h1 {
+        font-size: 1.6rem;
+    }
+
+    .mid_side .content .swiper .swiper-slide .heading button {
+        padding: 0.2rem;
+        width: 35%;
+        margin-top: 1rem;
+    }
+
+    .bot_side img {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .bot_side #currentStart {
+        margin: unset;
     }
 }

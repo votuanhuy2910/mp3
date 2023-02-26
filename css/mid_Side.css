@@ -114,15 +114,16 @@
 }
 
 .mid_side .pane_content {
-    height: 100%;
+    width: 90%;
+    height: 90%;
+    margin: auto;
+    margin-top: 2rem;
 }
 
 .mid_side .content {
-    width: 90%;
     height: 100%;
-    margin: auto;
-    margin-top: 2rem;
     display: none;
+    overflow-x: hidden;
     overflow-y: auto;
 }
 
@@ -192,6 +193,7 @@
     font-size: 2.5rem;
     font-weight: 600;
     padding-right: 1rem;
+    text-transform: capitalize;
 }
 
 .mid_side .content .heading p {
@@ -210,6 +212,7 @@
     margin-top: 2rem;
     background: rgba(254, 255, 255, .1);
     color: var(--white);
+    text-transform: uppercase;
     cursor: pointer;
     transition: all .4s ease-in-out;
 }

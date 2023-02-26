@@ -4,15 +4,62 @@
     color: var(--text);
 }
 
-.left_side.active {
-    transform: translateX(0%);
+.btn-z_right {
+    font-size: 2.6rem;
+    padding: 0.5rem 1.8rem;
+    font-weight: 700;
+    background-size: 300% 100%;
+    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+    transition: all .4s ease-in-out;
+    outline: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    /* display: none; */
+    border-radius: 1rem;
+    position: absolute;
+    bottom: 1.5rem;
+    right: -6rem;
 }
 
-.left_side.active .btn-z {
-    transform: translateX(-500%);
+.btn-z_right:hover {
+    background-position: 100% 0;
+    transition: all .4s ease-in-out;
 }
 
-.left_side .btn-z,
+.playList_right {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    bottom: 7rem;
+    right: -6rem;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 1rem;
+    color: white;
+    font-size: 3.5rem;
+    background-size: 300% 100%;
+    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+    box-shadow: 0 1px 2px 0 rgba(65, 132, 234, 0.75);
+    transition: all .4s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+    /* display: none; */
+}
+
+.playList_right:hover {
+    background-position: 100% 0;
+    transition: all .4s ease-in-out;
+}
+
+.playList_right i {
+    position: absolute;
+    top: 18%;
+    left: 6px;
+}
+
+
 .left_side .btn-zing {
     font-size: 2.2rem;
     margin: 2rem 2.5rem 0;
@@ -28,21 +75,9 @@
     cursor: pointer;
 }
 
-.left_side .btn-z:hover,
 .left_side .btn-zing:hover {
     background-position: 100% 0;
     transition: all .4s ease-in-out;
-}
-
-.left_side .btn-z {
-    display: none;
-    margin: 0;
-    padding: 0.5rem 1.5rem;
-    border-radius: 50%;
-    position: absolute;
-    right: -43px;
-    bottom: 0;
-    z-index: 15;
 }
 
 .left_side .playlist {
@@ -206,7 +241,7 @@ b {
 }
 
 .left_side .playlist.sub {
-    max-height: 100%;
+    max-height: 45rem;
     overflow-y: auto;
     margin: 0.5rem 0;
     position: relative;

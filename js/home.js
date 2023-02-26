@@ -30,41 +30,23 @@ toggleBtn.onclick = () => {
 	}
 };
 
-let activeLeftSide = $(".btn-z");
 let leftSide = $(".left_side");
-
-activeLeftSide.addEventListener("click", () => {
-	leftSide.classList.toggle("active");
-	// leftSide.style.transform = "unset";
-	// activeLeftSide.style.opacity = 0;
-})
-
-function scrollRemoveLeftSide() {
-	// leftSide.style.transform = "translateX(-100%)";
-	// activeLeftSide.style.opacity = 1;
-}
-
-let midSide = $(".mid_side");
-
-midSide.addEventListener("click", () => {
-	// leftSide.style.transform = "translateX(-100%)";
-	// activeLeftSide.style.opacity = 1;
-})
-
 let rightSide = $(".right_side");
-rightSide.addEventListener("click", () => {
-	// leftSide.style.transform = "translateX(-100%)";
-	// activeLeftSide.style.opacity = 1;
-})
+let activeBtnPlaylist = document.getElementById("playlist");
+let activeBtnLeftSide = $(".btn-z");
+let activeBtnLeftSide1 = $(".btn-z_right");
 
-// const playLists = $$(".playlist h4");
+activeBtnLeftSide.addEventListener("click", () => {
+	leftSide.classList.toggle("active");
+});
 
-// playLists.forEach((item) => {
-// 	item.onclick = function () {
-// 		$(".playlist .active").classList.remove("active");
-// 		this.classList.add("active");
-// 	};
-// });
+activeBtnLeftSide1.addEventListener("click", () => {
+	leftSide.classList.toggle("active");
+});
+
+activeBtnPlaylist.addEventListener("click", () => {
+	rightSide.classList.toggle("active");
+});
 
 const tabs = $$(".tab-item");
 const panes = $$(".tab-pane");

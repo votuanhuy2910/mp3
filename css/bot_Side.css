@@ -7,6 +7,28 @@
     z-index: 9999999;
 }
 
+.btn-z {
+    font-size: 1.8rem;
+    padding: 1rem;
+    font-weight: 700;
+    background-size: 300% 100%;
+    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+    transition: all .4s ease-in-out;
+    outline: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: none;
+    margin-left: 1rem;
+    padding: 0 1.4rem;
+    border-radius: 1.5rem;
+}
+
+.btn-z:hover {
+    background-position: 100% 0;
+    transition: all .4s ease-in-out;
+}
+
 .bot_side .wave {
     width: 3rem;
     height: 3rem;
@@ -154,6 +176,7 @@
     color: #4c5262;
 }
 
+.bot_side .icon_sub,
 .bot_side .icon {
     display: flex;
     align-items: center;
@@ -163,16 +186,21 @@
     margin: 0 2rem;
 }
 
+.bot_side .icon_sub {
+    margin: unset;
+    display: none;
+}
+
 .bot_side .icon .ti {
     cursor: pointer;
     outline: none;
 }
 
-.bot_side .icon .ti:nth-child(2) {
+.bot_side .icon .ti #back {
     margin-left: 1.2rem;
 }
 
-.bot_side .icon .ti:nth-child(4) {
+.bot_side .icon .ti #next {
     margin-right: 0.4rem;
 }
 
@@ -318,7 +346,7 @@
     position: absolute;
     align-items: center;
     justify-content: center;
-    top: -70px;
+    top: -12rem;
     right: 2rem;
     width: 5rem;
     height: 5rem;
