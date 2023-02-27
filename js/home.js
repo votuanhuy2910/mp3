@@ -30,24 +30,6 @@ toggleBtn.onclick = () => {
 	}
 };
 
-let leftSide = $(".left_side");
-let rightSide = $(".right_side");
-let activeBtnPlaylist = document.getElementById("playlist");
-let activeBtnLeftSide = $(".btn-z");
-let activeBtnLeftSide1 = $(".btn-z_right");
-
-activeBtnLeftSide.addEventListener("click", () => {
-	leftSide.classList.toggle("active");
-});
-
-activeBtnLeftSide1.addEventListener("click", () => {
-	leftSide.classList.toggle("active");
-});
-
-activeBtnPlaylist.addEventListener("click", () => {
-	rightSide.classList.toggle("active");
-});
-
 const tabs = $$(".tab-item");
 const panes = $$(".tab-pane");
 

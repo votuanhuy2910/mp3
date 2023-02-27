@@ -7,29 +7,14 @@
     z-index: 9999999;
 }
 
-.btn-z {
-    font-size: 1.8rem;
-    padding: 1rem;
-    font-weight: 700;
-    background-size: 300% 100%;
-    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
-    transition: all .4s ease-in-out;
-    outline: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-    display: none;
-    margin-left: 1rem;
-    padding: 0 1.4rem;
-    border-radius: 1.5rem;
+.side_first {
+    display: flex;
+    align-items: center;
+    flex: 0 0 20%;
+    max-width: 20%;
 }
 
-.btn-z:hover {
-    background-position: 100% 0;
-    transition: all .4s ease-in-out;
-}
-
-.bot_side .wave {
+.side_first .wave {
     width: 3rem;
     height: 3rem;
     padding-bottom: 0.5rem;
@@ -37,7 +22,7 @@
     align-items: flex-end;
 }
 
-.bot_side .wave .wave1 {
+.side_first .wave .wave1 {
     width: 3px;
     height: 10px;
     margin-right: 3px;
@@ -46,25 +31,25 @@
     animation: inset;
 }
 
-.bot_side .wave .wave1:nth-child(2) {
+.side_first .wave .wave1:nth-child(2) {
     height: 13px;
     /* animation-delay: .4s; */
 }
 
-.bot_side .wave .wave1:nth-child(3) {
+.side_first .wave .wave1:nth-child(3) {
     height: 8px;
     /* animation-delay: .8s; */
 }
 
-.bot_side .wave .active2 .wave1 {
+.side_first .wave .active2 .wave1 {
     animation: wave .5s linear infinite;
 }
 
-.bot_side .wave .active2 .wave1:nth-child(2) {
+.side_first .wave .active2 .wave1:nth-child(2) {
     animation-delay: .4s;
 }
 
-.bot_side .wave .active2 .wave1:nth-child(3) {
+.side_first .wave .active2 .wave1:nth-child(3) {
     animation-delay: .8s;
 }
 
@@ -82,88 +67,14 @@
     }
 }
 
-.wave2 {
-    width: 6rem;
-    height: 3rem;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: -80px;
-    right: 42%;
-}
-
-.wave2>span {
-    display: block;
-    position: relative;
-    background: #000;
-    width: 4px;
-    height: 100%;
-    border-radius: 1rem;
-    margin: 0 0.2rem;
-    animation: inset;
-}
-
-.wave2>span:nth-child(1) {
-    height: 10px;
-    animation-delay: 0s;
-    background: #ff8c00;
-}
-
-.wave2>span:nth-child(2) {
-    height: 20px;
-    animation-delay: 0.3s;
-    background: #ffff00;
-}
-
-.wave2>span:nth-child(3) {
-    height: 15px;
-    animation-delay: 0.6s;
-    background: #26d53a;
-}
-
-.wave2>span:nth-child(4) {
-    height: 25px;
-    animation-delay: 0.9s;
-    background: #26e6a3;
-}
-
-.wave2>span:nth-child(5) {
-    height: 10px;
-    animation-delay: 0.6s;
-    background: #1da8e2;
-}
-
-.wave2>span:nth-child(6) {
-    height: 20px;
-    animation-delay: 0.3s;
-    background: #5916ba;
-}
-
-.wave2>span:nth-child(7) {
-    height: 13px;
-    animation-delay: 0s;
-    background: #d418d9;
-}
-
-@keyframes waves-2 {
-    50% {
-        height: 20%;
-    }
-
-    100% {
-        height: 100%;
-    }
-}
-
-.bot_side img {
+.side_first img {
     width: 6rem;
     height: 6rem;
     border-radius: 50%;
     margin-left: 1rem;
 }
 
-.bot_side h5 {
+.side_first h5 {
     width: 13rem;
     font-size: 1.4rem;
     margin-left: 1.5rem;
@@ -171,77 +82,97 @@
     line-height: 1.5rem;
 }
 
-.bot_side h5 .subtitle {
+.side_first h5 .subtitle {
     font-size: 1.1rem;
     color: #4c5262;
 }
 
-.bot_side .icon_sub,
-.bot_side .icon {
+.side_center {
+    flex: 0 0 60%;
+    max-width: 60%;
+}
+
+.music-control__center {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+}
+
+.music-control__icon {
     display: flex;
     align-items: center;
     outline: none;
-    font-size: 2rem;
     color: var(--text);
-    margin: 0 2rem;
 }
 
-.bot_side .icon_sub {
-    margin: unset;
-    display: none;
-}
-
-.bot_side .icon .ti {
-    cursor: pointer;
+.music-control__icon i {
+    font-size: 1.6rem;
+    padding: 8px;
     outline: none;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0 8px;
+    position: relative;
+    transition: .3s linear;
 }
 
-.bot_side .icon .ti #back {
-    margin-left: 1.2rem;
-}
-
-.bot_side .icon .ti #next {
-    margin-right: 0.4rem;
-}
-
-.bot_side .icon #masterPlay {
+.music-control__icon #masterPlay {
     border: 1px solid var(--text);
     border-radius: 50%;
-    padding: 6px 0px 6px 8px;
-    margin: 0 1.2rem 0 .4rem;
     background-size: 300% 100%;
     background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
     box-shadow: 0 1px 2px 0 rgba(65, 132, 234, 0.75);
     transition: all .4s ease-in-out;
 }
 
-.bot_side .icon #masterPlay:hover {
+.music-control__icon .fa-play {
+    padding: 8px 9px 8px 10px;
+}
+
+.music-control__icon .fa-backward-step,
+.music-control__icon .fa-forward-step {
+    padding: 8px 10px;
+}
+
+#download:hover,
+#arrows-shuffle:hover,
+#back:hover,
+#next:hover,
+#repeat:hover {
+    background: rgb(105, 105, 170, .1);
+}
+
+.music-control__icon #masterPlay:hover {
     background-position: 100% 0;
     transition: all .4s ease-in-out;
     border: 1px solid var(--white);
     color: var(--white);
 }
 
-.bot_side span {
+.music-control__progress {
+    display: flex;
+    width: 80%;
+    align-items: center;
+}
+
+.music-control__progress span {
     color: var(--text);
     width: 3.2rem;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 400;
+    margin: 0 1rem;
 }
 
-.bot_side #currentStart {
-    margin-left: 2rem;
-}
-
-.bot_side .bar {
+.music-control__progress .bar {
     position: relative;
-    width: 50%;
+    width: 100%;
     height: 2px;
     background: rgb(105, 105, 170, .1);
     margin: 0 15px 0 10px;
 }
 
-.bot_side .bar .bar2 {
+.music-control__progress .bar .bar2 {
     position: absolute;
     background: #36e2ec;
     width: 20%;
@@ -249,7 +180,7 @@
     top: 0;
 }
 
-.bot_side .bar .dot {
+.music-control__progress .bar .dot {
     position: absolute;
     width: 5px;
     height: 5px;
@@ -260,7 +191,7 @@
     transition: 1s linear;
 }
 
-.bot_side .bar .dot::before {
+.music-control__progress .bar .dot::before {
     content: "";
     position: absolute;
     width: 15px;
@@ -272,7 +203,7 @@
     box-shadow: inset 0 0 3px #36e2ec;
 }
 
-.bot_side .bar input {
+.music-control__progress .bar input {
     position: absolute;
     width: 100%;
     top: -6px;
@@ -283,7 +214,14 @@
     transition: 0s linear;
 }
 
-.bot_side .vol {
+.side_last {
+    flex: 0 0 20%;
+    max-width: 20%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.side_last .vol {
     position: relative;
     width: 15rem;
     height: 2px;
@@ -291,15 +229,20 @@
     background: rgb(105, 105, 170, .1);
 }
 
-.bot_side .vol .ti {
+.side_last .vol .ti {
     position: absolute;
     color: var(--text);
     font-size: 2.5rem;
     top: -12px;
     left: -35px;
+    cursor: pointer;
 }
 
-.bot_side .vol input {
+.side_last .vol .ti-volume-off {
+    display: none;
+}
+
+.side_last .vol input {
     position: absolute;
     width: 100%;
     top: -6px;
@@ -310,7 +253,7 @@
     transition: 0s linear;
 }
 
-.bot_side .vol .vol_bar {
+.side_last .vol .vol_bar {
     position: absolute;
     background: #36e2ec;
     width: 20%;
@@ -318,7 +261,7 @@
     top: 0;
 }
 
-.bot_side .vol .dot {
+.side_last .vol .dot {
     position: absolute;
     width: 5px;
     height: 5px;
@@ -329,7 +272,7 @@
     transition: 1s linear;
 }
 
-.bot_side .vol .dot::before {
+.side_last .vol .dot::before {
     content: "";
     position: absolute;
     width: 15px;
@@ -339,36 +282,4 @@
     left: -5px;
     top: -5px;
     box-shadow: inset 0 0 3px #36e2ec;
-}
-
-.bot_side .playList {
-    display: flex;
-    position: absolute;
-    align-items: center;
-    justify-content: center;
-    top: -12rem;
-    right: 2rem;
-    width: 5rem;
-    height: 5rem;
-    border-radius: 1rem;
-    color: white;
-    font-size: 3.5rem;
-    background-size: 300% 100%;
-    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
-    box-shadow: 0 1px 2px 0 rgba(65, 132, 234, 0.75);
-    transition: all .4s ease-in-out;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    cursor: pointer;
-    display: none;
-}
-
-.bot_side .playList:hover {
-    background-position: 100% 0;
-    transition: all .4s ease-in-out;
-}
-
-.bot_side .playList i {
-    position: absolute;
-    top: 18%;
-    left: 6px;
 }

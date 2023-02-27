@@ -7,33 +7,33 @@ const app = {
 		},
 
 		{
-			image: "/assets/files/img/giua dai lo dong tay.jpg",
-			name: "giua dai lo dong tay",
-			artist: "uyen linh",
+			image: "/assets/files/img/noinaycoanh.jpg",
+			name: "noi nay co anh",
+			artist: "son tung M-TP",
 		},
 
 		{
-			image: "/assets/files/img/noi nay co anh.jpg",
-			name: "noi nay co anh",
-			artist: "ST MT-P",
+			image: "/assets/files/img/giuadailodongtay.jpg",
+			name: "giua dai lo dong tay",
+			artist: "uyen linh",
 		},
 	],
 
 	songsDataTQ: [
 		{
-			image: "/assets/files/img/que boi.jpg",
+			image: "/assets/files/img/queboi.jpg",
 			name: "quẻ bói",
 			artist: "thôi tử cách",
 		},
 
 		{
-			image: "/assets/files/img/10 nam.jpg",
+			image: "/assets/files/img/10nam.jpg",
 			name: "thập niên nhân gian",
 			artist: "lão can ma",
 		},
 
 		{
-			image: "/assets/files/img/1 trieu kha nang.jpg",
+			image: "/assets/files/img/1trieukhanang.jpg",
 			name: "một triệu khả năng",
 			artist: "christine welch",
 		},
@@ -47,7 +47,7 @@ const app = {
 		},
 
 		{
-			image: "/assets/files/img/that girl.jpg",
+			image: "/assets/files/img/thatgirl.jpg",
 			name: "that girl",
 			artist: "olly murs",
 		},
@@ -65,7 +65,7 @@ const app = {
 		},
 
 		{
-			image: "/assets/files/img/i do.jpg",
+			image: "/assets/files/img/ido.jpg",
 			name: "i do",
 			artist: "911",
 		},
@@ -85,13 +85,13 @@ const app = {
 		},
 
 		{
-			image: "/assets/files/img/jam jam.jpg",
+			image: "/assets/files/img/jamjam.jpg",
 			name: "jam jam",
 			artist: "iu",
 		},
 
 		{
-			image: "/assets/files/img/stand by me.jpg",
+			image: "/assets/files/img/standbyme.jpg",
 			name: "stand by me",
 			artist: "hsk",
 		},
@@ -111,36 +111,36 @@ const app = {
 		const songList = document.querySelector(".tab-vn");
 		const htmlsVN = this.songsDataVN.map((song, index) => {
 			return `
-                <div class="song ${
-									index == this.currentIndex ? "active" : ""
-								}" data-index="${index}">
-                    <div style="position: relative">
-                        <img
-                            src="${song.image}"
-                            class="song_img"
-                            alt=""
-                        />
+				<div class="tab-pane__item ${
+					index == this.currentIndex ? "active" : ""
+				}" data-index="${index}">
+					<div class="item-img" style="background-image: url(${song.image});">
+						<div class="item-playbtn">
+							<i class="fas fa-play"></i>
+						</div>
 
-                        <i class="fas fa-play play_hover"></i>
+						<div class="item-playing">
+							<img src="/assets/files/component/icon-playing.gif" alt="">
+						</div>
+					</div>
 
-                        <img
-                            src="/assets/files/component/equalizer.gif"
-                            alt=""
-                            class="qualizer_gif"
-                        />
-                    </div>
+					<div class="item-body">
+						<span class="item-body__heading">
+							${song.name}
+						</span>
 
-                    <div class="song_info">
-                        <div class="info">
-                            <span class="song_name">${song.name}</span>
-                            <span class="song_artist">${song.artist}</span>
-                        </div>
-                        <div class="heart">
-							<input type="checkbox" id="${song.name}" />
-							<label class="icon-heart" for="${song.name}"></label>
-                        </div>
-                    </div>
-                </div>
+						<span class="item-body__desc">
+							${song.artist}
+						</span>
+					</div>
+
+					<div class="item-action">
+						<span class="item-action_heart">
+							<i class="fas fa-heart icon-heart"></i>
+							<i class="far fa-heart unheart"></i>
+						</span>
+					</div>
+				</div>
             `;
 		});
 
@@ -151,36 +151,36 @@ const app = {
 		const songList = document.querySelector(".tab-us");
 		const htmlsUS = this.songsDataUS.map((song, index) => {
 			return `
-                <div class="song ${
-									index == this.currentIndex ? "active" : ""
-								}" data-index="${index}">
-                    <div style="position: relative">
-                        <img
-                            src="${song.image}"
-                            class="song_img"
-                            alt=""
-                        />
+				<div class="tab-pane__item ${
+					index == this.currentIndex ? "active" : ""
+				}" data-index="${index}">
+					<div class="item-img" style="background-image: url(${song.image});">
+						<div class="item-playbtn">
+							<i class="fas fa-play"></i>
+						</div>
 
-                        <i class="fas fa-play play_hover"></i>
+						<div class="item-playing">
+							<img src="/assets/files/component/icon-playing.gif" alt="">
+						</div>
+					</div>
 
-                        <img
-                            src="/assets/files/component/equalizer.gif"
-                            alt=""
-                            class="qualizer_gif"
-                        />
-                    </div>
+					<div class="item-body">
+						<span class="item-body__heading">
+							${song.name}
+						</span>
 
-                    <div class="song_info">
-                        <div class="info">
-                            <span class="song_name">${song.name}</span>
-                            <span class="song_artist">${song.artist}</span>
-                        </div>
-                        <div class="heart">
-							<input type="checkbox" id="${song.name}" />
-							<label class="icon-heart" for="${song.name}"></label>
-                        </div>
-                    </div>
-                </div>
+						<span class="item-body__desc">
+							${song.artist}
+						</span>
+					</div>
+
+					<div class="item-action">
+						<span class="item-action_heart">
+							<i class="fas fa-heart icon-heart"></i>
+							<i class="far fa-heart unheart"></i>
+						</span>
+					</div>
+				</div>
             `;
 		});
 
@@ -191,36 +191,36 @@ const app = {
 		const songList = document.querySelector(".tab-kr");
 		const htmlsKR = this.songsDataKR.map((song, index) => {
 			return `
-                <div class="song ${
-									index == this.currentIndex ? "active" : ""
-								}" data-index="${index}">
-                    <div style="position: relative">
-                        <img
-                            src="${song.image}"
-                            class="song_img"
-                            alt=""
-                        />
+				<div class="tab-pane__item ${
+					index == this.currentIndex ? "active" : ""
+				}" data-index="${index}">
+					<div class="item-img" style="background-image: url(${song.image});">
+						<div class="item-playbtn">
+							<i class="fas fa-play"></i>
+						</div>
 
-                        <i class="fas fa-play play_hover"></i>
+						<div class="item-playing">
+							<img src="/assets/files/component/icon-playing.gif" alt="">
+						</div>
+					</div>
 
-                        <img
-                            src="/assets/files/component/equalizer.gif"
-                            alt=""
-                            class="qualizer_gif"
-                        />
-                    </div>
+					<div class="item-body">
+						<span class="item-body__heading">
+							${song.name}
+						</span>
 
-                    <div class="song_info">
-                        <div class="info">
-                            <span class="song_name">${song.name}</span>
-                            <span class="song_artist">${song.artist}</span>
-                        </div>
-                        <div class="heart">
-							<input type="checkbox" id="${song.name}" />
-							<label class="icon-heart" for="${song.name}"></label>
-                        </div>
-                    </div>
-                </div>
+						<span class="item-body__desc">
+							${song.artist}
+						</span>
+					</div>
+
+					<div class="item-action">
+						<span class="item-action_heart">
+							<i class="fas fa-heart icon-heart"></i>
+							<i class="far fa-heart unheart"></i>
+						</span>
+					</div>
+				</div>
             `;
 		});
 
@@ -231,36 +231,36 @@ const app = {
 		const songList = document.querySelector(".tab-tq");
 		const htmlsTQ = this.songsDataTQ.map((song, index) => {
 			return `
-                <div class="song ${
-									index == this.currentIndex ? "active" : ""
-								}" data-index="${index}">
-                    <div style="position: relative">
-                        <img
-                            src="${song.image}"
-                            class="song_img"
-                            alt=""
-                        />
+				<div class="tab-pane__item ${
+					index == this.currentIndex ? "active" : ""
+				}" data-index="${index}">
+					<div class="item-img" style="background-image: url(${song.image});">
+						<div class="item-playbtn">
+							<i class="fas fa-play"></i>
+						</div>
 
-                        <i class="fas fa-play play_hover"></i>
+						<div class="item-playing">
+							<img src="/assets/files/component/icon-playing.gif" alt="">
+						</div>
+					</div>
 
-                        <img
-                            src="/assets/files/component/equalizer.gif"
-                            alt=""
-                            class="qualizer_gif"
-                        />
-                    </div>
+					<div class="item-body">
+						<span class="item-body__heading">
+							${song.name}
+						</span>
 
-                    <div class="song_info">
-                        <div class="info">
-                            <span class="song_name">${song.name}</span>
-                            <span class="song_artist">${song.artist}</span>
-                        </div>
-                        <div class="heart">
-							<input type="checkbox" id="${song.name}" />
-							<label class="icon-heart" for="${song.name}"></label>
-                        </div>
-                    </div>
-                </div>
+						<span class="item-body__desc">
+							${song.artist}
+						</span>
+					</div>
+
+					<div class="item-action">
+						<span class="item-action_heart">
+							<i class="fas fa-heart icon-heart"></i>
+							<i class="far fa-heart unheart"></i>
+						</span>
+					</div>
+				</div>
             `;
 		});
 

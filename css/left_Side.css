@@ -4,62 +4,6 @@
     color: var(--text);
 }
 
-.btn-z_right {
-    font-size: 2.6rem;
-    padding: 0.5rem 1.8rem;
-    font-weight: 700;
-    background-size: 300% 100%;
-    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
-    transition: all .4s ease-in-out;
-    outline: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-    /* display: none; */
-    border-radius: 1rem;
-    position: absolute;
-    bottom: 1.5rem;
-    right: -6rem;
-}
-
-.btn-z_right:hover {
-    background-position: 100% 0;
-    transition: all .4s ease-in-out;
-}
-
-.playList_right {
-    display: flex;
-    position: absolute;
-    align-items: center;
-    justify-content: center;
-    bottom: 7rem;
-    right: -6rem;
-    width: 5rem;
-    height: 5rem;
-    border-radius: 1rem;
-    color: white;
-    font-size: 3.5rem;
-    background-size: 300% 100%;
-    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
-    box-shadow: 0 1px 2px 0 rgba(65, 132, 234, 0.75);
-    transition: all .4s ease-in-out;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    cursor: pointer;
-    /* display: none; */
-}
-
-.playList_right:hover {
-    background-position: 100% 0;
-    transition: all .4s ease-in-out;
-}
-
-.playList_right i {
-    position: absolute;
-    top: 18%;
-    left: 6px;
-}
-
-
 .left_side .btn-zing {
     font-size: 2.2rem;
     margin: 2rem 2.5rem 0;
@@ -72,7 +16,6 @@
     outline: none;
     border: none;
     color: white;
-    cursor: pointer;
 }
 
 .left_side .btn-zing:hover {
@@ -166,12 +109,18 @@ b {
     position: absolute;
     right: 2rem;
     font-size: 1.4rem;
+    padding: 8px;
+    border-radius: 50%;
     display: none;
 }
 
 .left_side .playlist .library:hover i {
     display: block;
     cursor: pointer;
+}
+
+.left_side .playlist .library i:hover {
+    background: rgb(105, 105, 170, .1);
 }
 
 .left_side .playlist h4 span {

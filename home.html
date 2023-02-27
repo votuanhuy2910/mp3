@@ -10,7 +10,7 @@
 		<link rel="stylesheet" href="/css/bot_Side.css" />
 		<link rel="stylesheet" href="/css/mid_Side.css" />
 		<link rel="stylesheet" href="/css/right_Side.css" />
-		<link rel="stylesheet" href="/css/reponsive.css" />
+		<!-- <link rel="stylesheet" href="/css/reponsive.css" /> -->
 
 		<link
 			rel="stylesheet"
@@ -139,12 +139,6 @@
 						</li>
 					</ul>
 				</div>
-
-				<div class="btn-z_right">Z</div>
-
-				<div class="playList_right" id="playlist">
-					<i class="ti ti-playlist"></i>
-				</div>
 			</section>
 
 			<section class="mid_side">
@@ -191,86 +185,19 @@
 
 				<div class="pane_content">
 					<div class="content active">
-						<div class="swiper mySwiper">
-							<div class="swiper-wrapper">
-								<div
-									class="swiper-slide"
-									style="
-										background-image: linear-gradient(
-											to right,
-											#25aae1,
-											#4481eb,
-											#04befe,
-											#3f86ed
-										);
-									"
-								>
-									<div class="heading">
-										<h1>JustaTee</h1>
-										<p>248.182 người quan tâm</p>
-										<button>quan tâm</button>
-									</div>
-									<div class="ytb">
-										<img
-											src="/assets/files/component/justatee.jpg"
-											alt="justaTee"
-										/>
-									</div>
-								</div>
-
-								<div
-									class="swiper-slide"
-									style="
-										background: linear-gradient(to right, #fe215e, #ff9402);
-									"
-								>
-									<div class="heading">
-										<h1>Mr. Siro</h1>
-										<p>804.978 người quan tâm</p>
-										<button>quan tâm</button>
-									</div>
-									<div class="ytb">
-										<img src="/assets/files/component/siro.jpg" alt="mr.siro" />
-									</div>
-								</div>
-
-								<div
-									class="swiper-slide"
-									style="
-										background: linear-gradient(to right, #6828fa, #ffbaa4);
-									"
-								>
-									<div class="heading">
-										<h1>Only C</h1>
-										<p>189.247 người quan tâm</p>
-										<button>quan tâm</button>
-									</div>
-									<div class="ytb">
-										<img src="/assets/files/component/onlyc.jpg" alt="onlyC" />
-									</div>
-								</div>
-							</div>
-							<div class="swiper-pagination"></div>
-						</div>
-
-						<div class="buttons">
-							<button>PLAY</button>
-							<button>FOLLOW</button>
-						</div>
-
 						<div class="overview">
 							<div class="overview__slider">
 								<div class="overview__slider-item first">
-									<img src="/assets/files/component/slider-1.jpg" alt="">
+									<img src="/assets/files/component/slider-1.jpg" alt="" />
 								</div>
 								<div class="overview__slider-item second">
-									<img src="/assets/files/component/slider-2.jpg" alt="">
+									<img src="/assets/files/component/slider-2.jpg" alt="" />
 								</div>
 								<div class="overview__slider-item third">
-									<img src="/assets/files/component/slider-3.jpg" alt="">
+									<img src="/assets/files/component/slider-3.jpg" alt="" />
 								</div>
 								<div class="overview__slider-item four">
-									<img src="/assets/files/component/slider-4.jpg" alt="">
+									<img src="/assets/files/component/slider-4.jpg" alt="" />
 								</div>
 								<div class="overview__slider-left">
 									<i class="fas fa-chevron-left"></i>
@@ -280,6 +207,10 @@
 									<i class="fas fa-chevron-right"></i>
 								</div>
 							</div>
+						</div>
+						<div class="buttons">
+							<button>PLAY</button>
+							<button>FOLLOW</button>
 						</div>
 					</div>
 					<div class="content">
@@ -318,7 +249,36 @@
 				</div>
 
 				<div class="tab-content">
-					<div class="tab-pane tab-vn active"></div>
+					<div class="tab-pane tab-vn active">
+						<!-- <div class="tab-pane__item active">
+							<div class="item-img" style="background-image: url(/assets/files/img/fadedjpg.jpg)">
+								<div class="item-playbtn">
+									<i class="fas fa-play"></i>
+								</div>
+
+								<div class="item-playing">
+									<img src="/assets/files/component/icon-playing.gif" alt="">
+								</div>
+							</div>
+
+							<div class="item-body">
+								<span class="item-body__heading">
+									alone
+								</span>
+
+								<span class="item-body__desc">
+									alan walker
+								</span>
+							</div>
+
+							<div class="item-action">
+								<span class="item-action_heart">
+									<i class="fas fa-heart icon-heart"></i>
+									<i class="far fa-heart unheart"></i>
+								</span>
+							</div>
+						</div> -->
+					</div>
 
 					<div class="tab-pane tab-us"></div>
 
@@ -328,22 +288,12 @@
 				</div>
 			</section>
 
-			<section class="bot_side">				
-				<div style="display: flex; align-items: center">
+			<section class="bot_side">
+				<div class="side_first">
 					<div class="wave">
 						<div class="wave1"></div>
 						<div class="wave1"></div>
 						<div class="wave1"></div>
-					</div>
-
-					<div class="wave2">
-						<span></span>
-						<span></span>
-						<span></span>
-						<span></span>
-						<span></span>
-						<span></span>
-						<span></span>
 					</div>
 
 					<img
@@ -359,68 +309,47 @@
 					</h5>
 				</div>
 
-				<div class="icon">
-					<i class="ti ti-repeat" id="repeat"></i>
-					<i class="ti ti-player-skip-back-filled" id="back"></i>
-					<i class="ti ti-player-play-filled" id="masterPlay"></i>
-					<i class="ti ti-player-skip-forward-filled" id="next"></i>
-					<i class="ti ti-arrows-shuffle" id="arrows-shuffle"></i>
+				<div class="side_center">
+					<div class="music-control__center">
+						<div class="music-control__icon">
+							<i class="fas fa-cloud-download" id="download"></i>
+							<i class="fa fa-shuffle" id="arrows-shuffle"></i>
+							<i class="fas fa-backward-step" id="back"></i>
+							<i class="fas fa-play" id="masterPlay"></i>
+							<i class="fas fa-forward-step" id="next"></i>
+							<i class="fas fa-repeat" id="repeat"></i>
+
+						</div>
+
+						<div class="music-control__progress">
+							<span id="currentStart">0:00</span>
+
+							<div class="bar">
+								<input type="range" id="seek" min="0" value="0" max="100" />
+								<div class="bar2" id="bar2"></div>
+								<div class="dot"></div>
+							</div>
+
+							<span id="currentEnd">0:00</span>
+						</div>
+					</div>
 				</div>
 
-				<div class="icon_sub">
-					<i class="ti ti-repeat" id="repeat_sub"></i>
+				<div class="side_last">
+					<div class="vol">
+						<i class="ti ti-volume-2" id="vol_icon"></i>
+						<i class="ti ti-volume-off" id="vol_icon-off"></i>
+						<input type="range" id="vol" min="0" value="30" max="100" />
+						<div class="vol_bar"></div>
+						<div class="dot" id="vol_dot"></div>
+					</div>
 				</div>
-
-				<span id="currentStart">0:00</span>
-
-				<div class="bar">
-					<input type="range" id="seek" min="0" value="0" max="100" />
-					<div class="bar2" id="bar2"></div>
-					<div class="dot"></div>
-				</div>
-
-				<span id="currentEnd">0:00</span>
-
-				<div class="icon_sub">
-					<i class="ti ti-arrows-shuffle" id="arrows-shuffle_sub"></i>
-				</div>
-
-				<div class="vol">
-					<i class="ti ti-volume-2" id="vol_icon"></i>
-					<input type="range" id="vol" min="0" value="30" max="100" />
-					<div class="vol_bar"></div>
-					<div class="dot" id="vol_dot"></div>
-				</div>
-
-				<div class="btn-z">Z</div>
 			</section>
 		</div>
 
 		<script src="/js/renderHome.js"></script>
 		<script src="/js/home.js"></script>
 
-		<script language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-
 		<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-
-		<script>
-			const progressCircle = document.querySelector(".autoplay-progress svg");
-			const progressContent = document.querySelector(".autoplay-progress span");
-			var swiper = new Swiper(".mySwiper", {
-				slidesPerView: 1,
-				spaceBetween: 30,
-				centeredSlides: true,
-				loop: true,
-				// autoplay: {
-				// 	delay: 5000,
-				// 	disableOnInteraction: false,
-				// },
-				pagination: {
-					el: ".swiper-pagination",
-					dynamicBullets: true,
-					clickable: true,
-				},
-			});
-		</script>
 	</body>
 </html>
