@@ -30,6 +30,61 @@ toggleBtn.onclick = () => {
 	}
 };
 
+// prev and next radio
+let radio_left = $(".radio-left");
+let radio_right = $(".radio-right");
+
+let radio = document.getElementsByClassName("radio-container")[0];
+
+radio_left.addEventListener("click", () => {
+	radio.scrollLeft -= 330;
+});
+
+radio_right.addEventListener("click", () => {
+	radio.scrollLeft += 330;
+});
+
+// end prev and next
+
+// prev and next listen
+let listen_left = $(".listen-left");
+let listen_right = $(".listen-right");
+
+let listen = document.getElementsByClassName("listen-container")[0];
+
+listen_left.addEventListener("click", () => {
+	listen.scrollLeft -= 330;
+});
+
+listen_right.addEventListener("click", () => {
+	listen.scrollLeft += 330;
+});
+
+// end prev and next
+
+// prev and next singer
+let singer_left = $(".singer-left");
+let singer_right = $(".singer-right");
+
+let singer = document.getElementsByClassName("singer-container")[0];
+
+singer_left.addEventListener("click", () => {
+	singer.scrollLeft -= 330;
+});
+
+singer_right.addEventListener("click", () => {
+	singer.scrollLeft += 330;
+});
+// end prev and next
+
+// let progress = document.getElementById("progressbar");
+// let totalHeight = body.scrollHeight - window.innerHeight;
+
+// window.onscroll = function () {
+// 	let progressHeight = (window.pageYOffset / totalHeight) * 100;
+// 	progress.style.height = progressHeight + "%";
+// }
+
 const tabs = $$(".tab-item");
 const panes = $$(".tab-pane");
 
@@ -44,6 +99,21 @@ tabs.forEach((tab, index) => {
 		pane.classList.add("active");
 	};
 });
+
+const tabsOption = $$(".tabs-option");
+const panelsOption = $$(".panels-option");
+
+tabsOption.forEach((tabOption, index) => {
+	const paneOption = panelsOption[index];
+
+	tabOption.onclick = function () {
+		$(".tabs-option.active").classList.remove("active");
+		$(".panels-option.active").classList.remove("active");
+
+		this.classList.add("active");
+		paneOption.classList.add("active");
+	}
+})
 
 const tabsLeft = $$(".tab_item-left");
 const panesMid = $$(".tab_pane-nav");
