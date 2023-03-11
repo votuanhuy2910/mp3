@@ -1,3 +1,6 @@
+const $ = document.querySelector.bind(document);
+const $$ = document.querySelectorAll.bind(document);
+
 let menu = document.querySelector(".fa-bars");
 let sidebar = document.querySelector(".sidebar");
 
@@ -11,16 +14,43 @@ window.onscroll = () => {
 	sidebar.classList.remove("active");
 };
 
-let moon = document.querySelector(".fa-moon");
+const toggleBtn = $(".fa-moon");
+const body = document.body;
+let darkMode = localStorage.getItem("dark-mode");
 
-moon.onclick = () => {
-	moon.classList.toggle("fa-sun");
-	if (moon.classList.contains("fa-sun")) {
-		document.body.classList.add("active");
+const enableDarkMode = () => {
+	toggleBtn.classList.replace("fa-moon", "fa-sun");
+	body.classList.add("active");
+	localStorage.setItem("dark-mode", "enabled");
+};
+
+const disableDarkMode = () => {
+	toggleBtn.classList.replace("fa-sun", "fa-moon");
+	body.classList.remove("active");
+	localStorage.setItem("dark-mode", "disabled");
+};
+
+if (darkMode === "enabled") {
+	enableDarkMode();
+}
+
+toggleBtn.onclick = () => {
+	darkMode = localStorage.getItem("dark-mode");
+	if (darkMode === "disabled") {
+		enableDarkMode();
 	} else {
-		document.body.classList.remove("active");
+		disableDarkMode();
 	}
 };
+
+// moon.onclick = () => {
+// 	moon.classList.toggle("fa-sun");
+// 	if (moon.classList.contains("fa-sun")) {
+// 		document.body.classList.add("active");
+// 	} else {
+// 		document.body.classList.remove("active");
+// 	}
+// };
 
 const player = document.querySelector(".player"),
 	musicImg = player.querySelector(".img-area img"),

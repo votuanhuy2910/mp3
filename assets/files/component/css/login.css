@@ -1,0 +1,246 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+    height: 400px;
+}
+
+.form .design,
+.box {
+    position: relative;
+    width: 60%;
+    height: 100%;
+}
+
+.form .design {
+    position: relative;
+    width: 40%;
+    height: 100%;
+    background: url("/assets/pink.jpg") no-repeat center center/cover;
+    border-bottom-left-radius: 10px;
+}
+
+.form .design::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 10px;
+    background: #be6b70;
+    border-radius: 10px 0 0 10px;
+    left: -11.6%;
+}
+
+.form .design::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 10px;
+    background: #be6b70;
+    border-radius: 10px 0 0 10px;
+    left: -7.6%;
+    top: 5%;
+}
+
+.form .design .round_point {
+    position: absolute;
+    width: 15px;
+    height: 10px;
+    background: #000;
+    border-radius: 0 10px 10px 0;
+    top: 2.5%;
+    left: 0;
+}
+
+.form .design .round_point::before {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 10px;
+    background: #000;
+    border-radius: 0 10px 10px 0;
+    left: 0;
+    top: 200.5%;
+}
+
+.form .design .btns {
+    position: absolute;
+    top: 44%;
+    right: 0%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form .design .btns .button {
+    padding: 8px 10px;
+    margin-top: 5px;
+    background: none;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    transition: .3s linear;
+}
+
+.form .design .btns .button:hover {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 20px 0 0 20px;
+}
+
+.form .design .btns .button.active {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 20px 0 0 20px;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0px 10px 10px 0;
+    background: #fff;
+}
+
+.box .formGroup {
+    display: none;
+}
+
+.box .formGroup.active {
+    display: block;
+}
+
+.box .formGroup h3 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+.box .formGroup .field_group {
+    border-bottom: 2px solid gray;
+    padding: 10px 0;
+    transition: .3s linear;
+    position: relative;
+}
+
+.box .formGroup .field_group input {
+    border: none;
+    outline: none;
+    margin-top: 20px;
+    padding-left: 10px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.box .formGroup .field_group i {
+    color: #be6b70;
+    font-size: 16px;
+}
+
+.box .formGroup button {
+    width: 100%;
+    margin-top: 30px;
+    padding: 8px;
+    border-radius: 30px;
+    background: none;
+    font-weight: 600;
+    cursor: pointer;
+    color: #be6b70;
+    font-size: 16px;
+    border: 2px solid #be6b70;
+    transition: .3s linear;
+}
+
+.box .formGroup button:hover {
+    background: #be6b70;
+    color: #fff;
+}
+
+.box .formGroup #checkPass {
+    position: absolute;
+    transform: translateY(-40%);
+    top: 60%;
+    right: 0rem;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#checkPass::before {
+    content: "\f06e";
+    font-family: fontAwesome;
+}
+
+#checkPass.hide::before {
+    content: "\f070";
+}
+
+#validation {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    display: none;
+    margin-top: 20px;
+    position: relative;
+    animation: valid 0.5s ease;
+}
+
+#validation ul {
+    position: relative;
+}
+
+#validation ul li {
+    position: relative;
+    list-style: none;
+    font-size: 14px;
+}
+
+#validation ul li::before {
+    content: "\f192";
+    width: 20px;
+    height: 10px;
+    font-family: fontAwesome;
+    display: inline-flex;
+}
+
+#validation ul li.valid {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+#validation ul li.valid::before {
+    content: "\f00c";
+    color: #0f0;
+}
+
+@keyframes valid {
+    from {
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}

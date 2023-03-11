@@ -323,6 +323,7 @@
     display: block;
 }
 
+.mid_side .music-popular,
 .mid_side .singer-popular,
 .mid_side .mv-popular,
 .mid_side .listen-popular,
@@ -332,6 +333,7 @@
     position: relative;
 }
 
+.mid_side .music-popular:hover .heading-content .heading-right span,
 .mid_side .singer-popular:hover .heading-content .heading-right span,
 .mid_side .mv-popular:hover .heading-content .heading-right span,
 .mid_side .listen-popular:hover .heading-content .heading-right span,
@@ -350,12 +352,356 @@
 .mid_side .heading-content .heading-left {
     text-transform: capitalize;
     font-size: 1.6rem;
-    cursor: pointer;
 }
 
 .mid_side .heading-content .heading-right {
     font-size: 1.2rem;
     cursor: pointer;
+}
+
+.heading-right.btn-music {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading-right.btn-music .buttons {
+    margin-top: 0;
+}
+
+.heading-right.btn-music .buttons button {
+    text-transform: uppercase;
+}
+
+.heading-right.btn-music .buttons button i {
+    color: white;
+}
+
+.heading-right.btn-music .buttons button.btn-playAll {
+    background: #ed2b91;
+    border: 1px solid #ed2b91;
+    color: white;
+}
+
+.heading-right.btn-music .buttons:hover button .fa-play {
+    color: white;
+}
+
+.mid_side .music-content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mid_side .music-content .content-left {
+    flex: 0 0 30%;
+    max-width: 30%;
+}
+
+.mid_side .music-content .swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.mid_side .music-content .swiper-slide {
+    height: 257px;
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.mid_side .music-content .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.mid_side .music-content .content-right {
+    flex: 0 0 70%;
+    max-width: 70%;
+    max-height: 257px;
+    overflow-y: auto;
+}
+
+.mid_side .content-right ul {
+    margin-left: 1rem;
+}
+
+.mid_side .music-content .content-right::-webkit-scrollbar {
+    width: 0;
+}
+
+.mid_side .content-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    transition: .3s linear;
+    cursor: pointer;
+}
+
+/* active button pause show */
+.mid_side .content-item.active .item-playbtn {
+    display: flex;
+}
+
+/* hover active hide pause */
+/* .mid_side .content-item.active:hover .item-playbtn {
+    display: none;
+} */
+
+/* hover active playing show */
+/* .mid_side .content-item.active:hover .item-playing {
+    display: flex;
+} */
+
+/* testing hover show pause */
+.mid_side .content-item:hover .item-playbtn {
+    display: flex;
+}
+
+/* hover show heart */
+.mid_side .content-item:hover .item-action {
+    display: flex;
+}
+
+.mid_side .content-item.active,
+.mid_side .content-item:hover {
+    background: rgb(105, 105, 170, .1);
+}
+
+.mid_side .item-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    margin-left: 8px;
+    margin-right: 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+}
+
+.mid_side .item-playing,
+.mid_side .item-playbtn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    display: none;
+}
+
+.mid_side .item-playbtn {
+    font-size: 1.5rem;
+    color: #fff;
+    margin: auto;
+    display: none;
+}
+
+.mid_side .item-playing img {
+    margin: auto;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.mid_side .item-body {
+    display: flex;
+    flex-direction: column;
+    cursor: default;
+}
+
+.mid_side .item-body__desc,
+.mid_side .item-body__heading {
+    font-weight: 500;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    text-transform: capitalize;
+}
+
+.mid_side .item-body__heading {
+    font-size: 1.4rem;
+    color: var(--black);
+    padding-bottom: 4px;
+}
+
+.mid_side .item-body__desc {
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, .6);
+}
+
+.mid_side .item-action {
+    width: 55px;
+    font-size: 1.4rem;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 10px;
+    /* display: none; */
+}
+
+.mid_side .item-action_heart {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 4px;
+    padding: 6px;
+}
+
+.mid_side .item-action_heart .icon-heart {
+    display: none;
+}
+
+.mid_side .item-action_heart:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.mid_side .option-singer {
+    margin-top: 2rem;
+}
+
+.mid_side .option-singer .singer-creative {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mid_side .singer-creative .singer-left {
+    flex: 0 0 15%;
+    max-width: 15%;
+    background: violet;
+    max-height: 500px;
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mid_side .singer-creative .singer-left::-webkit-scrollbar {
+    width: 0;
+}
+
+.mid_side .singer-left .imgBox {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    padding: 5px;
+    margin: 10px 0;
+    transition: .3s linear;
+    cursor: pointer;
+}
+
+.mid_side .singer-left .imgBox.active {
+    box-shadow: 0 0 0 2px #ff1d50;
+}
+
+.mid_side .singer-left .imgBox img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    filter: grayscale(1);
+}
+
+.mid_side .singer-left .imgBox.active img {
+    filter: grayscale(0);
+}
+
+.mid_side .singer-creative .singer-right {
+    flex: 0 0 85%;
+    max-width: 85%;
+    background: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mid_side .singer-creative .singer-right .container {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    border: 2px solid red;
+}
+
+.mid_side .container .test {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+.mid_side .container .test::before {
+    content: "";
+    position: absolute;
+    inset: 60px;
+    border: 4px solid transparent;
+    border-left: 4px solid #2196f3;
+    border-right: 4px solid #fff;
+    border-radius: 50%;
+    animation: animate1 5s linear infinite;
+    z-index: 1;
+    pointer-events: none;
+}
+
+@keyframes animate1 {
+    0% {
+        rotate: 0deg;
+    }
+
+    100% {
+        rotate: 360deg;
+    }
+}
+
+.mid_side .container .test::after {
+    content: "";
+    position: absolute;
+    inset: 120px;
+    border: 4px solid transparent;
+    border-left: 4px solid #ff1d50;
+    border-right: 4px solid #fff;
+    border-radius: 50%;
+    animation: animate2 2.5s linear infinite;
+    z-index: 1;
+    pointer-events: none;
+}
+
+@keyframes animate2 {
+    0% {
+        rotate: 360deg;
+    }
+
+    100% {
+        rotate: 0deg;
+    }
 }
 
 .mid_side .heading-content .heading-right i {
@@ -379,6 +725,11 @@
     transition: all linear 0.35s;
     font-weight: 600;
     font-size: 1.4rem;
+    color: #ccc;
+}
+
+.mid_side .heading-content .heading-right span:hover {
+    color: #000;
 }
 
 .mid_side .overview_content {
@@ -444,6 +795,7 @@
     font-size: 5rem;
     color: #fff;
     margin-bottom: 1rem;
+    cursor: pointer;
 }
 
 .card-playlist_plus span {
@@ -475,6 +827,7 @@
     overflow: hidden;
     border-radius: 50%;
     transition: .3s linear;
+    cursor: pointer;
 }
 
 .mid_side .top-content .mv_card-img img,
@@ -706,6 +1059,8 @@
     width: 7rem;
     height: 7rem;
     border-radius: 50%;
+    cursor: pointer;
+    margin-bottom: 1rem;
 }
 
 .mid_side .private-name {

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+		/>
+		<link rel="stylesheet" href="/assets/files/component/css/login.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div class="form">
+			<div class="design">
+				<div class="round_point"></div>
+				<div class="btns">
+					<a href="#" class="button active">Login</a>
+					<a href="#" class="button">SignUp</a>
+				</div>
+			</div>
+			<div class="box">
+				<div class="login active">
+					<form action="">
+						<h3>Login</h3>
+						<div class="field_group">
+							<i class="fa fa-envelope"></i>
+							<input
+								class="field_input"
+								maxlength="24"
+								type="email"
+								placeholder="username"
+							/>
+						</div>
+						<div class="field_group">
+							<i class="fa fa-shield"></i>
+							<input
+								class="field_input"
+								maxlength="16"
+								type="password"
+								placeholder="password"
+							/>
+							<span id="checkPass"></span>
+						</div>
+						<div class="loginBtn">
+							<button>Log In Now</button>
+						</div>
+					</form>
+				</div>
+
+				<div class="login">
+				</div>
+			</div>
+		</div>
+	</body>
+
+	<script>
+		const $ = document.querySelector.bind(document);
+		const $$ = document.querySelectorAll.bind(document);
+
+		const tabs = $$(".button");
+		const panes = $$(".login");
+
+		tabs.forEach((tab, index) => {
+			const pane = panes[index];
+
+			tab.onclick = function () {
+				$(".button.active").classList.remove("active");
+				$(".login.active").classList.remove("active");
+
+				this.classList.add("active");
+				pane.classList.add("active");
+			};
+		});
+	</script>
+</html>

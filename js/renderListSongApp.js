@@ -19,31 +19,31 @@ const app = {
 		},
 
 		{
-			src: "/assets/files/img/that girl.jpg",
+			src: "/assets/files/img/thatgirl.jpg",
 			name: "that girl",
 			artist: "olly murs",
 		},
 
 		{
-			src: "/assets/files/img/10 nam.jpg",
+			src: "/assets/files/img/10nam.jpg",
 			name: "thập niên nhân gian",
 			artist: "lão can ma",
 		},
 
 		{
-			src: "/assets/files/img/thuy trieu.jpg",
+			src: "/assets/files/img/thuytrieu.jpg",
 			name: "thủy triều",
 			artist: "phó mộng đồng",
 		},
 
 		{
-			src: "/assets/files/img/jam jam.jpg",
+			src: "/assets/files/img/jamjam.jpg",
 			name: "jam jam",
 			artist: "IU",
 		},
 
 		{
-			src: "/assets/files/img/noi nay co anh.jpg",
+			src: "/assets/files/img/noinaycoanh.jpg",
 			name: "nơi này có anh",
 			artist: "sơn tùng m-tP",
 		},
@@ -122,7 +122,7 @@ const app = {
 		{
 			id: 3,
 			index: "04",
-			src: "/assets/files/img/that girl.jpg",
+			src: "/assets/files/img/thatgirl.jpg",
 			name: "that girl",
 			artist: "olly murs",
 			time: "2:55",
@@ -131,7 +131,7 @@ const app = {
 		{
 			id: 4,
 			index: "05",
-			src: "/assets/files/img/que boi.jpg",
+			src: "/assets/files/img/queboi.jpg",
 			name: "quẻ bói",
 			artist: "thôi tử cách",
 			time: "3:34",
@@ -140,7 +140,7 @@ const app = {
 		{
 			id: 5,
 			index: "06",
-			src: "/assets/files/img/10 nam.jpg",
+			src: "/assets/files/img/10nam.jpg",
 			name: "thập niên nhân gian",
 			artist: "lão can ma",
 			time: "4:37",
@@ -149,7 +149,7 @@ const app = {
 		{
 			id: 6,
 			index: "07",
-			src: "/assets/files/img/1 trieu kha nang.jpg",
+			src: "/assets/files/img/1trieukhanang.jpg",
 			name: "một triệu khả năng",
 			artist: "christine welch",
 			time: "4:35",
@@ -176,7 +176,7 @@ const app = {
 		{
 			id: 9,
 			index: "10",
-			src: "/assets/files/img/i do.jpg",
+			src: "/assets/files/img/ido.jpg",
 			name: "i do",
 			artist: "911",
 			time: "3:21",
@@ -194,7 +194,7 @@ const app = {
 		{
 			id: 11,
 			index: "12",
-			src: "/assets/files/img/i want something just like this.jpg",
+			src: "/assets/files/img/iwantsomethingjustlikethis.jpg",
 			name: "i want something just like this",
 			artist: "the chainsmokers",
 			time: "4:07",
@@ -203,7 +203,7 @@ const app = {
 		{
 			id: 12,
 			index: "13",
-			src: "/assets/files/img/giua dai lo dong tay.jpg",
+			src: "/assets/files/img/giuadailodongtay.jpg",
 			name: "giữa đại lộ đông tây",
 			artist: "uyên linh",
 			time: "3:46",
@@ -212,7 +212,7 @@ const app = {
 		{
 			id: 13,
 			index: "14",
-			src: "/assets/files/img/in the end.jpg",
+			src: "/assets/files/img/intheend.jpg",
 			name: "in the end",
 			artist: "linkin park",
 			time: "3:38",
@@ -221,7 +221,7 @@ const app = {
 		{
 			id: 14,
 			index: "15",
-			src: "/assets/files/img/ke theo duoi anh sang.jpg",
+			src: "/assets/files/img/ketheoduoianhsang.jpg",
 			name: "kẻ theo đuổi ánh sáng",
 			artist: "huy vạc",
 			time: "3:32",
@@ -230,7 +230,7 @@ const app = {
 		{
 			id: 15,
 			index: "16",
-			src: "/assets/files/img/thai binh mo hoi roi.jpg",
+			src: "/assets/files/img/thaibinhmohoiroi.jpg",
 			name: "thái bình mồ hôi rơi",
 			artist: "sơn tùng m-tP",
 			time: "5:06",
@@ -239,7 +239,7 @@ const app = {
 		{
 			id: 16,
 			index: "17",
-			src: "/assets/files/img/noi nay co anh.jpg",
+			src: "/assets/files/img/noinaycoanh.jpg",
 			name: "nơi này có anh",
 			artist: "sơn tùng m-tp",
 			time: "4:17",
@@ -248,7 +248,7 @@ const app = {
 		{
 			id: 17,
 			index: "18",
-			src: "/assets/files/img/xich linh.jpg",
+			src: "/assets/files/img/xichlinh.jpg",
 			name: "xích linh",
 			artist: "chấp tố hề",
 			time: "4:57",
@@ -257,7 +257,7 @@ const app = {
 		{
 			id: 18,
 			index: "19",
-			src: "/assets/files/img/thuy trieu.jpg",
+			src: "/assets/files/img/thuytrieu.jpg",
 			name: "thủy triều",
 			artist: "phó mộng đồng",
 			time: "2:18",
@@ -266,7 +266,7 @@ const app = {
 		{
 			id: 19,
 			index: "20",
-			src: "/assets/files/img/jam jam.jpg",
+			src: "/assets/files/img/jamjam.jpg",
 			name: "jam jam",
 			artist: "IU",
 			time: "3:38",

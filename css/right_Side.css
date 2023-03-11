@@ -44,7 +44,7 @@
 .right_side .tab-content {
     overflow-x: hidden;
     overflow-y: auto;
-    max-height: 56.5rem;
+    max-height: 100%;
     transition: .3s linear;
 }
 
@@ -72,7 +72,8 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    display: none;
+    margin-right: .5rem;
+    /* display: none; */
 }
 
 .right_side .tab-pane.active {
@@ -122,14 +123,14 @@
 }
 
 /* hover active hide pause */
-.right_side .tab-pane__item.active:hover .item-playbtn {
+/* .right_side .tab-pane__item.active:hover .item-playbtn {
     display: none;
-}
+} */
 
 /* hover active playing show */
-.right_side .tab-pane__item.active:hover .item-playing {
+/* .right_side .tab-pane__item.active:hover .item-playing {
     display: flex;
-}
+} */
 
 /* testing hover show pause */
 .right_side .tab-pane__item:hover .item-playbtn {

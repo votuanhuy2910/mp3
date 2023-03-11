@@ -41,15 +41,15 @@
     /* animation-delay: .8s; */
 }
 
-.side_first .wave .active2 .wave1 {
+.side_first .wave.active2 .wave1 {
     animation: wave .5s linear infinite;
 }
 
-.side_first .wave .active2 .wave1:nth-child(2) {
+.side_first .wave.active2 .wave1:nth-child(2) {
     animation-delay: .4s;
 }
 
-.side_first .wave .active2 .wave1:nth-child(3) {
+.side_first .wave.active2 .wave1:nth-child(3) {
     animation-delay: .8s;
 }
 
@@ -80,6 +80,7 @@
     margin-left: 1.5rem;
     color: var(--text);
     line-height: 1.5rem;
+    text-transform: capitalize;
 }
 
 .side_first h5 .subtitle {
@@ -117,6 +118,7 @@
     transition: .3s linear;
 }
 
+.music-control__icon #masterPause,
 .music-control__icon #masterPlay {
     border: 1px solid var(--text);
     border-radius: 50%;
@@ -128,6 +130,10 @@
 
 .music-control__icon .fa-play {
     padding: 8px 9px 8px 10px;
+}
+
+.music-control__icon .fa-pause {
+    padding: 8px 10px;
 }
 
 .music-control__icon .fa-backward-step,
@@ -143,6 +149,7 @@
     background: rgb(105, 105, 170, .1);
 }
 
+.music-control__icon #masterPause:hover,
 .music-control__icon #masterPlay:hover {
     background-position: 100% 0;
     transition: all .4s ease-in-out;
@@ -175,7 +182,7 @@
 .music-control__progress .bar .bar2 {
     position: absolute;
     background: #36e2ec;
-    width: 20%;
+    width: 0%;
     height: 100%;
     top: 0;
 }
@@ -229,17 +236,12 @@
     background: rgb(105, 105, 170, .1);
 }
 
-.side_last .vol .ti {
+.side_last .vol .fa {
     position: absolute;
     color: var(--text);
-    font-size: 2.5rem;
-    top: -12px;
+    font-size: 2rem;
+    top: -10px;
     left: -35px;
-    cursor: pointer;
-}
-
-.side_last .vol .ti-volume-off {
-    display: none;
 }
 
 .side_last .vol input {
@@ -256,7 +258,7 @@
 .side_last .vol .vol_bar {
     position: absolute;
     background: #36e2ec;
-    width: 20%;
+    width: 100%;
     height: 100%;
     top: 0;
 }
@@ -267,7 +269,7 @@
     height: 5px;
     background: #36e2ec;
     border-radius: 50%;
-    left: 0;
+    right: 0;
     top: -2px;
     transition: 1s linear;
 }
