@@ -200,6 +200,9 @@ btnLogin.addEventListener("click", (e) => {
 			user.password === inputPassword.value
 		) {
 			handleShowAndHideToastSuccess("success");
+			setTimeout(() => {
+				window.location.href = "/home.html";
+			}, 3000);
 		} else if (
 			user.username !== inputEmail.value &&
 			user.password === inputPassword.value
